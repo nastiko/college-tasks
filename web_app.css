@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 *, *:before, *:after {
@@ -16,8 +16,18 @@ body {
     border: 0;
 }
 
+header {
+    height: 596px;
+    margin-bottom: 0.2vw;
+}
+
+nav {
+    margin: 0.5vw;
+    padding: 1vw;
+}
+
 .decor li {
-    float: right;
+    float: left;
 }
 
 .decor {
@@ -26,30 +36,48 @@ body {
 
 .decor a {
     text-decoration: none;
+    color: white;
+    padding-left: 1vw;
+    font-size: 1vw;
 }
 
 .logo {
+    position: sticky;
+    top: 0;
     float: left;
     width: 200px;
 }
 
 .container {
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: -2vw;
+    top: -3vw;
     z-index: -1;
     overflow: hidden;
-    background-color: lightgray;
     width: 100% !important;
 }
 
-video{
+video {
     width: 143vw;
     height: 95vh;
     object-fit: cover;
     zoom: 70%;
 }
 
- section {
-     color: #265985;
- }
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1vw;
+    background-color: #1c1a1a;
+    color: #fff;
+    padding: 4vw;
+}
+
+.icon_knife {
+    background-image: url(img/knifes.png);
+    background-repeat: no-repeat;
+    background-size: 2vw;
+    width: 100px;
+    height: 100px;
+}
