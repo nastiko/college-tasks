@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.decor li {
+    float: right;
+}
+
+.decor {
+    list-style-type: none;
+}
+
+.decor a {
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+    width: 200px;
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    top: -2vw;
+    z-index: -1;
+    overflow: hidden;
+    background-color: lightgray;
+    width: 100% !important;
+}
+
+video{
+    width: 143vw;
+    height: 95vh;
+    object-fit: cover;
+    zoom: 70%;
+}
+
+ section {
+     color: #265985;
+ }
