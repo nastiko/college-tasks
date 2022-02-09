@@ -63,7 +63,7 @@ video {
     -ms-transform: translate(0%,-28%);
 }
 
-main {
+.container_2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -94,9 +94,30 @@ main {
     background-image: url("img/stars.png");
 }
 
-
 .icon_left, .icon_center, .icon_right {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.container_3 {
+    background-image: url("img/bg_img.jpg");
+    padding: 2vw;
+}
+
+.title {
+    padding-bottom: 2vw;
+    font-size: 2vw;
+}
+
+.child_container_3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.img_first, .img_second, .img_third {
+    width: 250px;
+    height: 250px;
 }
