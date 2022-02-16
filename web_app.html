@@ -12,33 +12,35 @@
 </head>
 <body>
 <header>
-    <div class="container">
+    <div class="container_1">
         <video autoplay muted loop>
             <source src="video/video.mp4" type="video/mp4">
         </video>
     </div>
-    <img class="logo" src="img/logo.png" alt="logo">
-    <nav class="nav">
-        <ul class="decor">
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Log in / Subscribe</a></li>
-            <li><a href="#">Basket</a></li>
-        </ul>
-    </nav>
+    <div class="child_container_1">
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav class="nav">
+            <ul class="decor">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Log in / Subscribe</a></li>
+                <li><a href="#">Basket</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 <main>
     <div class="container_2">
         <div class="icon_left">
             <i class="icon_knife"></i>
-            <p>Guaranteed freshness</p>
+            <p class="text_p">Guaranteed freshness</p>
         </div>
         <div class="icon_center">
             <i class="icon_card"></i>
-            <p>100% secure online payment available</p>
+            <p class="text_p">100% secure online payment available</p>
         </div>
         <div class="icon_right">
             <i class="icon_stars"></i>
-            <p>You trust us</p>
+            <p class="text_p">You trust us</p>
         </div>
     </div>
     <div class="container_3">
@@ -49,23 +51,23 @@
             </div>
             <div>
                 <img class="img_first" src="img/try_pizza.jpg" alt="Pizza">
-                <h3>Rustica Chicken & Fiery Roquito</h3>
-                <button>Add</button>
+                <h3 class="name">Rustica Chicken & Fiery Roquito</h3>
+                <button class="price" type="button" data-front="£9.5" data-back="+"></button>
             </div>
             <div>
                 <img class="img_second" src="img/try_pasta.jpg" alt="Pasta">
-                <h3>King Prawn Linguine</h3>
-                <button>Add</button>
+                <h3 class="name">King Prawn Linguine</h3>
+                <button class="price" type="button" data-front="£12.5" data-back="+"></button>
             </div>
             <div>
                 <img class="img_third" src="img/try_sweet.png" alt="Sweet">
-                <h3>Giant S'mores Fondue</h3>
-                <button>Add</button>
+                <h3 class="name">Giant S'mores Fondue</h3>
+                <button class="price" type="button" data-front="£7.5" data-back="+"></button>
             </div>
             <div>
                 <img class="img_fourth" src="img/try_brownie.jpg" alt="Brownie">
-                <h3>Salted Caramel Chocolate Brownie</h3>
-                <button>Add</button>
+                <h3 class="name">Salted Caramel Chocolate Brownie</h3>
+                <button class="price" type="button" data-front="£4.5" data-back="+"></button>
             </div>
             <div>
                 <i class="fa fa-angle-right"></i>
@@ -73,8 +75,20 @@
         </div>
     </div>
     <div class="container_4">
-        <h2>Reserve a table</h2>
-        <h3>or Calls us at 0125 36584258</h3>
+        <h2 class="reserve">Reserve a table</h2>
+        <p class="phone">or Calls us at 0125 36584258</p>
+        <div class="child_container_4">
+            <img src="img/chef.png" alt="Chef">
+            <div class="calendar">
+                <div class="month">
+                    <i class="icon fa-angle-left"></i>
+                    <div class="date"></div>
+                    <h4>February</h4>
+                    <p>Tue Feb 15, 2022</p>
+                    <i class="icon fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <footer>
