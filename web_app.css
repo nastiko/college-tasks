@@ -41,6 +41,8 @@ body {
     border: 0;
 }
 
+/*NavBar*/
+
 nav {
     position: fixed;
     top: 0;
@@ -61,7 +63,8 @@ nav {
     text-decoration: none;
     color: white;
     padding-left: 1vw;
-    font-size: 1vw;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .logo {
@@ -70,7 +73,7 @@ nav {
     float: left;
     width: 200px;
 }
-
+/*Video' style*/
 .container_1 {
     height: 55vh;
     z-index: -1;
@@ -84,20 +87,16 @@ video {
     -ms-transform: translate(0%,-28%);
     opacity: 0.9;
 }
-
+/*Scroll down NavBar*/
 .child_container_1 {
     background-image: linear-gradient(180deg,#000 5%,transparent);
-    /*background: -moz-linear-gradient(180deg, rgba(35,36,36,0.8519608527004552) 5%, rgba(43,43,43,0.38977597875087533) 40%);
-    background: -webkit-linear-gradient(180deg, rgba(35,36,36,0.8519608527004552) 5%, rgba(43,43,43,0.38977597875087533) 40%);
-    background: linear-gradient(180deg, rgba(35,36,36,0.8519608527004552) 5%, rgba(43,43,43,0.38977597875087533) 40%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232424",endColorstr="#2b2b2b",GradientType=1);*/
     position: fixed;
     top: 0;
     height: 3.75vw;
     width: 100%;
     z-index: 1;
 }
-
+/*Block about how customer can trust the restaurant*/
 .container_2 {
     display: flex;
     flex-direction: row;
@@ -143,17 +142,10 @@ video {
     align-items: center;
 }
 
-.title, .name {
-    font-weight: 500;
-}
+/*Block about new food*/
+
 .container_3 {
     background-color: #fafafa;
-}
-
-.title {
-    padding: 2vw;
-    font-size: 2.125rem;
-    text-indent: 5vw;
 }
 
 .child_container_3 {
@@ -161,6 +153,16 @@ video {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.title, .name {
+    font-weight: 500;
+}
+
+.title {
+    padding: 2vw;
+    font-size: 2.125rem;
+    text-indent: 5vw;
 }
 
 .img_first, .img_second, .img_third, .img_fourth {
@@ -177,6 +179,8 @@ video {
     text-align: center;
     margin: 0.6vw;
 }
+
+/*Button "Add in basket"*/
 
 .price {
     position: relative;
@@ -225,9 +229,11 @@ video {
 .price:hover::before, .price:hover::after {
     cursor: pointer;
 }
-
+/*Reserve table*/
 .container_4 {
     background-image: url("img/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .reserve {
@@ -247,4 +253,49 @@ video {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+/*Contact*/
+.container_5 {
+    display: -webkit-box;
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+.child_container_5 {
+    border-right: 1px solid #b4a895;
+    width: 33.33%;
+}
+
+.info_support {
+    text-align: center;
+    color: #b4a895;
+    line-height: 1vw;
+    letter-spacing: 0.1vw;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    padding: 1vw;
+}
+
+.icon_position {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img_fifth {
+    width: 35px;
+}
+
+.info_link a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+[class^="fa"] {
+    color: #ffffff;
 }
