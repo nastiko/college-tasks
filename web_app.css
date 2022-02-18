@@ -20,14 +20,21 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
+    sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 html {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
     font-family: "Poppins",Helvetica,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    /*line-height: 1.7;*/
     background-color: #fff;
 }
 
@@ -42,7 +49,6 @@ body {
 }
 
 /*NavBar*/
-
 nav {
     position: fixed;
     top: 0;
@@ -61,10 +67,11 @@ nav {
 
 .decor a {
     text-decoration: none;
-    color: white;
-    padding-left: 1vw;
+    color: #d2d2d3;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-family: "Poppins",Helvetica,sans-serif;
+    letter-spacing: 1px;
+    padding: 5px 15px;
 }
 
 .logo {
@@ -73,8 +80,9 @@ nav {
     float: left;
     width: 200px;
 }
-/*Video' style*/
-.container_1 {
+
+/*Video*/
+.header_1 {
     height: 55vh;
     z-index: -1;
     overflow: hidden;
@@ -87,8 +95,9 @@ video {
     -ms-transform: translate(0%,-28%);
     opacity: 0.9;
 }
+
 /*Scroll down NavBar*/
-.child_container_1 {
+.child_header_1 {
     background-image: linear-gradient(180deg,#000 5%,transparent);
     position: fixed;
     top: 0;
@@ -96,6 +105,7 @@ video {
     width: 100%;
     z-index: 1;
 }
+
 /*Block about how customer can trust the restaurant*/
 .container_2 {
     display: flex;
@@ -111,11 +121,7 @@ video {
     mask: var(--mask);
 }
 
-.text_p {
-    letter-spacing: 1px;
-}
-
-.icon_knife, .icon_card, .icon_stars {
+.icon_knife, .icon_card, .icon_stars, .icon_operator {
     margin: auto;
     display: flex;
     width: 64px;
@@ -143,7 +149,6 @@ video {
 }
 
 /*Block about new food*/
-
 .container_3 {
     background-color: #fafafa;
 }
@@ -155,16 +160,6 @@ video {
     align-items: center;
 }
 
-.title, .name {
-    font-weight: 500;
-}
-
-.title {
-    padding: 2vw;
-    font-size: 2.125rem;
-    text-indent: 5vw;
-}
-
 .img_first, .img_second, .img_third, .img_fourth {
     width: 300px;
     height: 300px;
@@ -174,14 +169,7 @@ video {
     font-size: 3vw !important;
 }
 
-.name {
-    font-size: 1.125rem;
-    text-align: center;
-    margin: 0.6vw;
-}
-
 /*Button "Add in basket"*/
-
 .price {
     position: relative;
     background-color: transparent;
@@ -190,7 +178,7 @@ video {
     line-height: 2vw;
     text-align: center;
     letter-spacing: 1px;
-    margin: 0 0 1vw 6vw;
+    margin: 0 6vw 1vw;
 }
 
 .price:before {
@@ -229,51 +217,39 @@ video {
 .price:hover::before, .price:hover::after {
     cursor: pointer;
 }
+
 /*Reserve table*/
 .container_4 {
     background-image: url("img/bg_img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.reserve {
-    text-align: center;
-    font-size: 2rem;
-    line-height: 1.5;
-    padding-top: 1vw
-}
-
-.phone {
-    text-align: center;
-    font-size: 1rem;
-}
-
-.child_container_4 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    height: 45vw;
 }
-/*Contact*/
-.container_5 {
-    display: -webkit-box;
+
+.child_container_4 {
+    position: relative;
+    left: 13vw;
+    top: 3vw;
+}
+
+/*Footer*/
+.footer_1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
     background-color: #2b2b2b;
     color: #ffffff;
-}
-
-.child_container_5 {
-    border-right: 1px solid #b4a895;
-    width: 33.33%;
-}
-
-.info_support {
-    text-align: center;
-    color: #b4a895;
-    line-height: 1vw;
-    letter-spacing: 0.1vw;
-    font-size: 1.3rem;
-    font-weight: lighter;
-    padding: 1vw;
+    --mask:
+            linear-gradient(#2b2b2b, #2b2b2b, #2b2b2b) bottom/100% calc(100% - 0.3em) no-repeat,
+            radial-gradient(circle farthest-side,#2b2b2b 98%,#0000) top/0.56em 0.6em repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
 }
 
 .icon_position {
@@ -283,8 +259,8 @@ video {
     align-items: center;
 }
 
-.img_fifth {
-    width: 35px;
+.icon_operator {
+    background-image: url("img/operator.png");
 }
 
 .info_link a {
@@ -299,3 +275,49 @@ video {
 [class^="fa"] {
     color: #ffffff;
 }
+
+
+
+/*Calendar*/
+
+.calendar {
+    width: 600px;
+}
+
+
+
+
+/*Text*/
+h1, h2, h3, h4, h5, p {
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.title_h2, .title_h3 {
+    font-weight: lighter;
+    letter-spacing: 0.1vw;
+}
+
+.title_h2 {
+    font-size: 2.5rem;
+    text-indent: 5vw;
+    padding: 2vw 0;
+}
+
+.title_h3 {
+    font-size: 2rem;
+}
+
+.title_h4 {
+    font-family: 'Lora', serif;
+    font-size: 1.125rem;
+    line-height: 2.5;
+    text-align: center;
+}
+
+.text_p {
+    font-family: HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+

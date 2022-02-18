@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="web_app.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Web Application</title>
 </head>
 <body>
 <header>
-    <div class="container_1">
+    <div class="header_1">
         <video autoplay muted loop>
             <source src="video/video.mp4" type="video/mp4">
         </video>
     </div>
-    <div class="child_container_1">
+    <div class="child_header_1">
         <img class="logo" src="img/logo.png" alt="logo">
         <nav class="nav">
             <ul class="decor">
@@ -44,29 +45,29 @@
         </div>
     </div>
     <div class="container_3">
-        <h2 class="title">Try something new!</h2>
+        <h2 class="title_h2">Try something new!</h2>
         <div class="child_container_3">
             <div>
                 <i class="fa fa-angle-left"></i>
             </div>
             <div>
                 <img class="img_first" src="img/try_pizza.jpg" alt="Pizza">
-                <h3 class="name">Rustica Chicken & Fiery Roquito</h3>
+                <h4 class="title_h4">Rustica Chicken & Fiery Roquito</h4>
                 <button class="price" type="button" data-front="£9.5" data-back="+"></button>
             </div>
             <div>
                 <img class="img_second" src="img/try_pasta.jpg" alt="Pasta">
-                <h3 class="name">King Prawn Linguine</h3>
+                <h4 class="title_h4">King Prawn Linguine</h4>
                 <button class="price" type="button" data-front="£12.5" data-back="+"></button>
             </div>
             <div>
                 <img class="img_third" src="img/try_sweet.png" alt="Sweet">
-                <h3 class="name">Giant S'mores Fondue</h3>
+                <h4 class="title_h4">Giant S'mores Fondue</h4>
                 <button class="price" type="button" data-front="£7.5" data-back="+"></button>
             </div>
             <div>
                 <img class="img_fourth" src="img/try_brownie.jpg" alt="Brownie">
-                <h3 class="name">Salted Caramel Chocolate Brownie</h3>
+                <h4 class="title_h4">Salted Caramel Chocolate Brownie</h4>
                 <button class="price" type="button" data-front="£4.5" data-back="+"></button>
             </div>
             <div>
@@ -75,41 +76,55 @@
         </div>
     </div>
     <div class="container_4">
-        <h2 class="reserve">Reserve a table</h2>
-        <p class="phone">or Calls us at 0125 36584258</p>
         <div class="child_container_4">
             <img src="img/chef.png" alt="Chef">
-            <div class="calendar">
-                <div class="month">
-                    <i class="icon fa-angle-left"></i>
-                    <div class="date"></div>
-                    <h4>February</h4>
-                    <p>Tue Feb 15, 2022</p>
-                    <i class="icon fa-angle-right"></i>
-                </div>
+        </div>
+        <div class="calendar">
+            <h3 class="title_h3">Reserve a table</h3>
+            <p class="text_p">or Calls us at 0125 36584258</p>
+            <div class="month">
+                <i class="icon fa-angle-left"></i>
+                <div class="date"></div>
+                <h4>February</h4>
+                <p>Tue Feb 15, 2022</p>
+                <i class="icon fa-angle-right"></i>
             </div>
         </div>
     </div>
 </main>
-<footer class="container_5">
-    <div class="child_container_5">
-        <h3 class="info_support">Customer Service</h3>
+<footer class="footer_1">
+    <div class="child_footer_1">
+        <h4 class="title_h4">Customer Service</h4>
         <div class="info_link">
-            <img src="img/call_center.png" alt="Call center">
+            <div class="icon_operator"></div>
             <a href="#">You need help?</a>
+            <p>You have a question on a previous order</p>
         </div>
     </div>
-    <div class="child_container_5">
-        <h3 class="info_support">Information</h3>
+    <div class="child_footer_1">
+        <h3 class="main_title">Address</h3>
         <div class="info_link">
-            <a href="#">Terms of use</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Cookies Policy</a>
-            <a href="#">Covid 19</a>
+            <p>11 Kingland Cres</p>
+            <p>BH15 1KZ, Poole</p>
         </div>
     </div>
-    <div class="child_container_5">
-        <h3 class="info_support">Follow us</h3>
+    <div class="child_footer_1">
+        <h3 class="main_title">Reservations</h3>
+        <div class="info_link">
+            <p>01202 148912</p>
+            <p>reservations@YummyRestaurant.com</p>
+        </div>
+    </div>
+    <div class="child_footer_1">
+        <h3 class="main_title">Opening Hours</h3>
+        <div class="info_link">
+            <p>Mon - Sat: 10am - 11pm</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </div>
+    <div class="child_footer_1">
+        <h3 class="main_title">Follow us</h3>
+        <input type="email">
         <div class="icon_media">
             <a href="#"><i class='fa fa-facebook'></i></a>
             <a href="#"><i class='fa fa-twitter-square'></i></a>
