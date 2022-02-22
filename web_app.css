@@ -1,8 +1,40 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
+    sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
 html {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
+    font-family: "Poppins",Helvetica,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    /*line-height: 1.7;*/
     background-color: #fff;
 }
 
@@ -16,10 +48,7 @@ body {
     border: 0;
 }
 
-header {
-    margin-bottom: 0.2vw;
-}
-
+/*NavBar*/
 nav {
     position: fixed;
     top: 0;
@@ -38,9 +67,11 @@ nav {
 
 .decor a {
     text-decoration: none;
-    color: white;
-    padding-left: 1vw;
-    font-size: 1vw;
+    color: #d2d2d3;
+    font-size: 0.875rem;
+    font-family: "Poppins",Helvetica,sans-serif;
+    letter-spacing: 1px;
+    padding: 5px 15px;
 }
 
 .logo {
@@ -50,7 +81,8 @@ nav {
     width: 200px;
 }
 
-.container {
+/*Video*/
+.header_1 {
     height: 55vh;
     z-index: -1;
     overflow: hidden;
@@ -64,18 +96,32 @@ video {
     opacity: 0.9;
 }
 
+/*Scroll down NavBar*/
+.child_header_1 {
+    background-image: linear-gradient(180deg,#000 5%,transparent);
+    position: fixed;
+    top: 0;
+    height: 3.75vw;
+    width: 100%;
+    z-index: 1;
+}
+
+/*Block about how customer can trust the restaurant*/
 .container_2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font-size: 1vw;
     background-color: #2b2b2b;
     color: #b4a895;
     padding: 1vw;
-    margin-bottom: 0.2vw;
+    --mask:
+            linear-gradient(#2b2b2b, #2b2b2b, #2b2b2b) top/100% calc(100% - 0.3em) no-repeat,
+            radial-gradient(circle farthest-side,#2b2b2b 98%,#0000) bottom/0.56em 0.6em repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
 }
 
-.icon_knife, .icon_card, .icon_stars {
+.icon_knife, .icon_card, .icon_stars, .icon_operator {
     margin: auto;
     display: flex;
     width: 64px;
@@ -102,29 +148,9 @@ video {
     align-items: center;
 }
 
+/*Block about new food*/
 .container_3 {
-    position: relative;
-    width: 100%;
-    padding: 1vw 0;
-}
-
-.container_3::before {
-    content: "";
-    background-image: url("img/bg_img.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.05;
-}
-
-.title {
-    padding-bottom: 2vw;
-    font-size: 2vw;
-    text-indent: 5vw;
+    background-color: #fafafa;
 }
 
 .child_container_3 {
@@ -139,22 +165,254 @@ video {
     height: 300px;
 }
 
-.fa-angle-left, .fa-angle-right {
+.child_container_3 [class^="fa"] {
     font-size: 3vw !important;
+    color: #2b2b2b;
+    position: relative;
+    top: -3vw;
 }
 
-h3 {
+/*Button "Add in basket"*/
+.price {
+    position: relative;
+    background-color: transparent;
+    color: #534D44;
+    font-size: 1.125rem;
+    line-height: 2vw;
     text-align: center;
-    margin: 0.6vw;
+    letter-spacing: 1px;
+    margin: 0 6vw 1vw;
 }
 
-button {
-    text-align: center;
-    border: none;
+.price:before {
+    content: attr(data-front);
+    opacity: 1;
+    padding: 0 20px;
+    transition: 0.5s;
+    transform: translateY(0) rotate(0);
+}
+
+.price:after {
+    content: attr(data-back);
+    background-color: #323237;
+    color: #b4a895;
     border-radius: 3px;
-    padding: 0.5vw 1.5vw;
-    margin-left: 6vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    opacity: 0;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(0) rotate(0);
 }
 
+.price:hover::before {
+    opacity: 0;
+    transform: translateY(0) rotate(0);
+}
+
+.price:hover::after {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+}
+
+.price:hover::before, .price:hover::after {
+    cursor: pointer;
+}
+
+/*Reserve table*/
 .container_4 {
+    background-image: url("img/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 45vw;
+}
+
+.child_container_4 {
+    position: relative;
+    left: 13vw;
+    top: 3vw;
+}
+
+/*Footer*/
+.footer_1 {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    --mask:
+            linear-gradient(#2b2b2b, #2b2b2b, #2b2b2b) bottom/100% calc(100% - 0.3em) no-repeat,
+            radial-gradient(circle farthest-side,#2b2b2b 98%,#0000) top/0.56em 0.6em repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.child_footer_1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.icon_operator {
+    background-image: url("img/operator.png");
+    position: relative;
+    bottom: 3px;
+    margin: 0;
+}
+
+.info_text {
+    position: relative;
+    left: 70px;
+    bottom: 64px;
+    line-height: 2.5;
+}
+
+.info_text a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+}
+
+.info_text p, .main_info p, .copy {
+    font-size: 0.800rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: lighter;
+}
+
+.info_text p {
+    color: #b4a895;
+}
+
+.main_info p, .copy {
+    color: rgba(255,255,255,0.6);
+    line-height: 2.2;
+}
+
+.input_container {
+    width: 100%;
+    border: none;
+    line-height: 3.7;
+}
+
+input[type="email"] {
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.05);
+    color: #ccc;
+    width: 300px;
+    padding: 13px 15px;
+}
+
+input[type="email"]:focus {
+    outline: 1px solid #b4a895;
+}
+
+.button_submit {
+    background-color: #b4a895;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+    right: 42px;
+    top: 0;
+    padding: 13px 15px;
+}
+
+.button_submit:hover {
+    cursor: pointer;
+}
+
+::placeholder {
+    font-size: 0.800rem;
+    letter-spacing: 0.1vw;
+    color: #b4a895;
+}
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ccc;
+    -webkit-box-shadow: 0 0 0 1000px #2b2b2b inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #ccc;
+}
+
+hr {
+    border: 1px solid #b4a895;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.child_footer_2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 40px 0;
+    margin: 0 10vw;
+}
+
+.icon_media {
+    font-size: 25px;
+}
+
+.decor_footer a {
+    text-decoration: none;
+    color: #d2d2d3;
+    padding: 5px 15px;
+}
+
+
+/*Calendar*/
+
+.calendar {
+    width: 600px;
+}
+
+
+/*Text*/
+h1, h2, h3, h4, h5, p {
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.title_h2, .title_h3 {
+    font-weight: lighter;
+    letter-spacing: 0.1vw;
+}
+
+.title_h2 {
+    font-size: 2.5rem;
+    text-indent: 5vw;
+    color: #2b2b2b;
+    padding: 2vw 0;
+}
+
+.title_h3 {
+    font-size: 2rem;
+}
+
+.title_h4 {
+    font-size: 1.125rem;
+    line-height: 2.5;
+}
+
+.container_3 .title_h4 {
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+
+footer .title_h4 {
+    margin-top: 2vw;
+}
+
+.text_p {
+    font-family: HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
