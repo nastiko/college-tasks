@@ -165,8 +165,11 @@ video {
     height: 300px;
 }
 
-.fa-angle-left, .fa-angle-right {
+.child_container_3 [class^="fa"] {
     font-size: 3vw !important;
+    color: #2b2b2b;
+    position: relative;
+    top: -3vw;
 }
 
 /*Button "Add in basket"*/
@@ -238,11 +241,6 @@ video {
 
 /*Footer*/
 .footer_1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
     background-color: #2b2b2b;
     color: #ffffff;
     --mask:
@@ -250,41 +248,85 @@ video {
             radial-gradient(circle farthest-side,#2b2b2b 98%,#0000) top/0.56em 0.6em repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+    padding-bottom: 5vw;
 }
 
-.icon_position {
+.child_footer_1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 .icon_operator {
     background-image: url("img/operator.png");
+    position: relative;
+    bottom: 3px;
+    margin: 0;
 }
 
-.info_link a {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.info_text {
+    position: relative;
+    left: 70px;
+    bottom: 64px;
+    line-height: 2.5;
+}
+
+.info_text a {
     text-decoration: none;
-    color: #ffffff;
+    color: rgba(255,255,255,0.6);
 }
 
-[class^="fa"] {
-    color: #ffffff;
+.info_text p, .main_info p {
+    font-size: 0.800rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: lighter;
 }
 
+.info_text p {
+    color: #b4a895;
+}
 
+.main_info p {
+    color: rgba(255,255,255,0.6);
+    line-height: 2.2;
+}
+
+input[type="email"] {
+    border: none;
+    border-radius: 4px 0 0 4px;
+    background-color: rgba(255,255,255,0.05);
+    color: #ccc;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+}
+
+.button_submit {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #b4a895;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+}
+
+::placeholder {
+    font-size: 0.800rem;
+    letter-spacing: 0.1vw;
+    color: #b4a895;
+}
+
+/*:placeholder-shown {
+    background-color: green;
+}*/
 
 /*Calendar*/
 
 .calendar {
     width: 600px;
 }
-
-
 
 
 /*Text*/
@@ -301,6 +343,7 @@ h1, h2, h3, h4, h5, p {
 .title_h2 {
     font-size: 2.5rem;
     text-indent: 5vw;
+    color: #2b2b2b;
     padding: 2vw 0;
 }
 
@@ -309,10 +352,16 @@ h1, h2, h3, h4, h5, p {
 }
 
 .title_h4 {
-    font-family: 'Lora', serif;
     font-size: 1.125rem;
     line-height: 2.5;
-    text-align: center;
+}
+
+.container_3 .title_h4 {
+    font-family: 'Lora', serif;
+}
+
+footer .title_h4 {
+    margin-top: 1vw;
 }
 
 .text_p {
