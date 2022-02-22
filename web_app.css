@@ -248,7 +248,6 @@ video {
             radial-gradient(circle farthest-side,#2b2b2b 98%,#0000) top/0.56em 0.6em repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
-    padding-bottom: 5vw;
 }
 
 .child_footer_1 {
@@ -277,7 +276,7 @@ video {
     color: rgba(255,255,255,0.6);
 }
 
-.info_text p, .main_info p {
+.info_text p, .main_info p, .copy {
     font-size: 0.800rem;
     letter-spacing: 1px;
     word-spacing: 2px;
@@ -288,28 +287,41 @@ video {
     color: #b4a895;
 }
 
-.main_info p {
+.main_info p, .copy {
     color: rgba(255,255,255,0.6);
     line-height: 2.2;
 }
 
-input[type="email"] {
+.input_container {
+    width: 100%;
     border: none;
-    border-radius: 4px 0 0 4px;
+    line-height: 3.7;
+}
+
+input[type="email"] {
+    border-radius: 4px;
     background-color: rgba(255,255,255,0.05);
     color: #ccc;
-    width: 250px;
-    height: 40px;
-    padding-left: 15px;
+    width: 300px;
+    padding: 13px 15px;
+}
+
+input[type="email"]:focus {
+    outline: 1px solid #b4a895;
 }
 
 .button_submit {
-    position: absolute;
-    width: 40px;
-    height: 40px;
     background-color: #b4a895;
     color: #fff;
     border-radius: 0 4px 4px 0;
+    position: relative;
+    right: 42px;
+    top: 0;
+    padding: 13px 15px;
+}
+
+.button_submit:hover {
+    cursor: pointer;
 }
 
 ::placeholder {
@@ -318,9 +330,43 @@ input[type="email"] {
     color: #b4a895;
 }
 
-/*:placeholder-shown {
-    background-color: green;
-}*/
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ccc;
+    -webkit-box-shadow: 0 0 0 1000px #2b2b2b inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #ccc;
+}
+
+hr {
+    border: 1px solid #b4a895;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.child_footer_2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 40px 0;
+    margin: 0 10vw;
+}
+
+.icon_media {
+    font-size: 25px;
+}
+
+.decor_footer a {
+    text-decoration: none;
+    color: #d2d2d3;
+    padding: 5px 15px;
+}
+
 
 /*Calendar*/
 
@@ -358,10 +404,11 @@ h1, h2, h3, h4, h5, p {
 
 .container_3 .title_h4 {
     font-family: 'Lora', serif;
+    text-align: center;
 }
 
 footer .title_h4 {
-    margin-top: 1vw;
+    margin-top: 2vw;
 }
 
 .text_p {
@@ -369,4 +416,3 @@ footer .title_h4 {
     font-size: 1rem;
     letter-spacing: 1px;
 }
-
