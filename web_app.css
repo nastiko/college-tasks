@@ -165,8 +165,8 @@ video {
     height: 300px;
 }
 
-.child_container_3 [class^="fa"] {
-    font-size: 3vw !important;
+.icon_angle [class^="fa"] {
+    font-size: 3vw;
     color: #2b2b2b;
     position: relative;
     top: -3vw;
@@ -222,7 +222,7 @@ video {
 }
 
 /*Reserve table*/
-.container_4 {
+.main_container {
     background-image: url("img/bg_img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,10 +233,102 @@ video {
     height: 45vw;
 }
 
-.child_container_4 {
+.container_4 {
     position: relative;
     left: 13vw;
     top: 3vw;
+}
+
+.reserve_table {
+    margin-bottom: 25px;
+}
+
+/*Calendar*/
+
+.calendar {
+    width: 33rem;
+    background-color: rgb(244 244 244);
+    padding: 1vw;
+}
+
+.calendar_info {
+    color: #222;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+strong {
+    color: #999;
+}
+
+.hr_calendar {
+    width: 100%;
+    border: 1px solid #ededed;
+    margin: 25px auto;
+}
+
+.click {
+    float: right;
+    background-color: #b4a895;
+    color: #fff;
+    border: 1px solid #b4a895;
+    border-radius: 4px;
+    padding: 12px 30px;
+}
+
+.calendar_child {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.month {
+    width: 100%;
+    text-align: center;
+    padding: 1vw;
+}
+
+.icon_month.fa{
+    position: relative;
+    padding: 0 4vw;
+    font-size: 25px;
+}
+
+.date {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.weekdays {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 0;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.days div {
+    border: 1px dotted #ccc;
+}
+
+.weekdays div, .days div {
+    display: flex;
+    justify-content: center;
+    width: calc(28.2rem/7);
+    padding: 0.7em 0.3em;
+    margin: 2px;
+}
+
+.fas {
+    width: 25px;
 }
 
 /*Footer*/
@@ -312,7 +404,7 @@ input[type="email"]:focus {
 
 .button_submit {
     background-color: #b4a895;
-    color: #fff;
+    color: #ccc;
     border-radius: 0 4px 4px 0;
     position: relative;
     right: 42px;
@@ -341,7 +433,7 @@ input:-webkit-autofill:focus {
     caret-color: #ccc;
 }
 
-hr {
+.hr_footer {
     border: 1px solid #b4a895;
     width: 80%;
     margin: 0 auto;
@@ -366,14 +458,6 @@ hr {
     color: #d2d2d3;
     padding: 5px 15px;
 }
-
-
-/*Calendar*/
-
-.calendar {
-    width: 600px;
-}
-
 
 /*Text*/
 h1, h2, h3, h4, h5, p {
