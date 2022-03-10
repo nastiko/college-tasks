@@ -537,7 +537,7 @@ footer .title_h4 {
     float: left;
 }
 
-@media screen and (min-width: 975px) and (max-width: 1330px) {
+@media all and (min-width: 975px) and (max-width: 1392px) {
     video {
         width: 100%;
         height: 100%;
@@ -547,7 +547,7 @@ footer .title_h4 {
     }
 }
 
-@media screen and (max-width: 974px) {
+@media all and (max-width: 974px) {
     video, .child_header_1 {
         display: none;
     }
@@ -569,7 +569,23 @@ footer .title_h4 {
     }
 }
 
-@media screen and (min-width: 975px) and (max-width: 1330px) and (orientation: landscape) {
+@media all and (max-width: 882px) and (orientation: landscape) {
+    video, .child_header_1 {
+        display: none;
+    }
+    .home_page {
+        background-image: url("img/slide_home.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+        transform: translate(0%,-24%);
+        -ms-transform: translate(0%,-24%);
+    }
+}
+
+/*@media all and (min-width: 975px) and (max-width: 1330px) and (orientation: landscape) {
     video {
         width: 100%;
         height: 100%;
@@ -587,24 +603,10 @@ footer .title_h4 {
     }
 }
 
-@media screen and (min-width: 975px) and (max-width: 1330px) and (orientation: landscape) {
-    video, .child_header_1 {
-        display: none;
-    }
-    .home_page {
-        background-image: url("img/slide_home.jpg");
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-position: center;
-        transform: translate(0%,-24%);
-        -ms-transform: translate(0%,-24%);
-    }
-}
 
 
-@media screen and (max-width: 991px) {
+
+@media all and (max-width: 991px) {
     strong {
         position: relative;
         right: 15px;
@@ -613,23 +615,11 @@ footer .title_h4 {
         font-weight: 300;
         background-color: #683a1f;
     }
-}
-
-@media screen and (max-width: 974px) and (orientation: landscape) {
-    .home_page {
-        background-image: url("img/slide_home.jpg");
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-position: center;
-        transform: translate(0%,-23%);
-        -ms-transform: translate(0%,-23%);
-    }
-}
+}*/
 
 /*NavBar for App*/
-@media screen and (max-width:991px) {
+@media all and (max-width:991px) {
+
     .child_header_2 {
         display: flex;
         flex-direction: row;
@@ -640,9 +630,7 @@ footer .title_h4 {
         top: 0;
     }
 
-    .icon_menu::before {
-        content: "\2261";
-        font: var(--fa-font-solid);
+    .icon_menu {
         padding: 2vw;
         margin-left: 1vw;
         color: #ffffff;
@@ -650,15 +638,11 @@ footer .title_h4 {
         font-weight: 100;
     }
 
-    .icon_search::before {
+    .icon_search {
         transform: scaleX(-1);
         -moz-transform: scaleX(-1);
         -webkit-transform: scaleX(-1);
         -ms-transform: scaleX(-1);
-    }
-
-    .icon_bag::before {
-
     }
 
     img.web_logo {
@@ -666,7 +650,7 @@ footer .title_h4 {
     }
 }
 
-@media screen and (max-width:991px) {
+@media all and (max-width:991px) {
     .nav {
         display: none;
     }
@@ -678,7 +662,7 @@ footer .title_h4 {
     }
 }*/
 
-@media screen and (max-width:1600px) {
+@media all and (max-width:1600px) {
     .container_4 {
         display: none;
     }
@@ -690,7 +674,7 @@ footer .title_h4 {
 
 }
 
-@media screen and (max-width: 725px) {
+@media all and (max-width: 725px) {
     .calendar {
         width: 22rem;
     }
@@ -700,20 +684,20 @@ footer .title_h4 {
     }
 }
 
-@media screen and (max-width:991px) {
+@media all and (max-width:991px) {
     .footer_1 {
         position: fixed;
         width: 100%;
     }
 }
 
-@media screen and (max-width:1026px) {
+@media all and (max-width:1026px) {
     .footer_1 .title_h4 {
         padding-left: 25px;
     }
 }
 
-@media screen  and (max-width:1026px) {
+@media all  and (max-width:1026px) {
     .child_footer_1 {
         display: flex;
         flex-direction: column;
