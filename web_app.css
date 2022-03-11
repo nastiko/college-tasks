@@ -79,7 +79,7 @@ body {
 .decor a {
     text-decoration: none;
     color: #d2d2d3;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-family: "Poppins",Helvetica,sans-serif;
     letter-spacing: 1px;
     padding: 5px 15px;
@@ -116,7 +116,7 @@ video {
     background-image: linear-gradient(180deg,#000 5%,transparent);
     position: fixed;
     top: 0;
-    height: 3.75vw;
+    height: 76px;
     width: 100%;
     z-index: 1;
 }
@@ -523,6 +523,8 @@ footer .title_h4 {
     display: block;
     width: 100%;
     height: 530px;
+    opacity: 0.9;
+    z-index: -1;
 }
 
 .child_header_2 {
@@ -537,6 +539,31 @@ footer .title_h4 {
     float: left;
 }
 
+.icon_search {
+    padding-left: 2vw;
+}
+
+img.web_logo {
+    margin: auto;
+}
+
+.items {
+    position: relative;
+    right: 15px;
+    top: 5px;
+    color: #ffffff;
+    font-weight: 300;
+    background-color: #111514;
+    border-radius: 8px;
+    padding: 0 4px;
+    font-size: 10px;
+}
+
+.title_app {
+    font-size: 2.5rem;
+    padding: 2vw 0;
+}
+
 @media all and (min-width: 975px) and (max-width: 1392px) {
     video {
         width: 100%;
@@ -548,7 +575,7 @@ footer .title_h4 {
 }
 
 @media all and (max-width: 974px) {
-    video, .child_header_1 {
+    video, .child_header_1, .text_p {
         display: none;
     }
     .home_page {
@@ -559,13 +586,16 @@ footer .title_h4 {
         -o-background-size: cover;
         background-position: center;
     }
-    strong {
-        position: relative;
-        right: 15px;
-        top: 5px;
-        color: #ffffff;
-        font-weight: 300;
-        background-color: #111514;
+    .child_header_2 {
+        background-image: linear-gradient(180deg,#000 5%,transparent);
+        position: fixed;
+        top: 0;
+        height: 76px;
+        width: 100%;
+        z-index: 3;
+    }
+    .title_app {
+        text-align: center;
     }
 }
 
@@ -583,39 +613,18 @@ footer .title_h4 {
         transform: translate(0%,-24%);
         -ms-transform: translate(0%,-24%);
     }
-}
-
-/*@media all and (min-width: 975px) and (max-width: 1330px) and (orientation: landscape) {
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: translate(0%,0%);
-        -ms-transform: translate(0%,0%);
-    }
-    .home_page {
-        background-image: url("img/slide_home.jpg");
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-position: center;
+    .title_h2 {
+        text-align: center;
     }
 }
 
-
-
-
-@media all and (max-width: 991px) {
-    strong {
-        position: relative;
-        right: 15px;
-        top: 5px;
-        color: #ffffff;
-        font-weight: 300;
-        background-color: #683a1f;
+@media only screen and (min-device-width: 320px) and (max-device-width: 725px) and (-webkit-min-device-pixel-ratio: 3) {
+    .title_h2 {
+        font-size: 23px;
+        text-align: center;
+        padding: 3vw 0;
     }
-}*/
+}
 
 /*NavBar for App*/
 @media all and (max-width:991px) {
@@ -628,6 +637,7 @@ footer .title_h4 {
         width: 100%;
         position: fixed;
         top: 0;
+        padding: 1vw;
     }
 
     .icon_menu {
@@ -646,7 +656,7 @@ footer .title_h4 {
     }
 
     img.web_logo {
-        width: 140px;
+        width: 160px;
     }
 }
 
