@@ -24,9 +24,7 @@ html {
 
 body {
     font-family: var(--font-family-sans-serif);
-    font-size: 0.875rem;
     font-weight: 400;
-    /*line-height: 1.7;*/
     background-color: var(--white);
 }
 
@@ -47,23 +45,20 @@ h1, h2, h3, h4, h5, p {
 }
 
 .title_h2, .title_h3 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 400;
     letter-spacing: 0.1vw;
+    line-height: 1.75;
 }
 
 .title_h2 {
-    font-size: 2.5rem;
     text-indent: 5vw;
     color: var(--gray);
-    padding: 2vw 0;
-}
-
-.title_h3 {
-    font-size: 2rem;
+    padding: 0.5em 0;
 }
 
 .title_h4 {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 3vw, 1.125rem);
     line-height: 2.5;
 }
 
@@ -78,7 +73,7 @@ footer .title_h4 {
 
 .text_p {
     font-family: HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.935rem, 1.5vw, 1.0125rem);
     letter-spacing: 1px;
 }
 
@@ -96,8 +91,7 @@ footer .title_h4 {
 /*NavBar for Web*/
 .nav {
     position: fixed;
-    top: 0;
-    right: 0;
+    inset: 0.9rem 0 auto auto;
     margin: 0.5vw;
     padding: 1vw;
 }
@@ -112,17 +106,16 @@ footer .title_h4 {
 
 .decor a {
     text-decoration: none;
-    color: var(--magenta);
-    font-size: 14px;
+    color: var(--light-gray);
+    font-size: clamp(0.975rem, 1.5vw ,1.063rem);
     letter-spacing: 1px;
-    padding: 5px 15px;
+    padding: 5px 8px;
 }
 
 /*Logo for Web*/
 .logo_header_1 {
     position: fixed;
-    top: 0;
-    float: left;
+    inset: 0 auto auto 0;
 }
 
 .web_logo {
@@ -203,21 +196,24 @@ video {
 
 .child_container_3 {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-inline: auto;
 }
 
 .img_first, .img_second, .img_third, .img_fourth {
-    width: 300px;
-    height: 300px;
+    width: 20em;
 }
 
-.icon_angle [class^="fa"] {
-    font-size: 3vw;
-    color: var(--gray);
+.icon_angle {
+    font-size: clamp(1.725rem, 3vw, 3rem);
     position: relative;
-    top: -3vw;
+    inset: -4rem auto auto 0;
+}
+
+.block_align {
+    text-align: center;
 }
 
 /*Button "Add in basket"*/
@@ -549,23 +545,8 @@ img.web_logo {
     font-size: 10px;
 }
 
-.title_app {
-    font-size: 2.5rem;
-    padding: 2vw 0;
-}
-
-@media all and (min-width: 975px) and (max-width: 1392px) {
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: translate(0%,0%);
-        -ms-transform: translate(0%,0%);
-    }
-}
-
 @media all and (max-width: 974px) {
-    video, .child_header_1, .text_p {
+    video, .child_header_1, .text_hide {
         display: none;
     }
     .home_page {
@@ -589,10 +570,17 @@ img.web_logo {
     }
 }
 
-@media all and (max-width: 882px) and (orientation: landscape) {
-    video, .child_header_1 {
-        display: none;
+@media all and (min-width: 975px) {
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(0%,0%);
+        -ms-transform: translate(0%,0%);
     }
+}
+
+@media all and (max-width: 974px) and (orientation: landscape) {
     .home_page {
         background-image: url("img/slide_home.jpg");
         background-size: cover;
@@ -608,15 +596,22 @@ img.web_logo {
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 725px) and (-webkit-min-device-pixel-ratio: 3) {
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 725px) and (-webkit-min-device-pixel-ratio: 3) {
     .title_h2 {
         font-size: 23px;
         text-align: center;
         padding: 3vw 0;
     }
-}
+*/
 
 /*NavBar for App*/
+
+@media all and (max-width:991px) {
+    .nav {
+        display: none;
+    }
+}
+
 @media all and (max-width:991px) {
     .child_header_2 {
         display: flex;
@@ -646,12 +641,6 @@ img.web_logo {
     }
 }
 
-@media all and (max-width:991px) {
-    .nav {
-        display: none;
-    }
-}
-
 /*@media screen and (max-width:991px) {
     .main_container {
         background-size: cover;
@@ -659,15 +648,12 @@ img.web_logo {
 }*/
 
 @media all and (max-width:1600px) {
-    .container_4 {
+    .container_4, .icon_angle {
         display: none;
     }
-
     .main_container {
-        padding: 5vw;
-        background-size: cover;
+        padding: 3em;
     }
-
 }
 
 @media all and (max-width: 725px) {
