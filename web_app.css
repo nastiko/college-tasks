@@ -38,46 +38,40 @@ body {
     border: 0;
 }
 
-/*Text*/
+/*text*/
 h1, h2, h3, h4, h5, p {
     line-height: 1.2;
     font-weight: 500;
 }
-
 .title_h2, .title_h3 {
     font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 400;
     letter-spacing: 0.1vw;
     line-height: 1.75;
 }
-
 .title_h2 {
     text-indent: 5vw;
     color: var(--gray);
     padding: 0.5em 0;
 }
-
 .title_h4 {
     font-size: clamp(1rem, 3vw, 1.125rem);
     line-height: 2.5;
 }
-
 .container_3 .title_h4 {
     font-family: 'Lora', serif;
     text-align: center;
 }
-
 footer .title_h4 {
     margin-top: 2vw;
 }
-
 .text_p {
     font-family: HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, sans-serif;
     font-size: clamp(0.935rem, 1.5vw, 1.0125rem);
     letter-spacing: 1px;
 }
 
-/*Setting up Font Awesome icons as pseudo-element*/
+/*setting up Font Awesome icons as pseudo-element*/
 .icon_content::before {
     display: inline-block;
     font-style: normal;
@@ -88,22 +82,19 @@ footer .title_h4 {
     font-size: 50px;
 }
 
-/*NavBar for Web*/
+/*navbar for Web*/
 .nav {
     position: fixed;
     inset: 0.9rem 0 auto auto;
     margin: 0.5vw;
     padding: 1vw;
 }
-
 .decor li {
     float: left;
 }
-
 .decor {
     list-style-type: none;
 }
-
 .decor a {
     text-decoration: none;
     color: var(--light-gray);
@@ -112,23 +103,21 @@ footer .title_h4 {
     padding: 5px 8px;
 }
 
-/*Logo for Web*/
+/*logo for Web*/
 .logo_header_1 {
     position: fixed;
     inset: 0 auto auto 0;
 }
-
 .web_logo {
     width: 200px;
 }
 
-/*Video*/
+/*video*/
 .header_1 {
     height: 55vh;
     z-index: -1;
     overflow: hidden;
 }
-
 video {
     width: 100%;
     object-fit: cover;
@@ -137,7 +126,7 @@ video {
     opacity: 0.9;
 }
 
-/*Scroll down NavBar*/
+/*scroll down NavBar*/
 .child_header_1 {
     background-image: linear-gradient(180deg,#000 5%,transparent);
     position: fixed;
@@ -147,7 +136,7 @@ video {
     z-index: 1;
 }
 
-/*Block about how customer can trust the restaurant*/
+/*block about how customer can trust the restaurant*/
 .container_2 {
     display: flex;
     flex-direction: row;
@@ -161,7 +150,6 @@ video {
     -webkit-mask: var(--mask);
     mask: var(--mask);
 }
-
 .icon_knife, .icon_card, .icon_stars {
     margin: auto;
     display: flex;
@@ -169,31 +157,25 @@ video {
     height: 64px;
     background-size: auto 100%;
 }
-
 .icon_knife {
     background-image: url(img/knifes.png);
 }
-
 .icon_card {
     background-image: url("img/card.png");
-
 }
-
 .icon_stars {
     background-image: url("img/stars.png");
 }
-
 .icon_left, .icon_center, .icon_right {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/*Block about new food*/
+/*block about new food*/
 .container_3 {
     background-color: var(--light-gray);
 }
-
 .child_container_3 {
     display: flex;
     flex-wrap: wrap;
@@ -201,22 +183,19 @@ video {
     align-items: center;
     margin-inline: auto;
 }
-
 .img_first, .img_second, .img_third, .img_fourth {
     width: 20em;
 }
-
 .icon_angle {
     font-size: clamp(1.725rem, 3vw, 3rem);
     position: relative;
     inset: -4rem auto auto 0;
 }
-
 .block_align {
     text-align: center;
 }
 
-/*Button "Add in basket"*/
+/*button "Add in basket"*/
 .price {
     position: relative;
     background-color: transparent;
@@ -227,7 +206,6 @@ video {
     letter-spacing: 1px;
     margin-bottom: 1em;
 }
-
 .price:before {
     content: attr(data-front);
     opacity: 1;
@@ -235,7 +213,6 @@ video {
     transition: 0.5s;
     transform: translateY(0) rotate(0);
 }
-
 .price:after {
     content: attr(data-back);
     background-color: var(--blue-magenta);
@@ -249,22 +226,19 @@ video {
     transition: 0.5s;
     transform: translateY(0) rotate(0);
 }
-
 .price:hover::before {
     opacity: 0;
     transform: translateY(0) rotate(0);
 }
-
 .price:hover::after {
     opacity: 1;
     transform: translateY(0) rotate(0);
 }
-
 .price:hover::before, .price:hover::after {
     cursor: pointer;
 }
 
-/*Reserve table*/
+/*reserve table*/
 .main_container {
     background-image: url("img/bg_img.jpg");
     background-repeat: no-repeat;
@@ -274,25 +248,24 @@ video {
     justify-content: space-around;
     align-items: center;
 }
-
 .container_4 {
     position: relative;
-    left: 13vw;
-    top: 2vw;
+    inset: 1em auto auto 10em;
 }
-
 .reserve_table {
-    margin-bottom: 25px;
+    margin: 0 0 2em 6em;
 }
 
-/*Calendar*/
-
+/*calendar*/
+.wrap_container_5 {
+    width: 50em;
+}
 .calendar {
-    width: 40rem;
+    width: 80%;
     background-color: rgb(244 244 244);
-    padding: 1em 2em 4em 2em;
+    padding: 1em 2em 3em 2em;
+    margin: 0 auto;
 }
-
 .calendar_info {
     color: var(--dark-gray);
     font-size: 1.125rem;
@@ -300,18 +273,15 @@ video {
     padding: 0;
     margin: 0 0 20px 0;
 }
-
 strong {
     color: var(--medium-gray);
     font-weight: 500;
 }
-
 .hr_calendar {
     width: 100%;
     border: 1px solid var(--very-light-gray);
     margin: 10px auto;
 }
-
 .click {
     float: right;
     background-color: var(--light-brown);
@@ -320,7 +290,6 @@ strong {
     border-radius: 4px;
     padding: 12px 30px;
 }
-
 .calendar_child {
     width: 100%;
     background-color: var(--white);
@@ -328,54 +297,46 @@ strong {
     border-radius: 4px;
     padding: 0 0.2em 1.5em 0.2em;
 }
-
 .month {
     width: 100%;
     text-align: center;
     padding: 1vw;
 }
-
 .icon_month.fa{
     position: relative;
     padding: 0 4vw;
     font-size: 25px;
 }
-
 .date {
     font-size: 1.1em;
     text-align: center;
 }
-
 .weekdays {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     border: 0;
 }
-
 .days {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .days div {
     border: 1px dotted var(--chinese-silver);
 }
-
 .weekdays div, .days div {
     display: flex;
     justify-content: center;
-    width: calc(34.2rem/7);
+    width: calc(42.2rem/7);
     padding: 0.7em 0.3em;
     margin: 2px 0;
 }
-
 .fas {
     width: 25px;
 }
 
-/*Footer*/
+/*footer*/
 .footer_1 {
     background-color: var(--gray);
     color: var(--white);
@@ -385,7 +346,6 @@ strong {
     -webkit-mask: var(--mask);
     mask: var(--mask);
 }
-
 .child_footer_1 {
     display: flex;
     flex-wrap: wrap;
@@ -394,11 +354,9 @@ strong {
     align-content: center;
     gap: 1em;
 }
-
 .wrap_footer_1 {
     min-width: 20em;
 }
-
 .icon_operator {
     background-image: url("img/operator.png");
     background-size: auto 100%;
@@ -406,33 +364,27 @@ strong {
     width: 3.5em;
     height: 3.5em;
 }
-
 .info_text a {
     text-decoration: none;
     color: rgba(255,255,255,0.6);
 }
-
 .info_text p, .main_info p, .copy {
     font-size: clamp(0.800rem, 1vw, 0.875rem);
     line-height: 2;
     word-spacing: 2px;
     font-weight: lighter;
 }
-
 .info_text p {
     color: var(--light-brown);
 }
-
 .main_info p, .copy {
     color: rgba(255,255,255,0.6);
 }
-
 .input_container {
     width: 100%;
     border: none;
     line-height: 3.7;
 }
-
 input[type="email"] {
     border-radius: 4px;
     background-color: rgba(255,255,255,0.05);
@@ -440,11 +392,9 @@ input[type="email"] {
     width: 20em;
     padding: 13px 15px;
 }
-
 input[type="email"]:focus {
     outline: 1px solid var(--light-brown);
 }
-
 .button_submit {
     background-color: var(--light-brown);
     color: var(--chinese-silver);
@@ -454,19 +404,16 @@ input[type="email"]:focus {
     top: 0;
     padding: 13px 15px;
 }
-
 .button_submit:hover {
     cursor: pointer;
 }
-
 ::placeholder {
     font-size: 0.800rem;
     letter-spacing: 0.1vw;
     color: var(--light-brown);
 }
 
-/* Change Autocomplete styles in Chrome*/
-
+/*change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
@@ -475,13 +422,11 @@ input:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
     caret-color: var(--chinese-silver);
 }
-
 .hr_footer {
     border: 1px solid var(--light-brown);
     width: 80%;
     margin: 2em auto 0;
 }
-
 .child_footer_2 {
     display: flex;
     flex-direction: row;
@@ -491,18 +436,16 @@ input:-webkit-autofill:focus {
     padding: 40px 0 40px 0;
     margin: 0 10vw;
 }
-
 .icon_media {
     font-size: 25px;
 }
-
 .decor_footer a {
     text-decoration: none;
     color: var(--blue-magenta);
     padding: 5px 15px;
 }
 
-/*Home page on phone and table*/
+/*home page on phone and table*/
 .home_page {
     display: block;
     width: 100%;
@@ -510,27 +453,21 @@ input:-webkit-autofill:focus {
     opacity: 0.9;
     z-index: -1;
 }
-
 .child_header_2 {
     display: none;
 }
-
 .nav_header_2 ul {
     list-style-type: none;
 }
-
 .decor_header_2 li {
     float: left;
 }
-
 .icon_search {
     padding-left: 2vw;
 }
-
 img.web_logo {
     margin: auto;
 }
-
 .items {
     position: relative;
     right: 15px;
@@ -542,7 +479,16 @@ img.web_logo {
     padding: 0 4px;
     font-size: 10px;
 }
-
+/*none display of the img/shef.png and angle's icons, add margin in calendar*/
+@media all and (max-width:1600px) {
+    .container_4, .icon_angle {
+        display: none;
+    }
+    .calendar {
+        margin: 0 auto 1.5em;
+    }
+}
+/*none display of video and replaced it on img*/
 @media all and (max-width: 974px) {
     video, .child_header_1, .text_hide, .icon_operator {
         display: none;
@@ -567,12 +513,14 @@ img.web_logo {
     }
     .title_app {
         text-align: center;
+        text-indent: 0;
     }
     .price {
         line-height: 2em;
     }
 }
 
+/*resize of video*/
 @media all and (min-width: 975px) {
     video {
         width: 100%;
@@ -586,6 +534,7 @@ img.web_logo {
     }
 }
 
+/*app screen for orientation landscape*/
 @media all and (max-width: 974px) and (orientation: landscape) {
     .home_page {
         background-image: url("img/slide_home.jpg");
@@ -602,7 +551,7 @@ img.web_logo {
     }
 }
 
-/*NavBar for App*/
+/*navbar for app*/
 @media all and (max-width:991px) {
     .nav {
         display: none;
@@ -637,16 +586,6 @@ img.web_logo {
         min-width: 15em;
     }
 }
-
-@media all and (max-width:1600px) {
-    .container_4, .icon_angle {
-        display: none;
-    }
-    .main_container {
-        padding: 3em;
-    }
-}
-
 @media screen and (max-width:475px) {
     .child_footer_1, .child_footer_2 {
         display: block;
@@ -657,19 +596,42 @@ img.web_logo {
         text-align: center;
     }
 }
-
-/*@media all and (max-width: 375px){
-    .child_footer_1 {
-        display: block;
+/*calendar*/
+@media all and (min-device-width: 800px) {
+    .wrap_container_5 {
+        width: 50em;
     }
-}*/
-
-/*@media all and (max-width: 725px) {
-    .calendar {
-        width: 22rem;
-    }
-
     .weekdays div, .days div {
-        width: calc(19.2rem / 7);
+        width: calc(35.2rem/7);
     }
-}*/
+}
+@media all and (max-width: 475px) {
+    .wrap_container_5 {
+        width: auto;
+    }
+    .calendar {
+        width: 100%;
+        padding: 1em 1em 3em 1em;
+    }
+    .weekdays {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .weekdays div {
+        width: inherit;
+    }
+    .days div {
+        width: calc(21.2rem/7);
+    }
+}
+@media all and (max-width: 360px)  {
+    .days div {
+        width: calc(19.4rem/7);
+    }
+}
+@media all and (max-height: 360px) and (orientation: landscape) {
+    .weekdays div, .days div {
+        width: calc(32.2rem/7);
+    }
+}
+
