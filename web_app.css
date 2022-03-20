@@ -12,6 +12,7 @@
     --chinese-silver: #ccc;
     --green-cyan: #111514;
     --black-magic: #000;
+    --mercury: #e8e8e8;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
     sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -260,13 +261,13 @@ video {
 .wrap_container_5 {
     width: 50em;
 }
-.calendar {
+.calendar, .time {
     width: 80%;
     background-color: rgb(244 244 244);
     padding: 1em 2em 3em 2em;
     margin: 0 auto;
 }
-.calendar_info {
+.calendar_info, .time_info {
     color: var(--dark-gray);
     font-size: 1.125rem;
     font-weight: 500;
@@ -282,6 +283,17 @@ strong {
     border: 1px solid var(--very-light-gray);
     margin: 10px auto;
 }
+.bottom_position{
+    float: right;
+}
+.click_prev {
+    background-color: var(--mercury);
+    color: var(--black-magic);
+    border: 1px solid var(--mercury);
+    border-radius: 4px;
+    padding: 12px 30px;
+    margin-right: 0.25em;
+}
 .click {
     float: right;
     background-color: var(--light-brown);
@@ -290,14 +302,17 @@ strong {
     border-radius: 4px;
     padding: 12px 30px;
 }
-.calendar_child {
+.calendar_child, .time_child {
     width: 100%;
     background-color: var(--white);
     border: 1px solid var(--chinese-silver);
     border-radius: 4px;
     padding: 0 0.2em 1.5em 0.2em;
 }
-.month {
+.gap_time {
+    margin-bottom: 1em;
+}
+.month, .title_time {
     width: 100%;
     text-align: center;
     padding: 1vw;
@@ -305,10 +320,15 @@ strong {
 .icon_month.fa{
     position: relative;
     padding: 0 4vw;
-    font-size: 25px;
+    font-size: 18px;
 }
 .date {
     font-size: 1.1em;
+    text-align: center;
+}
+.title_text{
+    font-size: 1rem;
+    text-transform: uppercase;
     text-align: center;
 }
 .weekdays {
@@ -322,8 +342,20 @@ strong {
     flex-wrap: wrap;
     justify-content: center;
 }
-.days div {
+.days div, .main_time div {
     border: 1px dotted var(--chinese-silver);
+}
+.main_time {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto 2em;
+}
+.main_time div {
+    width: 23.5%;
+    text-align: center;
+    padding: 0.7em 1em;
+    margin: 2px;
 }
 .weekdays div, .days div {
     display: flex;
@@ -484,7 +516,7 @@ img.web_logo {
     .container_4, .icon_angle {
         display: none;
     }
-    .calendar {
+    .calendar, .time {
         margin: 0 auto 1.5em;
     }
 }
@@ -609,7 +641,7 @@ img.web_logo {
     .wrap_container_5 {
         width: auto;
     }
-    .calendar {
+    .calendar, .time {
         width: 100%;
         padding: 1em 1em 3em 1em;
     }
@@ -623,10 +655,22 @@ img.web_logo {
     .days div {
         width: calc(21.2rem/7);
     }
+    .main_time {
+        margin: 0.5em;
+    }
+    .time_child {
+        padding: 0 0.2em 0.5em 0.2em;
+    }
+    .title_time, .month {
+        padding-top: 0.5em;
+    }
 }
 @media all and (max-width: 360px)  {
     .days div {
         width: calc(19.4rem/7);
+    }
+    .main_time div {
+        width: 48%;
     }
 }
 @media all and (max-height: 360px) and (orientation: landscape) {
