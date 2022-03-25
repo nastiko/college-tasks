@@ -13,29 +13,30 @@
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Web Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 <header>
-    <div class="header_1">
+    <div class="header-video">
         <video autoplay muted loop>
             <source src="video/video.mp4" type="video/mp4">
         </video>
-        <div class="home_page"></div>
+        <div class="bg-app"></div>
     </div>
-    <div class="child_header_1">
-        <div class="logo_header_1">
-            <img class="web_logo" src="img/logo.png" alt="logo">
+    <div class="nav-scroll">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo">
         </div>
-        <nav class="nav">
-            <ul class="decor">
+        <nav class="nav-web">
+            <ul>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Log in / Subscribe</a></li>
                 <li><a href="#">Basket</a></li>
             </ul>
         </nav>
     </div>
-    <div class="child_header_2 ">
-        <div class="icon_menu icon_content">
+    <div class="nav-app">
+        <div class="icon-menu">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                  width="30" height="30"
                  viewBox="0 0 172 172"
@@ -51,12 +52,12 @@
                 </g>
             </svg>
         </div>
-        <div class="logo_header_2">
-            <img class="web_logo" src="img/logo.png" alt="logo">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo">
         </div>
         <nav class="nav_header_2">
             <ul class="decor_header_2">
-                <li class="icon_search icon_content">
+                <li class="icon-search">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                              width="30" height="30"
@@ -153,7 +154,7 @@
     </div>
     <div class="container_3">
         <h2 class="title_h2 title_app">Try something new!</h2>
-        <div class="child_container_3">
+        <div class="product_slider">
             <div class="icon_angle">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                      width="2rem" height="2rem"
@@ -173,24 +174,19 @@
                 </svg>
             </div>
             <div class="block_align">
-                <img class="img_first" src="img/try_pizza.jpg" alt="Pizza">
-                <h4 class="title_h4">Rustica Chicken & Fiery Roquito</h4>
+                <img src="img/try_pizza.jpg" alt="Pizza">
+                <h4>Rustica Chicken & Fiery Roquito</h4>
                 <button class="price" type="button" data-front="£9.5" data-back="+"></button>
             </div>
             <div class="block_align">
-                <img class="img_second" src="img/try_pasta.jpg" alt="Pasta">
-                <h4 class="title_h4">King Prawn Linguine</h4>
+                <img src="img/try_pasta.jpg" alt="Pasta">
+                <h4>King Prawn Linguine</h4>
                 <button class="price" type="button" data-front="£12.5" data-back="+"></button>
             </div>
             <div class="block_align">
-                <img class="img_third" src="img/try_sweet.png" alt="Sweet">
-                <h4 class="title_h4">Giant S'mores Fondue</h4>
+                <img src="img/try_sweet.png" alt="Sweet">
+                <h4>Giant S'mores Fondue</h4>
                 <button class="price" type="button" data-front="£7.5" data-back="+"></button>
-            </div>
-            <div class="block_align">
-                <img class="img_fourth" src="img/try_brownie.jpg" alt="Brownie">
-                <h4 class="title_h4">Salted Caramel Chocolate Brownie</h4>
-                <button class="price" type="button" data-front="£4.5" data-back="+"></button>
             </div>
             <div class="icon_angle">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -210,126 +206,132 @@
                     </g>
                 </svg>
             </div>
+            <div class="block_align img_hided">
+                <img src="img/try_brownie.jpg" alt="Brownie">
+                <h4>Salted Caramel Chocolate Brownie</h4>
+                <button class="price" type="button" data-front="£4.5" data-back="+"></button>
+            </div>
         </div>
     </div>
-    <div class="main_container">
+    <div class="reserve_table">
         <div class="container_4">
             <img src="img/chef.png" alt="Chef">
         </div>
-        <div class="wrap_container_5">
-            <div class="container_5">
-                <div class="reserve_table">
-                    <h3 class="title_h3">Reserve a table</h3>
-                    <p class="text_p">or Calls us at 0125 36584258</p>
-                </div>
+        <div class="block">
+            <div class="title">
+                <h3>Reserve a table</h3>
+                <p>or Calls us at 0125 36584258</p>
             </div>
-            <div class="calendar">
-                <div class="calendar_info">
-                    <strong>1/3</strong>
-                    Please Select a date
-                </div>
-                <div class="calendar_child">
-                    <div class="month">
-                        <i class="icon_month fa">&#xf104;</i>
-                        <span class="date">March 2022</span>
-                        <i class="icon_month fa">&#xf105;</i>
+            <div class="form">
+                <div class="form-block calendar show">
+                    <div class="calendar_info">
+                        <strong>1/3</strong>
+                        Please Select a date
                     </div>
-                    <div class="weekdays">
-                        <div>Sun</div>
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thu</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
+                    <div class="calendar_child">
+                        <div class="month">
+                            <i class="icon_month fa">&#xf104;</i>
+                            <span class="date">March 2022</span>
+                            <i class="icon_month fa">&#xf105;</i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days">
+                            <div class="prev_date">26</div>
+                            <div class="prev_date">27</div>
+                            <div class="prev_date">28</div>
+                            <div class="prev_date">29</div>
+                            <div class="prev_date">30</div>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                            <div>11</div>
+                            <div>12</div>
+                            <div>13</div>
+                            <div>14</div>
+                            <div>15</div>
+                            <div>16</div>
+                            <div>17</div>
+                            <div>18</div>
+                            <div>19</div>
+                            <div>20</div>
+                            <div>21</div>
+                            <div>22</div>
+                            <div>23</div>
+                            <div>24</div>
+                            <div>25</div>
+                            <div>26</div>
+                            <div>27</div>
+                            <div>28</div>
+                            <div>29</div>
+                            <div>30</div>
+                            <div>31</div>
+                            <div class="next_date">1</div>
+                            <div class="prev_date">2</div>
+                            <div class="prev_date">3</div>
+                            <div class="prev_date">4</div>
+                            <div class="prev_date">5</div>
+                            <div class="prev_date">6</div>
+                        </div>
                     </div>
-                    <div class="days">
-                        <div class="prev_date">26</div>
-                        <div class="prev_date">27</div>
-                        <div class="prev_date">28</div>
-                        <div class="prev_date">29</div>
-                        <div class="prev_date">30</div>
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
-                        <div>10</div>
-                        <div>11</div>
-                        <div>12</div>
-                        <div>13</div>
-                        <div>14</div>
-                        <div>15</div>
-                        <div>16</div>
-                        <div>17</div>
-                        <div>18</div>
-                        <div>19</div>
-                        <div>20</div>
-                        <div>21</div>
-                        <div>22</div>
-                        <div>23</div>
-                        <div>24</div>
-                        <div>25</div>
-                        <div>26</div>
-                        <div>27</div>
-                        <div>28</div>
-                        <div>29</div>
-                        <div>30</div>
-                        <div>31</div>
-                        <div class="next_date">1</div>
-                        <div class="prev_date">2</div>
-                        <div class="prev_date">3</div>
-                        <div class="prev_date">4</div>
-                        <div class="prev_date">5</div>
-                        <div class="prev_date">6</div>
-                    </div>
-                </div>
-                <hr class="hr_calendar">
-                <button class="click" type="button">Next</button>
-            </div>
-            <div class="time">
-                <div class="time_info">
-                    <strong>2/3</strong>
-                    Select time and guests
-                </div>
-                <div class="time_child gap_time">
-                    <div class="title_time">
-                        <span class="title_text">Time</span>
-                    </div>
-                    <div class="main_time">
-                        <div>12.00</div>
-                        <div>12.30</div>
-                        <div>1.00</div>
-                        <div>1.30</div>
-                        <div>8.00</div>
-                        <div>8.30</div>
-                        <div>9.00</div>
-                        <div>9.30</div>
+                    <hr class="hr_calendar">
+                    <div class="nav-buttons">
+                        <button class="next reserve-table-step-next" type="button">Next</button>
                     </div>
                 </div>
-                <div class="time_child">
-                    <div class="title_time">
-                        <span class="title_text">How many people?</span>
+                <div class="form-block time">
+                    <div class="time_info">
+                        <strong>2/3</strong>
+                        Select time and guests
                     </div>
-                    <div class="main_time">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>+4</div>
+                    <div class="time_child gap_time">
+                        <div class="title_time">
+                            <span class="title_text">Time</span>
+                        </div>
+                        <div class="main_time">
+                            <div>12.00</div>
+                            <div>12.30</div>
+                            <div>1.00</div>
+                            <div>1.30</div>
+                            <div>8.00</div>
+                            <div>8.30</div>
+                            <div>9.00</div>
+                            <div>9.30</div>
+                        </div>
                     </div>
-                </div>
-                <hr class="hr_calendar">
-                <div class="bottom_position">
-                    <button class="click_prev" type="button">Prev</button>
-                    <button class="click" type="button">Next</button>
+                    <div class="time_child">
+                        <div class="title_time">
+                            <span class="title_text">How many people?</span>
+                        </div>
+                        <div class="main_time">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>+4</div>
+                        </div>
+                    </div>
+                    <hr class="hr_calendar">
+                    <div class="nav-buttons">
+                        <button class="prev" type="button">Prev</button>
+                        <button class="next" type="button">Next</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </main>
 <footer class="footer_1">
