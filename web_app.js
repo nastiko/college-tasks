@@ -5,14 +5,11 @@ $('.nav-buttons .next').click(function () {
     if (elNext && elNext.length) {
         elNow.removeClass("show");
         elNext.addClass("show");
-        $('.calendar_info strong').html(`${++currentStep}/3`);
+        $('.calendar-info strong').html(`${++currentStep}/3`);
     } else {
         $(this).prop('disabled', true);
     }
 });
-
-
-
 
 
 
