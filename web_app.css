@@ -1,51 +1,8 @@
-:root {
-    --white: #fff;
-    --light-gray: #fafafa;
-    --dark-orange: #534D44;
-    --blue-magenta: #323237;
-    --magenta: #d2d2d3;
-    --light-brown: #b4a895;
-    --dark-gray: #222;
-    --gray: #2b2b2b;
-    --medium-gray: #999;
-    --very-light-gray: #ededed;
-    --chinese-silver: #ccc;
-    --green-cyan: #111514;
-    --black-magic: #000;
-    --mercury: #e8e8e8;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
-    sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
-
-html {
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
 body {
     font-family: var(--font-family-sans-serif);
     font-weight: 400;
     background-color: var(--white);
 }
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-
-/*text*/
-h1, h2, h3, h4, h5, p {
-    line-height: 1.2;
-    font-weight: 500;
-}
-
 
 /*navbar for Web*/
 .nav-web {
@@ -397,7 +354,7 @@ strong {
     padding: 0.5vw;
     margin-bottom: 1em;
 }
-form .contact {
+form .contact-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -406,7 +363,7 @@ form input:focus, textarea:focus {
     border: 2px solid var(--light-brown);
     outline: none;
 }
-.contact-email, .contact-phone {
+.expiration-date, .contact-phone {
     width: 48%;
 }
 .gap-time {
@@ -557,6 +514,9 @@ input:-webkit-autofill:focus {
 .search-items li {
     float: left;
 }
+.search-items li a {
+    text-decoration: none;
+}
 .search-items strong {
     position: relative;
     right: 25px;
@@ -575,7 +535,7 @@ input:-webkit-autofill:focus {
     .reserve-table img, .icon-angle {
         display: none;
     }
-    .calendar, .time {
+    .calendar, .time, .submit-form {
         margin: 0 auto 1.5em;
     }
 }
@@ -694,6 +654,9 @@ input:-webkit-autofill:focus {
         padding: 2em 0;
         text-align: center;
     }
+    .info-contact h4 {
+        margin: 6vw 0 1vw 0;
+    }
 }
 
 
@@ -710,7 +673,7 @@ input:-webkit-autofill:focus {
     .reserve-table .block {
         width: auto;
     }
-    .calendar, .time {
+    .calendar, .time, .submit-form  {
         width: 100%;
         padding: 1em 1em 3em 1em;
     }
