@@ -259,10 +259,10 @@ video {
     font-weight: 400;
     margin: 0 0 0 0.2vw;
 }
-.reserve-table .block .form-block.show {
+.reserve-table .block .form-block.show, .reserve-table .submit-form .submit {
     display: inherit;
 }
-.reserve-table .block .form-block {
+.reserve-table .block .form-block, .reserve-table .submit-form  {
     display: none;
 }
 .calendar, .time, .submit-form {
@@ -298,7 +298,7 @@ strong {
     padding: 12px 30px;
     margin-right: 0.25em;
 }
-.nav-buttons .next {
+.nav-buttons .next, .nav-buttons .submit {
     float: right;
     background-color: var(--light-brown);
     color: var(--white);
@@ -306,17 +306,10 @@ strong {
     border-radius: 4px;
     padding: 12px 30px;
 }
-.nav-buttons .next:hover {
-    cursor: pointer;
+.nav-buttons .next:hover, .nav-buttons .submit:hover, .nav-buttons .prev:hover  {
     background: var(--dark-gray);
     color: var(--white);
-}
-.nav-buttons button:disabled {
-    background-color: var(--very-light-gray);
-}
-.nav-buttons button:disabled:hover {
-    cursor: auto;
-    background-color: var(--very-light-gray);
+    cursor: pointer;
 }
 .calendar-child, .time-child, .submit-form input, .subject textarea {
     width: 100%;
@@ -356,8 +349,19 @@ strong {
     flex-wrap: wrap;
     justify-content: center;
 }
+.days div:hover {
+    background-color: var(--light-brown);
+}
+
+/*.days div:focus {
+    background-color: var(--light-brown);
+    color: white;
+}*/
 .days div, .select-condition div {
     border: 1px dotted var(--chinese-silver);
+}
+.prev-date, .next-date {
+    opacity: .35;
 }
 .select-condition {
     display: flex;
@@ -384,13 +388,13 @@ strong {
 .subject textarea {
     font-family: var(--font-family-sans-serif);
     font-size:1rem;
-    padding: 0.7vw;
+    padding: 0.5vw;
     resize: vertical;
 }
 .submit-form input {
     font-family: var(--font-family-sans-serif);
     font-size: 1rem;
-    padding: 0.7vw;
+    padding: 0.5vw;
     margin-bottom: 1em;
 }
 form .contact {
@@ -408,8 +412,16 @@ form input:focus, textarea:focus {
 .gap-time {
     margin-bottom: 1em;
 }
-.confirm-policy {
+.confirm-policy input {
+    margin: 1em 0.5em auto 0;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.1em;
+}
+.confirm-policy p {
     display: inline-block;
+    font-weight: 400;
 }
 
 
@@ -515,7 +527,7 @@ input:-webkit-autofill:focus {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0 40px 0;
+    padding: 20px 0 20px 0;
     margin: 0 10vw;
 }
 .icon-media {
