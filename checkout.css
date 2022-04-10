@@ -91,7 +91,7 @@ main.pattern {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 1280px !important;
+    width: 65%;
     margin: 0 auto;
 }
 .main-container .boxes-forms {
@@ -106,17 +106,6 @@ main.pattern {
 .main-container .box-booking {
     margin-bottom: 3em;
 }
-.main-container .box-order {
-    min-width: 30%;
-    border: 1px solid black;
-    margin: 5em 0;
-}
-.aside-block {
-    border: 1px solid red;
-    width: 80%;
-    margin: 0 auto;
-}
-
 .details h3 {
     background-color: var(--light-brown);
     color: var(--white);
@@ -216,8 +205,80 @@ form input:focus {
     margin-bottom: 1em;
 }
 
+/*aside*/
+.main-container .box-order {
+    min-width: 30%;
+    margin: 5em 0;
+}
+.aside-block {
+    border: 1px dotted var(--medium-gray);
+    background-color: var(--white);
+    position: sticky;
+    top: 9em;
+}
+.order-block div h2 {
+    background-color: var(--shade-gray);
+    text-align: center;
+    border-bottom: 1px dotted var(--medium-gray);
+    padding: 23px 20px 18px 20px;
+}
+.order-block .order-items {
+    width: 90%;
+    font-size: 0.875rem;
+    margin: 0 auto;
+}
+.box-order .order-block div ul {
+    list-style-type: none;
+    line-height: 1.5;
+}
+.order-items ul li {
+    margin: 1em;
+}
+.order-items ul li a {
+    text-decoration: none;
+    color: var(--black-magic);
+}
+.box-order .order-block div ul li a img {
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+.box-order .order-block div ul li span {
+    float: right;
+    font-weight: 500;
+}
+.order-items .subtotal-items {
+    margin-top: 2em;
+}
+
+.subtotal-items .special-style {
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    margin: 0.8em;
+    font-weight: 600;
+}
+.special-style span {
+    font-weight: 600!important;
+}
+.order-items button {
+    display: block;
+    width: 90%;
+    color: var(--white);
+    background-color: var(--light-brown);
+    border-radius: 5px;
+    padding: 12px;
+    margin: 0 auto;
+}
+.order-items small {
+    display: block;
+    margin: 1em 0;
+    text-align: center;
+}
+
+
 /*footer*/
 .frame {
+    font-family: var(--font-family-sans-serif);
     background-color: var(--gray);
     color: var(--white);
     --mask:
@@ -335,21 +396,12 @@ input:-webkit-autofill:focus {
     }
 }
 
-
-/*none display of video and replaced it on img*/
-@media all and (max-width: 974px) {
-    .nav-scroll, .icon-operator {
-        display: none;
-    }
-    .nav-app {
-        background-color: #fff;
-        border-bottom: 1px solid #ededed;
-    }
-}
-
 /*navbar for app*/
 @media all and (max-width: 991px) {
     .nav-web {
+        display: none;
+    }
+    .nav-scroll, .icon-operator {
         display: none;
     }
     .nav-app {
@@ -358,6 +410,8 @@ input:-webkit-autofill:focus {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid #ededed;
     }
     .nav-app .menu {
         padding: 2vw;
@@ -377,6 +431,23 @@ input:-webkit-autofill:focus {
     }
     .fill-form .col-50_expire {
         width: 100%;
+    }
+    .main-container .boxes-forms {
+        width: 100%;
+        margin: 2em 0;
+    }
+    .pattern .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .main-container .box-order {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .main-container .aside-block {
+        margin-bottom: 2em;
     }
 }
 @media screen and (max-width:475px) {
