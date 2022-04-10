@@ -105,14 +105,18 @@
                 </div>
             </div>
         </form>
-        <form class="submit-form" action="#">
+    </div>
+    <div class="details">
+        <form class="submit-form payment-area" action="#">
             <div>
                 <h3>Payment Method</h3>
             </div>
             <div class="confirm-payment">
-                <input type="radio" name="terms" value="Yes">
-                <p>Credit Card</p>
-                <img src="img/credit_card.png" alt="credit_card">
+                <label>
+                    <input type="radio" name="terms" value="Yes">
+                    <img src="img/credit_card.png" alt="credit_card">
+                    Credit Card
+                </label>
             </div>
             <div class="fill-form">
                 <div>
@@ -139,7 +143,65 @@
                     </div>
                 </div>
             </div>
+            <div class="confirm-payment pay-paypal">
+                <label>
+                    <input type="radio" name="terms" value="Yes">
+                    <img src="img/icon_paypal.png" alt="icon_paypal">
+                    Pay with Paypal
+                </label>
+            </div>
+            <div class="confirm-payment">
+                <label>
+                    <input type="radio" name="terms" value="Yes">
+                    <img src="img/icons_wallet.png" alt="icon_wallet">
+                    Pay with Cash
+                </label>
+            </div>
         </form>
+    </div>
+    <div class="aside-block">
+        <div class="order-block">
+            <div>
+                <h2>Order Summary</h2>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">1x Enchilados</a>
+                        <span>£11</span>
+                    </li>
+                    <li>
+                        <a href="#">2x Burito</a>
+                        <span>£14</span>
+                    </li>
+                    <li>
+                        <a href="#">1x Chicken</a>
+                        <span>£18</span>
+                    </li>
+                    <li>
+                        <a href="#">2x Corona Beer</a>
+                        <span>£9</span>
+                    </li>
+                    <li>
+                        <a href="#">2x Cheese Cake</a>
+                        <span>£11</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Subtotal
+                        <span>£56</span>
+                    </li>
+                    <li>Delivery fee
+                        <span>£5</span>
+                    </li>
+                    <li>Total
+                        <span>£61</span>
+                    </li>
+                </ul>
+                <button>Order Now</button>
+                <small>Or Call Us at 0125 365 8425</small>
+            </div>
+        </div>
     </div>
 </main>
 <footer class="frame">

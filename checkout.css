@@ -88,7 +88,7 @@ body {
 .details {
     width: 33%;
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
-    margin: 3em auto;
+    margin: 3em;
 }
 
 .details h3 {
@@ -101,12 +101,16 @@ body {
 }
 .details label {
     font-size: 0.875rem;
+    font-weight: 500;
     color: var(--gray);
     padding-left: 0.5em;
 }
 .submit-form {
     background-color: var(--white);
     margin: 0 auto;
+}
+.submit-form.payment-area {
+    padding: 0 0 2em 0;
 }
 .submit-form input {
     width: 100%;
@@ -131,9 +135,13 @@ body {
     bottom: 5px;
     right: 10px;
 }
+.confirm-payment label {
+    font-size: 0.875rem;
+    font-weight:500;
+    vertical-align: top;
+}
 .confirm-payment input[type="radio"] {
     margin: 0 10px;
-    vertical-align: text-top;
 }
 .confirm-payment input {
     margin: 1em 0.5em auto 0;
@@ -142,13 +150,11 @@ body {
     position: relative;
     top: 0.1em;
 }
-.confirm-payment p {
-    display: inline-block;
-    font-size: 0.875rem;
-    vertical-align: text-top;
+.confirm-payment.pay-paypal {
+    margin: 0 2em;
 }
 .submit-form .fill-form {
-    padding: 1em 2em 2em 2em;
+    padding: 1em 2em 1em 2em;
 }
 form .contact-card {
     display: flex;
@@ -169,12 +175,6 @@ form input:focus {
 .col-50_expire label {
     padding-bottom: 2px;
 }
-.col-50_expire label:nth-child(1) {
-    margin-right: 12px;
-}
-.col-50_expire .field-form input:nth-child(1) {
-    margin-right: 12px;
-}
 .col-50_expire .field-form input {
     display: inline-block;
     width: 40%;
@@ -186,27 +186,21 @@ form input:focus {
 .fill-form span {
     font-size: 0.7rem;
 }
-/*.label-info label {
-    display: inline-block;
-}
-.fill-form .expiration-date {
-    display: flex;
-    justify-content: space-between;
-}
-.col-50_expire {
-    width: 35%;*/
-/*.expiration-date input {
-    width: 100%;
-}
-.ccv-code input {
-    width: 32%;
-    text-align: center;
-}*/
 .gap-time {
     margin-bottom: 1em;
 }
 
+/*aside*/
+.aside-block {
+    border: 1px solid red;
+    min-width: 680px;
+    height: 680px;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    min-height: 1px;
 
+}
 /*footer*/
 .frame {
     background-color: var(--gray);
@@ -361,6 +355,13 @@ input:-webkit-autofill:focus {
     }
     .help-contact {
         min-width: 15em;
+    }
+    .details {
+        width: 100%;
+        margin: 3em auto;
+    }
+    .fill-form .col-50_expire {
+        width: 100%;
     }
 }
 @media screen and (max-width:475px) {
