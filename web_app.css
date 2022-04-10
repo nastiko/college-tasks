@@ -363,7 +363,11 @@ form input:focus, textarea:focus {
     border: 2px solid var(--light-brown);
     outline: none;
 }
-.expiration-date, .contact-phone {
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+.expiration-date, .contact-email, .contact-phone {
     width: 48%;
 }
 .gap-time {
