@@ -68,138 +68,144 @@
         </nav>
     </div>
 </header>
-<main>
-    <div class="details">
-        <form class="submit-form" action="#">
-            <div>
-                <h3>Personal Details</h3>
-            </div>
-            <div class="fill-form">
-                <div>
-                    <label>First and Last Name</label>
-                    <input type="text" name="First and Last Name" placeholder="First and Last Name">
-                </div>
-                <div class="contact-card">
+<main class="pattern">
+    <div class="main-container">
+        <div class="boxes-forms">
+            <div class="details box-booking">
+                <form class="submit-form" action="#">
                     <div>
-                        <label>Your Email</label>
-                        <input type="email" name="Your Email" placeholder="Your Email">
+                        <h3>Personal Details</h3>
+                    </div>
+                    <div class="fill-form">
+                        <div>
+                            <label>First and Last Name</label>
+                            <input type="text" name="First and Last Name" placeholder="First and Last Name">
+                        </div>
+                        <div class="contact-card">
+                            <div>
+                                <label>Your Email</label>
+                                <input type="email" name="Your Email" placeholder="Your Email">
+                            </div>
+                            <div>
+                                <label>Phone</label>
+                                <input type="tel" name="Phone" placeholder="(+44)">
+                            </div>
+                        </div>
+                        <div class="contact-address">
+                            <label>Full Address</label>
+                            <input type="text" name="Full Address" placeholder="Full Address">
+                        </div>
+                        <div class="contact-card">
+                            <div>
+                                <label>City</label>
+                                <input type="text" name="City" placeholder="City">
+                            </div>
+                            <div>
+                                <label>Postcode</label>
+                                <input type="text" name="Postcode" placeholder="BH0 0TY">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="details">
+                <form class="submit-form payment-area" action="#">
+                    <div>
+                        <h3>Payment Method</h3>
+                    </div>
+                    <div class="confirm-payment">
+                        <label>
+                            <input type="radio" name="terms" value="Yes">
+                            <img src="img/credit_card.png" alt="credit_card">
+                            Credit Card
+                        </label>
+                    </div>
+                    <div class="fill-form">
+                        <div>
+                            <label>Name on card</label>
+                            <input type="text" name="First and Last Name" placeholder="First and Last Name">
+                        </div>
+                        <div>
+                            <label>Card number</label>
+                            <input type="text" name="Card number" placeholder="Card number">
+                        </div>
+                        <div class="col-50_expire">
+                            <label>Expiration date</label>
+                            <div class="field-form">
+                                <input type="text" name="Expiration date" placeholder="mm">
+                                <input type="text" name="Expiration date" placeholder="yyyy">
+                            </div>
+                        </div>
+                        <div class="col-50_expire">
+                            <label>Security code</label>
+                            <div class="field-form">
+                                <input type="text" name="Code" placeholder="CCV">
+                                <img src="img/icon_ccv.gif" alt="icon_ccv">
+                                <span><sub>Last 3 digits</sub></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirm-payment pay-paypal">
+                        <label>
+                            <input type="radio" name="terms" value="Yes">
+                            <img src="img/icon_paypal.png" alt="icon_paypal">
+                            Pay with Paypal
+                        </label>
+                    </div>
+                    <div class="confirm-payment">
+                        <label>
+                            <input type="radio" name="terms" value="Yes">
+                            <img src="img/icons_wallet.png" alt="icon_wallet">
+                            Pay with Cash
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box-order">
+            <div class="aside-block">
+                <div class="order-block">
+                    <div>
+                        <h2>Order Summary</h2>
                     </div>
                     <div>
-                        <label>Phone</label>
-                        <input type="tel" name="Phone" placeholder="(+44)">
+                        <ul>
+                            <li>
+                                <a href="#">1x Enchilados</a>
+                                <span>£11</span>
+                            </li>
+                            <li>
+                                <a href="#">2x Burito</a>
+                                <span>£14</span>
+                            </li>
+                            <li>
+                                <a href="#">1x Chicken</a>
+                                <span>£18</span>
+                            </li>
+                            <li>
+                                <a href="#">2x Corona Beer</a>
+                                <span>£9</span>
+                            </li>
+                            <li>
+                                <a href="#">2x Cheese Cake</a>
+                                <span>£11</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Subtotal
+                                <span>£56</span>
+                            </li>
+                            <li>Delivery fee
+                                <span>£5</span>
+                            </li>
+                            <li>Total
+                                <span>£61</span>
+                            </li>
+                        </ul>
+                        <button>Order Now</button>
+                        <small>Or Call Us at 0125 365 8425</small>
                     </div>
                 </div>
-                <div class="contact-address">
-                    <label>Full Address</label>
-                    <input type="text" name="Full Address" placeholder="Full Address">
-                </div>
-                <div class="contact-card">
-                    <div>
-                        <label>City</label>
-                        <input type="text" name="City" placeholder="City">
-                    </div>
-                    <div>
-                        <label>Postcode</label>
-                        <input type="text" name="Postcode" placeholder="BH0 0TY">
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="details">
-        <form class="submit-form payment-area" action="#">
-            <div>
-                <h3>Payment Method</h3>
-            </div>
-            <div class="confirm-payment">
-                <label>
-                    <input type="radio" name="terms" value="Yes">
-                    <img src="img/credit_card.png" alt="credit_card">
-                    Credit Card
-                </label>
-            </div>
-            <div class="fill-form">
-                <div>
-                    <label>Name on card</label>
-                    <input type="text" name="First and Last Name" placeholder="First and Last Name">
-                </div>
-                <div>
-                    <label>Card number</label>
-                    <input type="text" name="Card number" placeholder="Card number">
-                </div>
-                <div class="col-50_expire">
-                    <label>Expiration date</label>
-                    <div class="field-form">
-                        <input type="text" name="Expiration date" placeholder="mm">
-                        <input type="text" name="Expiration date" placeholder="yyyy">
-                    </div>
-                </div>
-                <div class="col-50_expire">
-                    <label>Security code</label>
-                    <div class="field-form">
-                        <input type="text" name="Code" placeholder="CCV">
-                        <img src="img/icon_ccv.gif" alt="icon_ccv">
-                        <span><sub>Last 3 digits</sub></span>
-                    </div>
-                </div>
-            </div>
-            <div class="confirm-payment pay-paypal">
-                <label>
-                    <input type="radio" name="terms" value="Yes">
-                    <img src="img/icon_paypal.png" alt="icon_paypal">
-                    Pay with Paypal
-                </label>
-            </div>
-            <div class="confirm-payment">
-                <label>
-                    <input type="radio" name="terms" value="Yes">
-                    <img src="img/icons_wallet.png" alt="icon_wallet">
-                    Pay with Cash
-                </label>
-            </div>
-        </form>
-    </div>
-    <div class="aside-block">
-        <div class="order-block">
-            <div>
-                <h2>Order Summary</h2>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">1x Enchilados</a>
-                        <span>£11</span>
-                    </li>
-                    <li>
-                        <a href="#">2x Burito</a>
-                        <span>£14</span>
-                    </li>
-                    <li>
-                        <a href="#">1x Chicken</a>
-                        <span>£18</span>
-                    </li>
-                    <li>
-                        <a href="#">2x Corona Beer</a>
-                        <span>£9</span>
-                    </li>
-                    <li>
-                        <a href="#">2x Cheese Cake</a>
-                        <span>£11</span>
-                    </li>
-                </ul>
-                <ul>
-                    <li>Subtotal
-                        <span>£56</span>
-                    </li>
-                    <li>Delivery fee
-                        <span>£5</span>
-                    </li>
-                    <li>Total
-                        <span>£61</span>
-                    </li>
-                </ul>
-                <button>Order Now</button>
-                <small>Or Call Us at 0125 365 8425</small>
             </div>
         </div>
     </div>

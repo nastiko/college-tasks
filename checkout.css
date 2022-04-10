@@ -2,14 +2,6 @@ body {
     font-family: "Poppins",Helvetica,sans-serif;
     line-height: 1.7;
     font-weight: 400;
-    background-image: url("img/bg_img.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-attachment: scroll;
 }
 
 /*navbar for Web*/
@@ -85,10 +77,44 @@ body {
 }
 
 /*forms*/
-.details {
-    width: 33%;
+main.pattern {
+    background-image: url("img/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: scroll;
+}
+.pattern .main-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1280px !important;
+    margin: 0 auto;
+}
+.main-container .boxes-forms {
+    width: 55%;
+    margin: 5em 0;
+}
+.main-container .details {
+    width: 90%;
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
-    margin: 3em;
+    margin: 0 auto;
+}
+.main-container .box-booking {
+    margin-bottom: 3em;
+}
+.main-container .box-order {
+    min-width: 30%;
+    border: 1px solid black;
+    margin: 5em 0;
+}
+.aside-block {
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .details h3 {
@@ -190,17 +216,6 @@ form input:focus {
     margin-bottom: 1em;
 }
 
-/*aside*/
-.aside-block {
-    border: 1px solid red;
-    min-width: 680px;
-    height: 680px;
-    position: relative;
-    overflow: visible;
-    box-sizing: border-box;
-    min-height: 1px;
-
-}
 /*footer*/
 .frame {
     background-color: var(--gray);
