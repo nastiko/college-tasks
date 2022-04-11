@@ -23,6 +23,10 @@ body {
     letter-spacing: 1px;
     padding: 5px 8px;
 }
+.nav-sticky ul a {
+    color: var(--black-magic);
+    font-weight: 400;
+}
 
 
 /*logo for Web*/
@@ -32,6 +36,12 @@ body {
 }
 .logo img {
     width: 200px;
+    margin: 0.5em;
+    display: none;
+}
+
+.logo .visible {
+   display: block;
 }
 
 
@@ -52,12 +62,23 @@ video {
 
 /*scroll down NavBar*/
 .nav-scroll {
-    background-image: linear-gradient(180deg, #000 5%, transparent);
+    /*background-image: linear-gradient(180deg, #000 5%, transparent);
     position: fixed;
     top: 0;
     height: 76px;
     width: 100%;
-    z-index: 1;
+    z-index: 1;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 76px;
+    width: 100%;
+    z-index: 999999;
+}
+
+.scroll-sticky {
+    position: sticky;
+    background-color: white;
 }
 
 

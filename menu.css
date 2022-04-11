@@ -1,0 +1,223 @@
+/*navbar for Web*/
+.nav-web {
+    position: fixed;
+    inset: 0.4rem 0 auto auto;
+    padding: 1vw;
+}
+.nav-web ul li {
+    float: left;
+}
+.nav-web ul {
+    list-style-type: none;
+}
+.nav-web ul a {
+    text-decoration: none;
+    color: var(--light-gray);
+    font-size: clamp(0.975rem, 1.5vw, 1.063rem);
+    letter-spacing: 1px;
+    padding: 5px 8px;
+}
+.nav-sticky ul a {
+    color: var(--black-magic);
+    font-weight: 400;
+}
+
+
+/*logo for Web*/
+.logo {
+    position: fixed;
+    inset: 0 auto auto 0;
+}
+.logo img {
+    width: 200px;
+    margin: 0.5em;
+    display: none;
+}
+
+.logo .visible {
+    display: block;
+}
+
+/*scroll down NavBar*/
+.nav-scroll {
+    position: relative;
+    height: 76px;
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
+}
+
+
+/*home page on phone and table*/
+.bg-app {
+    display: block;
+    width: 100%;
+    height: 530px;
+    opacity: 0.9;
+    z-index: -1;
+}
+.nav-app {
+    display: none;
+}
+.search-items ul {
+    list-style-type: none;
+}
+.search-items li {
+    float: left;
+    padding: 0.2em 0.5em;
+}
+.search-items li a {
+    text-decoration: none;
+}
+.search-items img {
+    width: 25px;
+}
+.search-items strong {
+    position: relative;
+    right: 16px;
+    top: 5px;
+    color: var(--white);
+    font-weight: 300;
+    background-color: var(--green-cyan);
+    border-radius: 6px;
+    padding: 0 4px;
+    font-size: 10px;
+}
+
+/*bg-img*/
+.bg-transparency {
+    background-color: var(--black-magic);
+}
+.bg-img {
+    background-image: url("img/meal_menu.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 30em;
+    opacity: 0.8;
+}
+
+/*main*/
+main.pattern {
+    background-image: url("img/bg_img.jpg");
+}
+.hr-line {
+    border: 1px solid var(--shade-gray);
+    width: 10%;
+    margin: 2em auto;
+}
+
+/*footer*/
+.frame {
+    font-family: var(--font-family-sans-serif);
+    background-color: var(--gray);
+    color: var(--white);
+    --mask:
+            linear-gradient(#2b2b2b, #2b2b2b, #2b2b2b) bottom/100% calc(100% - 0.3em) no-repeat,
+            radial-gradient(circle farthest-side,#2b2b2b 98%,#0000) top/0.56em 0.6em repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+.customer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    gap: 1em;
+}
+.help-contact {
+    min-width: 20em;
+}
+footer .help-contact h4, .info-contact h4 {
+    margin: 2vw 0 1vw 0;
+}
+.icon-operator {
+    background-image: url("img/operator.png");
+    background-size: auto 100%;
+    float: left;
+    width: 3.5em;
+    height: 3.5em;
+}
+.online-support a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+}
+.online-support p, .main-info p, .social-media p {
+    font-size: clamp(0.800rem, 1vw, 0.875rem);
+    line-height: 2;
+    word-spacing: 2px;
+    font-weight: lighter;
+}
+.online-support p {
+    color: var(--light-brown);
+}
+.main-info p, .social-media p {
+    color: rgba(255,255,255,0.6);
+}
+.input-container {
+    width: 100%;
+    border: none;
+    line-height: 3.7;
+}
+.input-container input[type="email"] {
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.05);
+    color:var(--chinese-silver);
+    width: 20em;
+    padding: 13px 15px;
+}
+.input-container input[type="email"]:focus {
+    outline: 1px solid var(--light-brown);
+}
+.button_submit {
+    background-color: var(--light-brown);
+    color: var(--white);
+    border-radius: 0 4px 4px 0;
+    position: relative;
+    right: 42px;
+    top: 0;
+    padding: 13px 15px;
+}
+.button_submit:hover {
+    cursor: pointer;
+}
+.input-container::placeholder {
+    font-size: 0.800rem;
+    letter-spacing: 0.1vw;
+    color: var(--light-brown);
+}
+
+/*change Autocomplete styles in Chrome*/
+.input-container input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--chinese-silver);
+    -webkit-box-shadow: 0 0 0 1000px #2b2b2b inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: var(--chinese-silver);
+}
+.hr-footer {
+    border: 1px solid var(--light-brown);
+    width: 80%;
+    margin: 2em auto 0;
+}
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    margin: 0 10vw;
+}
+.icon-media {
+    font-size: 25px;
+}
+.icon-media a {
+    text-decoration: none;
+    color: var(--blue-magenta);
+    padding: 5px 15px;
+}

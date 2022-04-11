@@ -17,23 +17,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+<div class="nav-scroll">
+    <div class="logo">
+        <img class="visible" src="img/logo_bg-dark.png" alt="logo">
+        <img src="img/logo-dark_text.png" alt="logo">
+    </div>
+    <nav class="nav-web">
+        <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Basket</a></li>
+        </ul>
+    </nav>
+</div>
 <header>
     <div class="header-video">
         <video autoplay muted loop>
             <source src="video/video.mp4" type="video/mp4">
         </video>
         <div class="bg-app"></div>
-    </div>
-    <div class="nav-scroll">
-        <div class="logo">
-            <img src="img/logo.png" alt="logo">
-        </div>
-        <nav class="nav-web">
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Basket</a></li>
-            </ul>
-        </nav>
     </div>
     <div class="nav-app">
         <div class="menu">
@@ -479,5 +480,16 @@
     </div>
 </footer>
 <script src="web_app.js"></script>
+<script>
+    let menu = new Menu();
+    let calendar = new Calendar();
+
+
+    $(document).ready(function () {
+        menu.makeSticky();
+        calendar.initNext();
+        calendar.initPrev();
+    });
+</script>
 </body>
 </html>
