@@ -31,6 +31,11 @@
 .logo img {
     width: 200px;
     margin: 0.5em;
+    display: none;
+}
+
+.logo .visible {
+    display: block;
 }
 
 
@@ -88,28 +93,49 @@
 
 /*bg-img*/
 .bg-transparency {
-    background-color: var(--black-magic);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .bg-img {
-    background-image: url("img/meal_menu.jpg");
+    background-image: url("img/meals_menu.jpg");
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-position: center;
     background-attachment: fixed;
-    height: 30em;
-    opacity: 0.8;
+    background-position-y: 78%;
+    height: 25em;
+}
+.bg-img div {
+    position: relative;
+    top: 10em;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.bg-img div h1 {
+    color: var(--white);
+    line-height: 1.5;
+    font-size: 4rem;
 }
 
 /*main*/
-main.pattern {
+main .pattern {
     background-image: url("img/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-.hr-line {
-    border: 1px solid var(--shade-gray);
-    width: 10%;
-    margin: 2em auto;
+
+.hr-colorful span {
+    width: 120px;
+    height: 2px;
+    background-color: #e1e1e1;
+    display: block;
+}
+main h2 {
+    border-top: 1px solid var(--shade-gray);
+    text-align: center;
+    padding-top: 5em;
 }
 
 /*footer*/
