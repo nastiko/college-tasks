@@ -23,21 +23,39 @@ class Menu {
     makeSticky() {
         $(window).scroll(function () {
             if ($(document).scrollTop() > 50) {
-                // make nav sticky
+                // make sticky nav bar
                 $(".nav-scroll").addClass("scroll-sticky");
+                // make nav sticky for phone devices
+                $(".nav-app").addClass("scroll-sticky");
+                // swap color for icons
+                $(".menu").addClass("swap-color");
+                $(".search-items").addClass("swap-color");
+
                 // swap nav bar color
                 $(".nav-web").addClass("nav-sticky");
                 // swap logo text background
                 $(".logo img:eq(0)").removeClass("visible");
                 $(".logo img:eq(1)").addClass("visible");
+                // swap logo colors
+                $(".nav-app .logo img:eq(0)").removeClass("visible");
+                $(".nav-app .logo img:eq(1)").addClass("visible");
             } else {
                 // remove sticky nav bar
                 $(".nav-scroll").removeClass("scroll-sticky");
+
+                // remove nav sticky for phone devices
+                $(".nav-app").removeClass("scroll-sticky");
+                // remove color for icons
+                $(".menu").removeClass("swap-color");
+                $(".search-items").removeClass("swap-color");
                 // remove sticky from nav
                 $(".nav-web").removeClass("nav-sticky");
-                // swap logo to black text
+                // remove logo text background
                 $(".logo img:eq(0)").addClass("visible");
                 $(".logo img:eq(1)").removeClass("visible");
+                // remove logo colors
+                $(".nav-app .logo img:eq(0)").addClass("visible");
+                $(".nav-app .logo img:eq(1)").removeClass("visible");
             }
         });
     }

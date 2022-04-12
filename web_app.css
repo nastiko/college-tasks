@@ -62,16 +62,10 @@ video {
 
 /*scroll down NavBar*/
 .nav-scroll {
-    /*background-image: linear-gradient(180deg, #000 5%, transparent);
-    position: fixed;
-    top: 0;
-    height: 76px;
-    width: 100%;
-    z-index: 1;*/
     position: fixed;
     top: 0;
     left: 0;
-    height: 76px;
+    height: 67px;
     width: 100%;
     z-index: 999999;
 }
@@ -535,23 +529,28 @@ input:-webkit-autofill:focus {
 }
 .search-items ul {
     list-style-type: none;
+    padding: 1vw 0.5vw 0 0;
 }
 .search-items li {
     float: left;
+}
+.search-items li:nth-child(1){
+    margin-right: 2vw;
 }
 .search-items li a {
     text-decoration: none;
 }
 .search-items strong {
     position: relative;
-    right: 25px;
+    right: 17px;
     top: 5px;
     color: var(--white);
-    font-weight: 300;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
     background-color: var(--green-cyan);
     border-radius: 8px;
     padding: 0 4px;
-    font-size: 10px;
 }
 
 
@@ -580,14 +579,6 @@ input:-webkit-autofill:focus {
         background-position: center;
         transform: translate(0%,0%);
         -ms-transform: translate(0%,0%);
-    }
-    .nav-app {
-        background-image: linear-gradient(180deg, #000 5%, transparent);
-        position: fixed;
-        top: 0;
-        height: 76px;
-        width: 100%;
-        z-index: 3;
     }
     .new-foods h2 {
         text-align: center;
@@ -642,17 +633,23 @@ input:-webkit-autofill:focus {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background-color: transparent;
         width: 100%;
         position: fixed;
         top: 0;
         padding: 1vw;
+        height: 58px;
+        z-index: 999999;
+    }
+    .scroll-sticky {
+        position: sticky;
+        background-color: white;
     }
     .nav-app .menu {
         padding: 2vw;
-        margin-left: 1vw;
-        color: var(--white);
-        font-size: 30px;
-        font-weight: 100;
+    }
+    .swap-color svg g g {
+        fill: black;
     }
     .icon-search {
         transform: scaleX(-1);
