@@ -1,3 +1,7 @@
+body {
+    font-family: "Poppins",Helvetica,sans-serif;
+}
+
 /*navbar for Web*/
 .nav-web {
     position: fixed;
@@ -134,9 +138,89 @@ main .pattern {
 }
 main h2 {
     border-top: 1px solid var(--shade-gray);
+    font-size: 2.125rem;
     text-align: center;
-    padding-top: 5em;
 }
+
+
+
+
+/*starter*/
+.pattern .starter-menu {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.starter-menu .block-items {
+    padding: 0 15px;
+    margin: 20px 0;
+}
+.pattern .starter-menu a {
+    text-decoration: none;
+    color: var(--black-magic);
+}
+
+.starter-menu figure img {
+    float: left;
+    width: 106px;
+    border-radius: 50%;
+}
+
+.starter-menu .name-items {
+    display: inherit;
+    width: 30%;
+    position: absolute;
+    padding: 15px 0 0 15px;
+}
+
+.name-items p {
+    font-family: 'Lora', serif;
+    margin-top: 5px;
+}
+
+.cost-items {
+    background-image: radial-gradient(#d5d5d5 40%,rgba(0,0,0,0) 10%);
+    background-position: 0 14px;
+    background-size: 4px 4px;
+    background-repeat: repeat-x;
+}
+
+.cost-items div h3 {
+    display: inline;
+    background-color: var(--white);
+    padding-right: 5px;
+}
+
+.cost-items em {
+    float: right;
+    background-color: var(--white);
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 5px;
+}
+
+
+.block-items .show-button {
+    position: relative;
+    right: -15px;
+}
+
+.show-button button {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    background-color: var(--light-brown);
+    color: var(--white);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    border-radius: 3px;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding: 6px 4px;
+}
+
 
 /*footer*/
 .frame {
