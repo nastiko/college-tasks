@@ -122,77 +122,76 @@ body {
     font-size: 4rem;
 }
 
-/*main*/
+/*menu*/
 main .pattern {
     background-image: url("img/bg_img.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
+main .hr-colorful {
+    padding-top: 2em;
+}
 .hr-colorful span {
     width: 120px;
     height: 2px;
-    background-color: #e1e1e1;
     display: block;
+    background-color: #e1e1e1;
+    margin: 0 auto;
+}
+.hr-colorful span em {
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #978667;
+    margin: 0 auto;
 }
 main h2 {
-    border-top: 1px solid var(--shade-gray);
     font-size: 2.125rem;
     text-align: center;
+    padding-top: 20px;
 }
-
-
-
-
-/*starter*/
-.pattern .starter-menu {
+.pattern .menu {
     display: grid;
     grid-template-columns: auto auto;
     width: 80%;
-    margin: 0 auto;
+    margin: 1em auto;
 }
-
-.starter-menu .block-items {
+.menu .block-items {
     padding: 0 15px;
     margin: 20px 0;
 }
-.pattern .starter-menu a {
+.pattern .menu a {
     text-decoration: none;
     color: var(--black-magic);
 }
 
-.starter-menu figure img {
+.menu figure img {
     float: left;
     width: 106px;
     border-radius: 50%;
 }
-
-.starter-menu .name-items {
+.menu .name-items {
     display: inherit;
     width: 30%;
     position: absolute;
     padding: 15px 0 0 15px;
 }
-
 .name-items p {
     font-family: 'Lora', serif;
     margin-top: 5px;
 }
-
 .cost-items {
     background-image: radial-gradient(#d5d5d5 40%,rgba(0,0,0,0) 10%);
     background-position: 0 14px;
     background-size: 4px 4px;
     background-repeat: repeat-x;
 }
-
 .cost-items div h3 {
     display: inline;
     background-color: var(--white);
     padding-right: 5px;
 }
-
 .cost-items em {
     float: right;
     background-color: var(--white);
@@ -200,13 +199,10 @@ main h2 {
     font-style: normal;
     padding-left: 5px;
 }
-
-
 .block-items .show-button {
     position: relative;
     right: -15px;
 }
-
 .show-button button {
     position: absolute;
     left: 0;
@@ -220,6 +216,22 @@ main h2 {
     letter-spacing: 1px;
     padding: 6px 4px;
 }
+.pattern .download-file {
+    display: grid;
+}
+.download-file a {
+    display: table;
+    text-decoration: none;
+    background: none;
+    color: var(--black-magic);
+    border: 1px solid var(--black-magic);
+    border-radius: 3px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 6px 15px;
+    margin: 3em auto;
+}
+
 
 
 /*footer*/
