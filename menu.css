@@ -4,7 +4,7 @@ body {
 }
 
 /*navbar for Web*/
-.nav-web {
+/*.nav-web {
     position: fixed;
     inset: 0 0 auto auto;
     padding: 0.5vw;
@@ -12,7 +12,7 @@ body {
 .nav-web .position-nav {
     list-style-type: none;
     display: flex;
-}
+}*/
 /*.nav-web ul a {
     text-decoration: none;
     color: var(--light-gray);
@@ -21,12 +21,17 @@ body {
     padding: 5px 8px;
 }*/
 
-.position-nav .style-link {
+.navbar-nav.position-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.nav-item .style-link {
     text-decoration: none;
     color: var(--white);
-    font-size: 0.975rem;
+    font-size: 1.125rem;
     letter-spacing: 1px;
-    padding: 5px 8px;
 }
 .nav-sticky .style-link {
     color: var(--black-magic);
@@ -61,6 +66,67 @@ body {
 .scroll-sticky {
     position: sticky;
     background-color: var(--shade-gray);
+}
+
+/*dropdown basket*/
+.bg-menu {
+    background-color: var(--white);
+}
+.dropdown-item.position-item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown-item  .img-style {
+    width: auto;
+    height: 70px;
+}
+.dropdown-item .item-info {
+    margin: 0 20px;
+}
+.block-item {
+    display: block;
+    text-decoration: none;
+    color: var(--black-magic);
+}
+.filled-em {
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: normal;
+}
+.dropdown-item .svg-item {
+    display: flex;
+    gap: 10px;
+}
+/*.hr-line_style {
+    width: 90%;
+    margin: 5px auto;
+    background-color: var(--light-brown);
+}*/
+.total-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    margin: 0 17px;
+    font-weight: 500;
+}
+.button-checkout {
+    display: block;
+    width: 90%;
+    font-family: "Poppins",Helvetica,sans-serif;
+    font-size: 0.975rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--light-brown);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    margin: 5px auto;
 }
 
 
