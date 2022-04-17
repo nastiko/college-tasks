@@ -26,7 +26,7 @@ html {
     font-family: sans-serif;
 }
 
-*, *:before, *:after {
+/**, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -34,7 +34,7 @@ html {
     padding: 0;
     margin: 0;
     border: 0;
-}
+}*/
 
 
 /*text*/

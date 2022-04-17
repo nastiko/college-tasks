@@ -10,11 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Menu</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="nav-scroll">
@@ -23,9 +28,9 @@
         <img src="img/logo-dark_text.png" alt="logo">
     </div>
     <nav class="nav-web">
-        <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Basket</a></li>
+        <ul class="position-nav">
+            <li><a class="style-link" href="#">Menu</a></li>
+            <li><a class="style-link" href="#">Basket</a></li>
         </ul>
     </nav>
 </div>
@@ -149,405 +154,375 @@
     </div>
 </header>
 <main>
-    <div class="pattern">
-        <div class="hr-colorful">
-            <span><em></em></span>
-        </div>
-        <h2>Starters</h2>
-        <div class="menu">
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/starters_1.jpg" alt="Toast with eggs">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Soft-Boiled Eggs</h3>
-                                <em>£8.5</em>
+    <div class="container-fluid pattern">
+        <div class="container pt-5">
+            <span class="mb-2 hr-colorful">
+            <em class="mb-2 bg-em_line"></em>
+            </span>
+            <h2 class="heading-h2">Starters</h2>
+            <div class="row">
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/starters_1.jpg" alt="Toast with eggs">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Soft-Boiled Eggs</h3>
+                                <em class="bg-em_title">£8.5</em>
                             </div>
+                            <p class="paragraph-font">Toast, Avocado, Eggs</p>
                         </div>
-                        <p>Toast, Avocado, Eggs</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/starters_3.jpg" alt="Grill corn">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Grill corn</h3>
-                                <em>£5.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/starters_3.jpg" alt="Grill corn">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Grill Corn</h3>
+                                <em class="bg-em_title">£5.5</em>
                             </div>
+                            <p class="paragraph-font">Corn, Salt, Caramel</p>
                         </div>
-                        <p>Corn, Salt, Caramel</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/starters_2.jpg" alt="Marinated Grilled Shrimp Salad">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Marinated Grilled Shrimp Salad</h3>
-                                <em>£12</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/starters_2.jpg" alt="Marinated Grilled Shrimp Salad">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Marinated Grilled Shrimp Salad</h3>
+                                <em class="bg-em_title">£12</em>
                             </div>
+                            <p class="paragraph-font">Salad, Shrimp, Onion, Walnuts </p>
                         </div>
-                        <p>Salad, Shrimp, Onion, Walnuts </p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/starters_4.jpg" alt="Avocado Salad">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Avocado Salad</h3>
-                                <em>£6.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/starters_4.jpg" alt="Avocado Salad">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Avocado Salad</h3>
+                                <em class="bg-em_title">£6.5</em>
                             </div>
+                            <p class="paragraph-font">Salad, Avocado, Garnet</p>
                         </div>
-                        <p>Salad, Avocado, Garnet</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/starters_6.jpg" alt="Cesar Salad">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Cesar Salad</h3>
-                                <em>£9.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/starters_6.jpg" alt="Cesar Salad">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Cesar Salad</h3>
+                                <em class="bg-em_title">£9.5</em>
                             </div>
+                            <p class="paragraph-font">Salad, Paper, Cheese, Crackers</p>
                         </div>
-                        <p>Salad, Paper, Cheese, Crackers</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/starters_5.jpg" alt="Greek Salad Pita ">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Pita Pockets with Grilled Pork</h3>
-                                <em>£10</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/starters_5.jpg" alt="Greek Salad Pita ">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Pita Pockets & Grilled Pork</h3>
+                                <em class="bg-em_title">£10</em>
                             </div>
+                            <p class="paragraph-font">Pita, Pork, Avocado</p>
                         </div>
-                        <p>Pita, Pork, Avocado</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="hr-colorful">
-            <span><em></em></span>
-        </div>
-        <h2>Main Dishes</h2>
-        <div class="menu">
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/try_pizza.jpg" alt="Rustica Chicken">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Rustica Chicken & Fiery Roquito</h3>
-                                <em>£9.5</em>
+        <div class="container pt-5">
+                <span class="mb-2 hr-colorful">
+                    <em class="mb-2 bg-em_line"></em>
+                </span>
+            <h2 class="heading-h2">Main Dishes</h2>
+            <div class="row">
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/try_pizza.jpg" alt="Rustica Chicken">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Rustica Chicken & Fiery Roquito</h3>
+                                <em class="bg-em_title">£9.5</em>
                             </div>
+                            <p class="paragraph-font">Toast, Avocado, Eggs</p>
                         </div>
-                        <p>Toast, Avocado, Eggs</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/try_pasta.jpg" alt="King Prawn Linguine">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>King Prawn Linguine</h3>
-                                <em>£12.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/try_pasta.jpg" alt="King Prawn Linguine">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">King Prawn Linguine</h3>
+                                <em class="bg-em_title">£12.5</em>
                             </div>
+                            <p class="paragraph-font">Spaghetti, King Prawns, Tomatoes</p>
                         </div>
-                        <p>Spaghetti, King Prawns, Tomatoes</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/dishes_1.jpg" alt="Grill Pork Sweet Potatoes">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Grill Pork & Sweet Potatoes</h3>
-                                <em>£14.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/dishes_1.jpg" alt="Grill Pork Sweet Potatoes">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Grill Pork & Sweet Potatoes</h3>
+                                <em class="bg-em_title">£14.5</em>
                             </div>
+                            <p class="paragraph-font">Pork, Potatoes, Creamy Sauce</p>
                         </div>
-                        <p>Pork, Potatoes, Creamy Sauce</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/dishes_2.jpg" alt="Salmon">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Creamy Salmon</h3>
-                                <em>£13.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/dishes_2.jpg" alt="Salmon">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Creamy Salmon</h3>
+                                <em class="bg-em_title">£13.5</em>
                             </div>
+                            <p class="paragraph-font">Salmon, Sweet Sauce, Stewed Vegetables</p>
                         </div>
-                        <p>Salmon, Sweet Sauce, Stewed Vegetables</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/dishes_3.jpg" alt="Steak">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Grill Steak</h3>
-                                <em>£18.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/dishes_3.jpg" alt="Steak">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Grill Steak</h3>
+                                <em class="bg-em_title">£18.5</em>
                             </div>
+                            <p class="paragraph-font">Pork, Beetroot, Mashed Potatoes</p>
                         </div>
-                        <p>Pork, Beetroot, Mashed Potatoes</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/dishes_4.jpg" alt="Small Ramen Soup ">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Small Ramen Soup </h3>
-                                <em>£11.5</em>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/dishes_4.jpg" alt="Small Ramen Soup ">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Small Ramen Soup </h3>
+                                <em class="bg-em_title">£11.5</em>
                             </div>
+                            <p class="paragraph-font">Ramen noodles, Pork, Egg, Spring onion</p>
                         </div>
-                        <p>Ramen noodles, Pork, Egg, Spring onion</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="hr-colorful">
-            <span><em></em></span>
-        </div>
-        <h2>Dessert and Drinks</h2>
-        <div class="menu">
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/try_sweet.png" alt="Giant S'mores Fondue">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Giant S'mores Fondue</h3>
-                                <em>£7.5</em>
+        <div class="container pt-5">
+                <span class="mb-2 hr-colorful">
+                    <em class="mb-2 bg-em_line"></em>
+                </span>
+            <h2 class="heading-h2">Dessert and Drinks</h2>
+            <div class="row">
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/try_sweet.png" alt="Giant S'mores Fondue">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Giant S'mores Fondue</h3>
+                                <em class="bg-em_title">£7.5</em>
                             </div>
+                            <p class="paragraph-font">Chocolate, Apples, Double Cream</p>
                         </div>
-                        <p>Chocolate, Apples, Double Cream</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
                     </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/try_brownie.jpg" alt="Brownie">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Salted Caramel Chocolate Brownie</h3>
+                                <em class="bg-em_title">£4.5</em>
+                            </div>
+                            <p class="paragraph-font">Chocolate, Salted Caramel, Vanilla Ice Cream</p>
+                        </div>
+                    </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/dessert_1.jpg" alt="Apple strudel">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Apple strudel</h3>
+                                <em class="bg-em_title">£7.5</em>
+                            </div>
+                            <p class="paragraph-font">Apple, Double Cream, White Chocolate</p>
+                        </div>
+                    </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/drink_1.jpg" alt="Coffee">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Coffee</h3>
+                                <em class="bg-em_title">£4.5</em>
+                            </div>
+                            <p class="paragraph-font">Coffee Blend, Cow Milk</p>
+                        </div>
+                    </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/drink_2.jpg" alt="tea">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Lemon Tea</h3>
+                                <em class="bg-em_title">£2.5</em>
+                            </div>
+                            <p class="paragraph-font">Black Tea, Lemon</p>
+                        </div>
+                    </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-4">
+                    <a class="small-block" href="#">
+                        <picture>
+                            <img src="img/drink_3.jpg" alt="Hot Chocolate">
+                        </picture>
+                        <div class="name-items">
+                            <div class="cost-items">
+                                <h3 class="bg-title">Hot Chocolate</h3>
+                                <em class="bg-em_title">£4.5</em>
+                            </div>
+                            <p class="paragraph-font">Power Chocolate, Cow Milk, Whipped cream</p>
+                        </div>
+                    </a>
+                    <div class="show-button">
+                        <a href="#">
+                            <button>Add To Cart</button>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/try_brownie.jpg" alt="Brownie">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Salted Caramel Chocolate Brownie</h3>
-                                <em>£4.5</em>
-                            </div>
-                        </div>
-                        <p>Chocolate, Salted Caramel, Vanilla Ice Cream</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
-                    </a>
-                </div>
+            <div class="download-file">
+                <a href="#">Download Menu</a>
             </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/dessert_1.jpg" alt="Apple strudel">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Apple strudel</h3>
-                                <em>£7.5</em>
-                            </div>
-                        </div>
-                        <p>Apple, Double Cream, White Chocolate</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
-                    </a>
-                </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/drink_1.jpg" alt="Coffee">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Coffee</h3>
-                                <em>£4.5</em>
-                            </div>
-                        </div>
-                        <p>Coffee Blend, Cow Milk</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
-                    </a>
-                </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/drink_2.jpg" alt="tea">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Lemon Tea</h3>
-                                <em>£2.5</em>
-                            </div>
-                        </div>
-                        <p>Black Tea, Lemon</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
-                    </a>
-                </div>
-            </div>
-            <div class="block-items">
-                <a href="#">
-                    <figure>
-                        <img src="img/drink_3.jpg" alt="Hot Chocolate">
-                    </figure>
-                    <div class="name-items">
-                        <div class="cost-items">
-                            <div>
-                                <h3>Hot Chocolate</h3>
-                                <em>£4.5</em>
-                            </div>
-                        </div>
-                        <p>Power Chocolate, Cow Milk, Whipped cream</p>
-                    </div>
-                </a>
-                <div class="show-button">
-                    <a href="#">
-                        <button>Add To Cart</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="download-file">
-            <a href="#">Download Menu</a>
         </div>
     </div>
 </main>
@@ -668,8 +643,10 @@
 <script src="web_app.js"></script>
 <script>
     let menu = new Menu();
+    let show = new ShowButton();
     $(document).ready(function () {
         menu.makeSticky();
+        /*show.hoverButton();*/
     });
 </script>
 </body>

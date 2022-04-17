@@ -84,3 +84,11 @@ class Calendar {
         });
     }
 }
+
+class ShowButton {
+    hoverButton () {
+        $('picture').hover(function () {
+            $("button").toggle()
+        })
+    }
+}
