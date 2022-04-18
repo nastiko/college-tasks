@@ -32,7 +32,7 @@ class Menu {
                 $(".search-items").addClass("swap-color");
 
                 // swap nav bar color
-                $(".nav-web").addClass("nav-sticky");
+                $(".nav-hided").addClass("nav-sticky");
                 // swap logo text background
                 $(".logo img:eq(0)").removeClass("visible");
                 $(".logo img:eq(1)").addClass("visible");
@@ -49,7 +49,7 @@ class Menu {
                 $(".menu").removeClass("swap-color");
                 $(".search-items").removeClass("swap-color");
                 // remove sticky from nav
-                $(".nav-web").removeClass("nav-sticky");
+                $(".nav-hided").removeClass("nav-sticky");
                 // remove logo text background
                 $(".logo img:eq(0)").addClass("visible");
                 $(".logo img:eq(1)").removeClass("visible");

@@ -21,19 +21,20 @@ body {
     padding: 5px 8px;
 }*/
 
-.navbar-nav.position-nav {
+.navbar-nav.position-navbar {
     flex-direction: row;
     justify-content: flex-end;
     gap: 25px;
+    padding-top: 18px;
 }
 
-.nav-item .style-link {
+.nav-item .nav-item_link {
     text-decoration: none;
     color: var(--white);
     font-size: 1.125rem;
     letter-spacing: 1px;
 }
-.nav-sticky .style-link {
+.nav-sticky .nav-item_link {
     color: var(--black-magic);
     font-weight: 400;
 }
@@ -42,7 +43,7 @@ body {
 /*logo for Web*/
 .logo {
     position: fixed;
-    /*inset: 0 auto auto 0;*/
+    inset: 0 auto auto 0;
 }
 .logo img {
     width: 200px;
@@ -61,7 +62,7 @@ body {
     left: 0;
     height: 67px;
     width: 100%;
-    z-index: 999999;
+    z-index: 1000;
 }
 .scroll-sticky {
     position: sticky;
@@ -79,19 +80,19 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.dropdown-item  .img-style {
+.dropdown-item  .item-img {
     width: auto;
     height: 70px;
 }
 .dropdown-item .item-info {
     margin: 0 20px;
 }
-.block-item {
+.item-title {
     display: block;
     text-decoration: none;
     color: var(--black-magic);
 }
-.filled-em {
+.item-cost {
     font-size: 1rem;
     font-weight: 700;
     font-style: normal;
@@ -169,28 +170,28 @@ body {
 
 
 /*bg-img*/
-.bg-transparency {
-    background-color: rgba(0, 0, 0, 0.6);
+.container-fluid.container-size {
+    padding: 0;
 }
 .bg-img {
-    background-image: url("img/meals_menu.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/meals_menu.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-attachment: fixed;
-    background-position-y: 80vw;
-    height: 25em;
+    background-position-y: -30rem;
+    max-width: 100%;
+    height: 400px;
+    opacity: 0.8;
 }
-.bg-img div {
-    position: relative;
-    top: 10em;
-    text-align: center;
-    margin: 0 auto;
+.text-center {
+    padding: 10rem;
+    color: white;
 }
-.bg-img div h1 {
-    color: var(--white);
-    font-size: clamp(3rem, 7vw, 4rem);
+.heading-size {
+    font-size: 4rem;
 }
 
 /*menu*/
@@ -410,8 +411,8 @@ input:-webkit-autofill:focus {
     padding: 5px 15px;
 }
 
-@media all and (max-width: 991px) {
-    .nav-web {
+@media all and (max-width: 992px) {
+    .nav-hided {
         display: none;
     }
     .nav-app {
@@ -419,13 +420,12 @@ input:-webkit-autofill:focus {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--shade-gray);
         width: 100%;
         position: fixed;
         top: 0;
         padding: 1vw;
         height: 58px;
-        z-index: 999999;
+        z-index: 1000;
         opacity: 0.9;
     }
     .scroll-sticky {
@@ -449,6 +449,13 @@ input:-webkit-autofill:focus {
         position: fixed;
         inset: 0.5em 0 auto 0;
         margin: auto;
+    }
+    .bg-img {
+        background-attachment: inherit;
+        background-position-y: 0;
+    }
+    .heading-size {
+        font-size: 3rem;
     }
     .help-contact {
         min-width: 15em;

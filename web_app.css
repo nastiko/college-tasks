@@ -5,18 +5,18 @@ body {
 }
 
 /*navbar for Web*/
-.nav-web {
+.nav-hided {
     position: fixed;
     inset: 0.4rem 0 auto auto;
     padding: 1vw;
 }
-.nav-web ul li {
+.nav-hided ul li {
     float: left;
 }
-.nav-web ul {
+.nav-hided ul {
     list-style-type: none;
 }
-.nav-web ul a {
+.nav-hided ul a {
     text-decoration: none;
     color: var(--light-gray);
     font-size: clamp(0.975rem, 1.5vw, 1.063rem);
@@ -625,7 +625,7 @@ input:-webkit-autofill:focus {
 
 /*navbar for app*/
 @media all and (max-width: 991px) {
-    .nav-web {
+    .nav-hided {
         display: none;
     }
     .nav-app {
