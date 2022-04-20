@@ -3,6 +3,15 @@ body {
     font-weight: 400;
     background-color: var(--white);
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 
 /*navbar for Web*/
 .nav-hided {
@@ -464,7 +473,7 @@ footer .help-contact h4, .info-contact h4 {
 .input-container input[type="email"]:focus {
     outline: 1px solid var(--light-brown);
 }
-.button_submit {
+.button-submit {
     background-color: var(--light-brown);
     color: var(--white);
     border-radius: 0 4px 4px 0;
@@ -473,7 +482,7 @@ footer .help-contact h4, .info-contact h4 {
     top: 0;
     padding: 13px 15px;
 }
-.button_submit:hover {
+.button-submit:hover {
     cursor: pointer;
 }
 .input-container::placeholder {

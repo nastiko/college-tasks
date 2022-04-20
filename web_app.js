@@ -29,8 +29,9 @@ class Menu {
                 $(".nav-app").addClass("scroll-sticky");
                 // swap color for icons
                 $(".menu").addClass("swap-color");
-                $(".search-items").addClass("swap-color");
-
+                /*$(".search-items").addClass("swap-color");*/
+                //icons from Bootstrap
+                $(".icons-scroll").addClass("text-black");
                 // swap nav bar color
                 $(".nav-hided").addClass("nav-sticky");
                 // swap logo text background
@@ -42,12 +43,13 @@ class Menu {
             } else {
                 // remove sticky nav bar
                 $(".nav-scroll").removeClass("scroll-sticky");
-
                 // remove nav sticky for phone devices
                 $(".nav-app").removeClass("scroll-sticky");
                 // remove color for icons
                 $(".menu").removeClass("swap-color");
-                $(".search-items").removeClass("swap-color");
+                /*$(".search-items").removeClass("swap-color");*/
+                //icons from Bootstrap
+                $(".icons-scroll").removeClass("text-black");
                 // remove sticky from nav
                 $(".nav-hided").removeClass("nav-sticky");
                 // remove logo text background
