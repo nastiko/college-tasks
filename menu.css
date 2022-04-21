@@ -1,46 +1,23 @@
-body {
-    font-family: "Poppins",Helvetica,sans-serif;
-    margin: 0;
-}
-
-/*navbar for Web*/
-/*.nav-web {
-    position: fixed;
-    inset: 0 0 auto auto;
-    padding: 0.5vw;
-}
-.nav-web .position-nav {
-    list-style-type: none;
-    display: flex;
-}*/
-/*.nav-web ul a {
-    text-decoration: none;
-    color: var(--light-gray);
-    font-size: clamp(0.975rem, 1.5vw, 1.063rem);
-    letter-spacing: 1px;
-    padding: 5px 8px;
-}*/
-
 .navbar-nav.position-navbar {
     flex-direction: row;
     justify-content: flex-end;
     padding-top: 18px;
 }
 
-.nav-item .nav-item_link {
+.nav-item_link {
     text-decoration: none;
     color: var(--white);
     font-size: 1.125rem;
     letter-spacing: 1px;
-    margin-right: 30px;
+    margin-right: 25px;
+}
+.nav-item_link:active, .nav-item_link:hover  {
+    color: var(--white);
 }
 .nav-sticky .nav-item_link {
     color: var(--black-magic);
     font-weight: 400;
 }
-/*.nav-item_link:active {
-    background-color: transparent;
-}*/
 
 
 /*logo for Web*/
@@ -68,9 +45,9 @@ body {
     z-index: 1000;
 }
 .scroll-sticky {
-    position: sticky;
     background-color: var(--shade-gray);
 }
+
 
 /*dropdown basket*/
 .bg-menu {
@@ -90,25 +67,6 @@ body {
 .dropdown-item .item-info {
     margin: 0 20px;
 }
-/*.dropdown-item .active, .dropdown-item:active {
-    color: #000;
-    text-decoration: none;
-    background-color: #ffffff00;
-}*/
-/*.dropdown-item.active, .dropdown-item:hover {
-    color: var(--light-brown);
-    text-decoration: none;
-    background-color: transparent;
-}
-.position-item.active, .position-item:active {
-    color: var(--light-brown);
-    text-decoration: none;
-    background-color: transparent;
-}
-.dropdown-item:focus, .dropdown-item:hover {
-    color: #1e2125;
-    background-color: transparent;
-}*/
 .item-title {
     display: block;
     text-decoration: none;
@@ -170,23 +128,17 @@ body {
     opacity: 0.9;
     z-index: -1;
 }
-.nav-app {
-    display: none;
-}
-.search-items .item-type {
+.basket-icon .item-type {
     display: flex;
     gap: 20px;
     list-style-type: none;
    /* padding: 1vw 0.5vw 0 0;*/
     margin: 0;
 }
-/*.search-items li:nth-child(1){
-    margin-right: 2vw;
-}*/
-.search-items li a {
+.basket-icon a {
     text-decoration: none;
 }
-.search-items .item-amount {
+.basket-icon .item-amount {
     position: relative;
     right: 14px;
     top: 12px;
@@ -197,6 +149,9 @@ body {
     background-color: var(--black-magic);
     border-radius: 10px;
     padding: 1px 5px;
+}
+.basket-icon {
+    display: none;
 }
 
 
@@ -254,10 +209,6 @@ main .heading-h2 {
     font-size: 32px;
     text-align: center;
 }
-/*.menu .block-items {
-    padding: 0 15px;
-    margin: 20px 0;
-}*/
 .col-lg-6 .small-block {
     display: flex;
     text-decoration: none;
@@ -368,9 +319,6 @@ picture img {
     word-spacing: 2px;
     margin-bottom: 0;
 }
-.text-position {
-    margin-left: 5px;
-}
 .online-support p {
     color: var(--light-brown);
 }
@@ -463,29 +411,19 @@ input:-webkit-autofill:focus {
         opacity: 0.9;
     }
     .scroll-sticky {
-        position: sticky;
         background-color: var(--shade-gray);
-    }
-    /*.nav-app .menu {
-        padding: 2vw;
-    }*/
-    .swap-color svg g g {
-        fill: black;
     }
     .text-black svg {
         fill: var(--black-magic);
     }
-    .icon-search {
-        transform: scaleX(-1);
-        -moz-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        -ms-transform: scaleX(-1);
-    }
     .logo img {
         width: 175px;
-        position: fixed;
+        /*position: fixed;
         inset: 0.5em 0 auto 0;
-        margin: 0 auto;
+        margin: 0 auto;*/
+    }
+    .basket-icon {
+        display: block;
     }
     .bg-img {
         background-attachment: inherit;
@@ -503,6 +441,7 @@ input:-webkit-autofill:focus {
     .icon-media {
         margin-top: 15px;
     }
+
 }
 
 
@@ -549,5 +488,8 @@ input:-webkit-autofill:focus {
     }
     .hr-footer {
         width: 95%;
+    }
+    .text-position {
+        margin-left: 5px;
     }
 }
