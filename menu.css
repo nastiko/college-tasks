@@ -182,8 +182,15 @@
 
 /*menu*/
 main .pattern {
-    background: url("img/bg_img.jpg") no-repeat center center;
+    /*background: url("img/bg_img.jpg") no-repeat center center;
     background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;*/
+    background-image: url(img/bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -289,7 +296,6 @@ picture img {
 
 /*footer*/
 .frame {
-    font-family: var(--font-family-sans-serif);
     background-color: var(--gray);
     color: var(--white);
     --mask:
@@ -418,9 +424,6 @@ input:-webkit-autofill:focus {
     }
     .logo img {
         width: 175px;
-        /*position: fixed;
-        inset: 0.5em 0 auto 0;
-        margin: 0 auto;*/
     }
     .basket-icon {
         display: block;
@@ -431,12 +434,6 @@ input:-webkit-autofill:focus {
     }
     .heading-size {
         font-size: 3rem;
-    }
-    .help-contact {
-        min-width: 15em;
-    }
-    .icon-operator {
-        display: none;
     }
     .icon-media {
         margin-top: 15px;
