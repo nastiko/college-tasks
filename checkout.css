@@ -1,8 +1,4 @@
-/*body {
-    font-family: "Poppins",Helvetica,sans-serif;
-    line-height: 1.7;
-    font-weight: 400;
-}*/
+
 
 /*navbar for Web*/
 /*.nav-hided {
@@ -87,20 +83,17 @@ main.pattern {
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: "Poppins", Helvetica, sans-serif;
-}
-.main-container .boxes-forms {
-    width: 55%;
-    margin: 5em 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 .main-container .details {
-    width: 90%;
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
-    margin: 0 auto;
 }
-.main-container .box-booking {
-    margin-bottom: 3em;
+.main-container .details:first-child {
+    margin-bottom: 3rem;
 }
-.details h3 {
+
+.details .heading-style {
     background-color: var(--light-brown);
     color: var(--white);
     text-align: center;
@@ -108,68 +101,72 @@ main.pattern {
     font-weight: 100;
     padding: 23px 20px 18px 20px;
 }
-.details label {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--gray);
-    padding-left: 0.5em;
-}
 .submit-form {
-    background-color: var(--white);
-    margin: 0 auto;
+     background-color: var(--white);
+ }
+.submit-form .fill-form {
+     padding: 1rem 2rem;
 }
-.submit-form.payment-area {
-    padding: 0 0 2em 0;
+.fill-form label {
+    padding-left: 1px;
+}
+.fill-form.label-details {
+    color: var(--bs-gray-900);
+    font-size: 15px;
+    font-weight: 500;
 }
 .submit-form input {
     width: 100%;
-    font-family: var(--font-family-sans-serif);
+    font-family: var(--bs-body-font-family);
     font-size: 0.875rem;
     background-color: var(--white);
     border: 1px solid var(--chinese-silver);
     border-radius: 4px;
-    padding: 0.5vw;
-    margin-bottom: 1em;
+    padding: 8px;
+    margin-bottom: 1rem;
 }
+.submit-form.payment-area {
+    padding-bottom: 2rem;
+}
+
 .confirm-payment {
     background-color: var(--gray94);
     border: 1px solid var(--gray94);
-    border-radius: 6px;
-    margin: 2em 2em 0 2em;
-    padding: 0.7em 0 0.3em 0;
+    border-radius: 4px;
+    margin: 2rem 2rem 0 2rem;
 }
-.confirm-payment img {
+/*.confirm-payment img {
     float: right;
     position: relative;
     bottom: 5px;
     right: 10px;
-}
+}*/
 .confirm-payment label {
+    display: flex;
+    justify-content: space-between;
     font-size: 0.875rem;
-    font-weight:500;
-    vertical-align: top;
+    font-weight: 500;
+    padding: 8px;
 }
 .confirm-payment input[type="radio"] {
-    margin: 0 10px;
+    margin: 0 5px 0 7px;
 }
 .confirm-payment input {
-    margin: 1em 0.5em auto 0;
+    /*margin: 1em 0.5em auto 0;*/
     width: 1em;
     height: 1em;
     position: relative;
-    top: 0.1em;
+    top: 2px;
 }
-.confirm-payment.pay-paypal {
+/*.confirm-payment.pay-paypal {
     margin: 0 2em;
-}
-.submit-form .fill-form {
-    padding: 1em 2em 1em 2em;
-}
-form .contact-card {
+}*/
+
+/*form .contact-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+}*/
 form input:focus {
     border: 2px solid var(--light-brown);
     outline: none;
@@ -272,7 +269,6 @@ form input:focus {
 
 /*footer*/
 .frame {
-    font-family: var(--font-family-sans-serif);
     background-color: var(--gray);
     color: var(--white);
     --mask:
@@ -413,17 +409,17 @@ input:-webkit-autofill:focus {
     /*.help-contact {
         min-width: 15em;
     }*/
-    .details {
+    /*.details {
         width: 100%;
         margin: 3em auto;
-    }
+    }*/
     .fill-form .col-50_expire {
         width: 100%;
     }
-    .main-container .boxes-forms {
+    /*.main-container .boxes-forms {
         width: 100%;
         margin: 2em 0;
-    }
+    }*/
     .pattern .main-container {
         display: flex;
         flex-direction: column;
