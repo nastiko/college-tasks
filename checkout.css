@@ -92,7 +92,6 @@ main.pattern {
 .main-container .details:first-child {
     margin-bottom: 3rem;
 }
-
 .details .heading-style {
     background-color: var(--light-brown);
     color: var(--white);
@@ -106,9 +105,11 @@ main.pattern {
  }
 .submit-form .fill-form {
      padding: 1rem 2rem;
+    /*padding: 1rem 2rem 0.5rem 2rem;*/
 }
 .fill-form label {
-    padding-left: 1px;
+    padding-left: 2px;
+    padding-bottom: 1px;
 }
 .fill-form.label-details {
     color: var(--bs-gray-900);
@@ -128,12 +129,11 @@ main.pattern {
 .submit-form.payment-area {
     padding-bottom: 2rem;
 }
-
 .confirm-payment {
     background-color: var(--gray94);
     border: 1px solid var(--gray94);
     border-radius: 4px;
-    margin: 2rem 2rem 0 2rem;
+    margin: 0 2rem;
 }
 /*.confirm-payment img {
     float: right;
@@ -146,27 +146,19 @@ main.pattern {
     justify-content: space-between;
     font-size: 0.875rem;
     font-weight: 500;
-    padding: 8px;
+    /*padding: 8px;*/
+    padding: 8px 8px 8px 0;
 }
 .confirm-payment input[type="radio"] {
     margin: 0 5px 0 7px;
 }
 .confirm-payment input {
     /*margin: 1em 0.5em auto 0;*/
-    width: 1em;
-    height: 1em;
+    width: 15px;
+    height: 15px;
     position: relative;
     top: 2px;
 }
-/*.confirm-payment.pay-paypal {
-    margin: 0 2em;
-}*/
-
-/*form .contact-card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}*/
 form input:focus {
     border: 2px solid var(--light-brown);
     outline: none;
@@ -174,51 +166,35 @@ form input:focus {
 .contact-card div {
     width: 48%;
 }
-.fill-form .col-50_expire {
-    display: inline-block;
-    width: 49%;
-}
-.col-50_expire label {
-    padding-bottom: 2px;
-}
-.col-50_expire .field-form input {
-    display: inline-block;
-    width: 40%;
-    margin-right: 12px;
-}
-.fill-form img {
-    vertical-align: middle;
-}
-.fill-form span {
-    font-size: 0.7rem;
-}
-.gap-time {
-    margin-bottom: 1em;
+.col-sm-6 .sub-position {
+    vertical-align: text-bottom;
 }
 
+
 /*aside*/
-.main-container .box-order {
+/*.main-container .box-order {
     min-width: 30%;
     margin: 5em 0;
-}
+}*/
 .aside-block {
     border: 1px dotted var(--medium-gray);
     background-color: var(--white);
     position: sticky;
-    top: 9em;
+    top: 9rem;
 }
-.order-block div h2 {
-    background-color: var(--shade-gray);
+.order-block .heading-aside {
+    font-size: 1.5rem;
     text-align: center;
+    background-color: var(--shade-gray);
     border-bottom: 1px dotted var(--medium-gray);
     padding: 23px 20px 18px 20px;
 }
-.order-block .order-items {
+/*.order-block */.order-items {
     width: 90%;
     font-size: 0.875rem;
     margin: 0 auto;
 }
-.box-order .order-block div ul {
+.order-list {
     list-style-type: none;
     line-height: 1.5;
 }
@@ -385,53 +361,14 @@ input:-webkit-autofill:focus {
     .nav-hided {
         display: none;
     }
-   /* .nav-scroll, .icon-operator {
-        display: none;
-    }*/
-    /*.nav-app {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        background-color: #fff;
-        border-bottom: 1px solid #ededed;
-    }
-    .nav-app .menu {
-        padding: 2vw;
-        margin-left: 1vw;
-        color: var(--white);
-    }*/
-    /*.logo img {
-        width: 135px;
-        margin-left: 3em;
-    }*/
-    /*.help-contact {
-        min-width: 15em;
-    }*/
-    /*.details {
-        width: 100%;
-        margin: 3em auto;
-    }*/
-    .fill-form .col-50_expire {
-        width: 100%;
-    }
-    /*.main-container .boxes-forms {
-        width: 100%;
-        margin: 2em 0;
-    }*/
     .pattern .main-container {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         width: 100%;
     }
-    .main-container .box-order {
-        width: 90%;
-        margin: 0 auto;
-    }
     .main-container .aside-block {
-        margin-bottom: 2em;
+        margin-top: 3rem;
     }
     .icon-media {
         margin-top: 15px;
@@ -454,26 +391,10 @@ input:-webkit-autofill:focus {
         width: 95%;
         padding: 25px 0;
     }
-    .container.container-pt {
-        padding-top: 2rem;
-    }
-    main .heading-h2 {
-        font-size: 30px;
-        margin-bottom: 1.5rem;
-    }
-    picture img {
-        width: 70px;
-    }
-    .cost-items .bg-title, .cost-items .bg-em_title {
-        font-size: 1rem;
-    }
     .show-button button {
         left: 2px;
         font-size: 0.575rem;
         padding: 4px 2px;
-    }
-    .paragraph-font {
-        font-size: 0.825rem;
     }
     .hr-footer {
         width: 95%;
@@ -481,13 +402,5 @@ input:-webkit-autofill:focus {
     .text-position {
         margin-left: 5px;
     }
-}
-@media screen and (max-width:475px) {
-
-
-    /*.submit-form  {
-        width: 100%;
-        padding: 1em 1em 3em 1em;
-    }*/
 }
 
