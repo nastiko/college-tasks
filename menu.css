@@ -60,6 +60,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.collect-flex {
+    display: flex;
+}
 .dropdown-item .item-img {
     width: auto;
     height: 70px;
@@ -182,11 +185,6 @@
 
 /*menu*/
 main .pattern {
-    /*background: url("img/bg_img.jpg") no-repeat center center;
-    background-size: auto;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;*/
     background-image: url(img/bg_img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -293,7 +291,6 @@ picture img {
 }
 
 
-
 /*footer*/
 .frame {
     background-color: var(--gray);
@@ -368,6 +365,7 @@ picture img {
     color: var(--light-brown);
 }
 
+
 /*change Autocomplete styles in Chrome*/
 .input-container input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -400,6 +398,7 @@ input:-webkit-autofill:focus {
     color: var(--blue-magenta);
 }
 
+
 @media all and (max-width: 992px) {
     .nav-hided {
         display: none;
@@ -428,6 +427,9 @@ input:-webkit-autofill:focus {
     .basket-icon {
         display: block;
     }
+    .nav-item_link {
+        margin-right: 0;
+    }
     .bg-img {
         background-attachment: inherit;
         background-position-y: 0;
@@ -440,8 +442,6 @@ input:-webkit-autofill:focus {
     }
 
 }
-
-
 @media screen and (max-width:475px) {
     .col-lg-6.container-mt {
         margin: 0;
