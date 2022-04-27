@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="web_app.css" rel="stylesheet">
     <link href="common_styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Web Application</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="nav-scroll">
@@ -215,153 +215,246 @@
             </div>
         </div>
     </div>
-    <div class="reserve-table">
-        <img src="img/chef.png" alt="Chef">
-        <div class="block">
-            <div class="title">
-                <h3>Reserve a table</h3>
-                <p>or Calls us at 0125 365 8425</p>
-            </div>
-            <div>
-                <div class="form-block calendar show">
-                    <div class="calendar-info">
-                        <strong>1/3</strong>
-                        Please Select a date
-                    </div>
-                    <div class="calendar-child">
-                        <div class="month">
-                            <i class="icon-month fa">&#xf104;</i>
-                            <span class="date">March 2022</span>
-                            <i class="icon-month fa">&#xf105;</i>
-                        </div>
-                        <div class="weekdays">
-                            <div>Sun</div>
-                            <div>Mon</div>
-                            <div>Tue</div>
-                            <div>Wed</div>
-                            <div>Thu</div>
-                            <div>Fri</div>
-                            <div>Sat</div>
-                        </div>
-                        <div class="days">
-                            <div class="prev-date">26</div>
-                            <div class="prev-date">27</div>
-                            <div class="prev-date">28</div>
-                            <div class="prev-date">29</div>
-                            <div class="prev-date">30</div>
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>4</div>
-                            <div>5</div>
-                            <div>6</div>
-                            <div>7</div>
-                            <div>8</div>
-                            <div>9</div>
-                            <div>10</div>
-                            <div>11</div>
-                            <div>12</div>
-                            <div>13</div>
-                            <div>14</div>
-                            <div>15</div>
-                            <div>16</div>
-                            <div>17</div>
-                            <div>18</div>
-                            <div>19</div>
-                            <div>20</div>
-                            <div>21</div>
-                            <div>22</div>
-                            <div>23</div>
-                            <div>24</div>
-                            <div>25</div>
-                            <div>26</div>
-                            <div>27</div>
-                            <div>28</div>
-                            <div>29</div>
-                            <div>30</div>
-                            <div>31</div>
-                            <div class="next-date">1</div>
-                            <div class="next-date">2</div>
-                            <div class="next-date">3</div>
-                            <div class="next-date">4</div>
-                            <div class="next-date">5</div>
-                            <div class="next-date">6</div>
-                        </div>
-                    </div>
-                    <hr class="hr-line">
-                    <div class="nav-buttons">
-                        <button class="next reserve-table-step-next" type="button">Next</button>
-                    </div>
+    <div class="container-fluid reserve-table">
+        <div class="container">
+            <div class="row position-elements">
+                <div class="col-xl-6 pt-5 mobile-display">
+                    <img src="img/chef.png" alt="Chef">
                 </div>
-                <div class="form-block time">
-                    <div class="time-info">
-                        <strong>2/3</strong>
-                        Select time and guests
+                <div class="col-xl-6 col-md-8 block">
+                    <div class="title">
+                        <h3>Reserve a table</h3>
+                        <p>or Calls us at 0125 365 8425</p>
                     </div>
-                    <div class="time-child gap-time">
-                        <div class="title-time">
-                            <span>Time</span>
+
+                    <div class="form-block calendar show">
+                        <div class="calendar-info">
+                            <strong>1/3</strong>
+                            Please Select a date
                         </div>
-                        <div class="select-condition">
-                            <div>12.00</div>
-                            <div>12.30</div>
-                            <div>1.00</div>
-                            <div>1.30</div>
-                            <div>8.00</div>
-                            <div>8.30</div>
-                            <div>9.00</div>
-                            <div>9.30</div>
-                        </div>
-                    </div>
-                    <div class="time-child">
-                        <div class="title-time">
-                            <span>How many people?</span>
-                        </div>
-                        <div class="select-condition">
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>+4</div>
-                        </div>
-                    </div>
-                    <hr class="hr-line">
-                    <div class="nav-buttons">
-                        <button class="prev" type="button">Prev</button>
-                        <button class="next" type="button">Next</button>
-                    </div>
-                </div>
-                <div class="form-block submit-form submit">
-                    <div class="time-info">
-                        <strong>3/3</strong>
-                        Please fill with your details
-                    </div>
-                    <form action="#">
-                        <div>
-                            <input type="text" name="First and Last Name" placeholder="First and Last Name">
-                        </div>
-                        <div class="contact">
-                            <div class="contact-email">
-                                <input type="email" name="Your Email" placeholder="Your Email">
+                        <table class="calendar-month">
+                            <thead>
+                            <tr>
+                                <th class="month-heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                         fill="currentColor"
+                                         class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                                    <span>March 2022</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                         fill="currentColor"
+                                         class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                    </svg>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="weekdays">
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                            <tr class="days">
+                                <td class="prev-date">26</td>
+                                <td class="prev-date">27</td>
+                                <td class="prev-date">28</td>
+                                <td class="prev-date">29</td>
+                                <td class="prev-date">30</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="days">
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                            </tr>
+                            <tr class="days">
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                            </tr>
+                            <tr class="days">
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                            </tr>
+                            <tr class="days">
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                            </tr>
+                            <tr class="days">
+                                <td>31</td>
+                                <td class="next-date">1</td>
+                                <td class="next-date">2</td>
+                                <td class="next-date">3</td>
+                                <td class="next-date">4</td>
+                                <td class="next-date">5</td>
+                                <td class="next-date">6</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--<div class="calendar-child">
+                            <div class="month">
+                                <i class="icon-month fa">&#xf104;</i>
+                                <span class="date">March 2022</span>
+                                <i class="icon-month fa">&#xf105;</i>
                             </div>
-                            <div class="contact-phone">
-                                <input type="tel" name="Your Telephone" placeholder="Your Telephone">
+                            <div class="weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="days">
+                                <div class="prev-date">26</div>
+                                <div class="prev-date">27</div>
+                                <div class="prev-date">28</div>
+                                <div class="prev-date">29</div>
+                                <div class="prev-date">30</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div>19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div>31</div>
+                                <div class="next-date">1</div>
+                                <div class="next-date">2</div>
+                                <div class="next-date">3</div>
+                                <div class="next-date">4</div>
+                                <div class="next-date">5</div>
+                                <div class="next-date">6</div>
+                            </div>
+                        </div>-->
+                        <hr class="hr-line">
+                        <div class="nav-buttons">
+                            <button class="next reserve-table-step-next" type="button">Next</button>
+                        </div>
+                    </div>
+                    <div class="form-block time">
+                        <div class="time-info">
+                            <strong>2/3</strong>
+                            Select time and guests
+                        </div>
+                        <div class="time-child gap-time">
+                            <div class="title-time">
+                                <span>Time</span>
+                            </div>
+                            <div class="select-condition">
+                                <div>12.00</div>
+                                <div>12.30</div>
+                                <div>1.00</div>
+                                <div>1.30</div>
+                                <div>8.00</div>
+                                <div>8.30</div>
+                                <div>9.00</div>
+                                <div>9.30</div>
                             </div>
                         </div>
-                        <div class="subject">
-                            <textarea name="subject" placeholder="Please provide any additional info"></textarea>
-                        </div>
-                        <div class="confirm-policy">
-                            <input type="checkbox" name="terms" value="Yes">
-                            <p>Please accept our Terms and Conditions</p>
+                        <div class="time-child">
+                            <div class="title-time">
+                                <span>How many people?</span>
+                            </div>
+                            <div class="select-condition">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>+4</div>
+                            </div>
                         </div>
                         <hr class="hr-line">
                         <div class="nav-buttons">
                             <button class="prev" type="button">Prev</button>
-                            <button class="submit" type="submit">Submit</button>
+                            <button class="next" type="button">Next</button>
                         </div>
-                    </form>
+                    </div>
+                    <div class="form-block submit-form submit">
+                        <div class="time-info">
+                            <strong>3/3</strong>
+                            Please fill with your details
+                        </div>
+                        <form action="#">
+                            <div>
+                                <input type="text" name="First and Last Name" placeholder="First and Last Name">
+                            </div>
+                            <div class="contact">
+                                <div class="contact-email">
+                                    <input type="email" name="Your Email" placeholder="Your Email">
+                                </div>
+                                <div class="contact-phone">
+                                    <input type="tel" name="Your Telephone" placeholder="Your Telephone">
+                                </div>
+                            </div>
+                            <div class="subject">
+                                    <textarea name="subject"
+                                              placeholder="Please provide any additional info"></textarea>
+                            </div>
+                            <div class="confirm-policy">
+                                <input type="checkbox" name="terms" value="Yes">
+                                <p>Please accept our Terms and Conditions</p>
+                            </div>
+                            <hr class="hr-line">
+                            <div class="nav-buttons">
+                                <button class="prev" type="button">Prev</button>
+                                <button class="submit" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </main>
