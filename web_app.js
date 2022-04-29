@@ -63,7 +63,7 @@ class Menu {
 
 class Calendar {
     initNext() {
-        $('.nav-buttons .next').click(function () {
+        $('.button-right .next').click(function () {
             let elNow = $('.form-block.show');
             let elNext = elNow.next();
             if (elNext && elNext.length) {

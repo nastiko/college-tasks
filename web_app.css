@@ -224,31 +224,33 @@ video {
 /*.reserve-table .block {
     width: 50em;
 }*/
-/*.reserve-table .title h3 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
+.title-heading {
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 0.1vw;
-    line-height: 1.75;
-}*/
-/*.reserve-table .title p {
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    letter-spacing: 4px;
+    line-height: 1;
+}
+.heading-info {
+    font-size: 1rem;
     font-weight: 400;
-    margin: 0 0 0 0.2vw;
-}*/
+}
 /*.reserve-table */.block .form-block.show, .reserve-table .submit-form .submit {
-    display: inherit;
+    display: block;
 }
 /*.reserve-table */.block .form-block, .reserve-table .submit-form  {
     display: none;
 }
-.time, .submit-form {
+/*.calendar, */.time, .submit-form {
     width: 80%;
     background-color: rgb(244 244 244);
     padding: 1em 2em 3em 2em;
     margin: 0 auto;
 }
+tbody, td, tfoot, th, thead, tr {
+    width: 13.5%;
+}
 td {
-    padding: 5px 30px;
+    /*padding: 5px 30px;*/
     border: 1px solid var(--bs-gray-100);
 }
 .calendar {
@@ -256,28 +258,42 @@ td {
     /*padding: 1rem 2rem 3rem 2rem;*/
     padding: 15px 20px;
 }
+.calendar-month {
+    background-color: var(--white);
+    border: 1px solid var(--chinese-silver);
+    border-radius: 4px;
+}
 .calendar-info {
     color: var(--dark-gray);
     font-size: 1.125rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.calendar-month {
-    width: 100%;
-    background-color: var(--white);
-    border: 1px solid var(--chinese-silver);
-    border-radius: 4px;
-}
-.calendar-month .month-heading {
+.month-heading {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 500;
+    padding-top: 15px;
 }
-
+.month {
+    width: 95%;
+    margin: 0 auto 20px auto;
+}
+.weekdays {
+    height: 50px;
+    text-align: center;
+    color: var(--blue-magenta);
+    /*padding: 5px 0;*/
+}
+.days {
+    height: 50px;
+    text-align: center;
+}
+.days td:hover {
+    background-color: var(--light-brown);
+}
 
 
 .time-info {
@@ -291,15 +307,14 @@ strong {
 color: var(--medium-gray);
 font-weight: 500;
 }
-.hr-line {
-width: 100%;
-border: 1px solid var(--very-light-gray);
-margin: 10px auto;
-}
 .nav-buttons {
-float: right;
+    background-color: var(--light-brown);
+    color: var(--white);
+    border: 1px solid var(--light-brown);
+    border-radius: 4px;
+    padding: 12px 30px;
 }
-.nav-buttons .prev {
+.button-right .prev {
 background-color: var(--mercury);
 color: var(--black-magic);
 border: 1px solid var(--mercury);
@@ -307,15 +322,11 @@ border-radius: 4px;
 padding: 12px 30px;
 margin-right: 0.25em;
 }
-.nav-buttons .next, .nav-buttons .submit {
-float: right;
-background-color: var(--light-brown);
-color: var(--white);
-border: 1px solid var(--light-brown);
-border-radius: 4px;
-padding: 12px 30px;
+.button-right {
+    display: flex;
+    justify-content: flex-end;
 }
-.nav-buttons .next:hover, .nav-buttons .submit:hover, .nav-buttons .prev:hover  {
+.nav-buttons:hover/*, .nav-buttons .submit:hover, .nav-buttons .prev:hover*/  {
 background: var(--dark-gray);
 color: var(--white);
 cursor: pointer;
@@ -346,35 +357,6 @@ padding: 1vw;
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
-}
-/*.weekdays {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    border: 0;
-}*/
-.weekdays {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    color: var(--blue-magenta);
-    padding: 5px 0;
-}
-.days {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    padding: 5px 0;
-}
-/*.days {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}*/
-.days div:hover {
-    background-color: var(--light-brown);
 }
 
 /*.days div:focus {
@@ -744,12 +726,15 @@ input:-webkit-autofill:focus {
     }*/
 }
 @media all and (max-width: 475px) {
+    .nav-buttons {
+        padding: 5px 20px;
+    }
     /*.reserve-table .block {
         width: auto;
     }*/
-    /*.calendar, */.time, .submit-form  {
+    .calendar, .time, .submit-form  {
        /* width: 100%;*/
-        padding: 1em 1em 3em 1em;
+        /*padding: 1em 1em 3em 1em;*/
     }
   /*  .weekdays {
         width: 95%;
@@ -771,17 +756,4 @@ input:-webkit-autofill:focus {
         padding-top: 0.5em;
     }*/
 }
-@media all and (max-width: 360px)  {
-    /*.days div {
-        width: calc(19.4rem/7);
-    }*/
-    /*.select-condition div {
-        width: 48%;
-    }*/
-}
-/*@media all and (max-height: 360px) and (orientation: landscape) {
-    .weekdays div, .days div {
-        width: calc(32.2rem/7);
-    }
-}*/
 
