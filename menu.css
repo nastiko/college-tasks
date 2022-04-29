@@ -424,7 +424,7 @@ input:-webkit-autofill:focus {
     .basket-icon {
         display: block;
     }
-    .nav-item_link {
+    .basket-icon .nav-item_link {
         margin-right: 0;
     }
     .bg-img {

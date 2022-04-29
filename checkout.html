@@ -4,88 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="checkout.css" rel="stylesheet">
     <link href="common_styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Checkout</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
-    <div class="nav-scroll">
-        <div class="logo">
-            <img src="img/logo-dark_text.png" alt="logo">
-        </div>
-        <!--<nav class="nav-web">
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Basket</a></li>
-            </ul>
-        </nav>-->
-    </div>
-    <div class="nav-app">
-        <div class="menu">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                 width="30" height="30"
-                 viewBox="0 0 172 172"
-                 style=" fill:#000000;">
-                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                   stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                   font-family="none" font-weight="100" font-size="none"
-                   style="mix-blend-mode: normal">
-                    <path d="M0,172v-172h172v172z" fill="none"></path>
-                    <g fill="#000000">
-                        <path d="M17.2,40.13333c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,80.26667c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,120.4c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843z"></path>
-                    </g>
-                </g>
-            </svg>
-        </div>
-        <div class="logo">
-            <img src="img/logo-dark_text.png" alt="logo">
-        </div>
-        <nav class="search-items">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="img/search.png" alt="icon_search">
-                    </a>
-                </li>
-                <li>
-                    <a class="bag-items" href="#">
-                        <img src="img/bag.png" alt="icon_bag">
-                        <strong>2</strong>
-                    </a>
-
-                </li>
-            </ul>
-        </nav>
+    <div class="container-fluid nav-scroll">
+        <a href="web_app.html">
+            <img class="logo" src="img/logo-dark_text.png" alt="logo">
+        </a>
     </div>
 </header>
-<main class="pattern">
-    <div class="main-container">
-        <div class="boxes-forms">
-            <div class="details box-booking">
+<main class="container-fluid pattern">
+    <div class="container main-container">
+        <div class="col-xl-6 col-lg-6">
+            <div class="details">
                 <form class="submit-form" action="#">
-                    <div>
-                        <h3>Personal Details</h3>
-                    </div>
-                    <div class="fill-form">
+                    <h3 class="heading-style">Personal Details</h3>
+                    <div class="fill-form label-details">
                         <div>
                             <label>First and Last Name</label>
                             <input type="text" name="First and Last Name" placeholder="First and Last Name">
                         </div>
-                        <div class="contact-card">
-                            <div>
+                        <div class="row">
+                            <div class="col-md-6">
                                 <label>Your Email</label>
                                 <input type="email" name="Your Email" placeholder="Your Email">
                             </div>
-                            <div>
+                            <div class="col-md-6">
                                 <label>Phone</label>
                                 <input type="tel" name="Phone" placeholder="(+44)">
                             </div>
@@ -94,12 +49,12 @@
                             <label>Full Address</label>
                             <input type="text" name="Full Address" placeholder="Full Address">
                         </div>
-                        <div class="contact-card">
-                            <div>
+                        <div class="row">
+                            <div class="col-md-6">
                                 <label>City</label>
                                 <input type="text" name="City" placeholder="City">
                             </div>
-                            <div>
+                            <div class="col-md-6">
                                 <label>Postcode</label>
                                 <input type="text" name="Postcode" placeholder="BH0 0TY">
                             </div>
@@ -109,17 +64,21 @@
             </div>
             <div class="details">
                 <form class="submit-form payment-area" action="#">
-                    <div>
-                        <h3>Payment Method</h3>
-                    </div>
-                    <div class="confirm-payment">
+                    <h3 class="heading-style">Payment Method</h3>
+                    <div class="confirm-payment mt-4">
                         <label>
-                            <input type="radio" name="terms" value="Yes">
-                            <img src="img/credit_card.png" alt="credit_card">
-                            Credit Card
+                            <span>
+                                <input type="radio" name="terms" value="Yes">
+                                Credit Card
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                 class="bi bi-credit-card-2-back" viewBox="0 0 16 16">
+                                <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z"/>
+                                <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z"/>
+                            </svg>
                         </label>
                     </div>
-                    <div class="fill-form">
+                    <div class="fill-form label-details">
                         <div>
                             <label>Name on card</label>
                             <input type="text" name="First and Last Name" placeholder="First and Last Name">
@@ -128,140 +87,185 @@
                             <label>Card number</label>
                             <input type="text" name="Card number" placeholder="Card number">
                         </div>
-                        <div class="col-50_expire">
-                            <label>Expiration date</label>
-                            <div class="field-form">
-                                <input type="text" name="Expiration date" placeholder="mm">
-                                <input type="text" name="Expiration date" placeholder="yyyy">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Expiration date</label>
+                                <div class="row">
+                                    <div class="col-sm-6 mb-2">
+                                        <input type="text" name="Expiration date" placeholder="mm">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input type="text" name="Expiration date" placeholder="yyyy">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-50_expire">
-                            <label>Security code</label>
-                            <div class="field-form">
-                                <input type="text" name="Code" placeholder="CCV">
-                                <img src="img/icon_ccv.gif" alt="icon_ccv">
-                                <span><sub>Last 3 digits</sub></span>
+                            <div class="col-md-6">
+                                <label>Security code</label>
+                                <div class="row">
+                                    <div class="col-sm-6 mb-2">
+                                        <input type="text" name="Code" placeholder="CCV">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <img src="img/icon_ccv.gif" alt="icon_ccv">
+                                        <span><sub class="sub-position">Last 3 digits</sub></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="confirm-payment pay-paypal">
+                    <div class="confirm-payment mt-0">
                         <label>
-                            <input type="radio" name="terms" value="Yes">
-                            <img src="img/icon_paypal.png" alt="icon_paypal">
-                            Pay with Paypal
+                            <span>
+                                <input type="radio" name="terms" value="Yes">
+                                Pay with Paypal
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                 class="bi bi-paypal" viewBox="0 0 16 16">
+                                <path d="M14.06 3.713c.12-1.071-.093-1.832-.702-2.526C12.628.356 11.312 0 9.626 0H4.734a.7.7 0 0 0-.691.59L2.005 13.509a.42.42 0 0 0 .415.486h2.756l-.202 1.28a.628.628 0 0 0 .62.726H8.14c.429 0 .793-.31.862-.731l.025-.13.48-3.043.03-.164.001-.007a.351.351 0 0 1 .348-.297h.38c1.266 0 2.425-.256 3.345-.91.379-.27.712-.603.993-1.005a4.942 4.942 0 0 0 .88-2.195c.242-1.246.13-2.356-.57-3.154a2.687 2.687 0 0 0-.76-.59l-.094-.061ZM6.543 8.82a.695.695 0 0 1 .321-.079H8.3c2.82 0 5.027-1.144 5.672-4.456l.003-.016c.217.124.4.27.548.438.546.623.679 1.535.45 2.71-.272 1.397-.866 2.307-1.663 2.874-.802.57-1.842.815-3.043.815h-.38a.873.873 0 0 0-.863.734l-.03.164-.48 3.043-.024.13-.001.004a.352.352 0 0 1-.348.296H5.595a.106.106 0 0 1-.105-.123l.208-1.32.845-5.214Z"/>
+                            </svg>
                         </label>
                     </div>
-                    <div class="confirm-payment">
+                    <div class="confirm-payment mt-4">
                         <label>
-                            <input type="radio" name="terms" value="Yes">
-                            <img src="img/icons_wallet.png" alt="icon_wallet">
-                            Pay with Cash
+                            <span>
+                                <input type="radio" name="terms" value="Yes">
+                                Pay with Cash
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                 class="bi bi-wallet2" viewBox="0 0 16 16">
+                                <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                            </svg>
                         </label>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="box-order">
+        <div class="col-xl-3 col-lg-4">
             <div class="aside-block">
-                <div class="order-block">
-                    <div>
-                        <h2>Order Summary</h2>
-                    </div>
-                    <div class="order-items">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icon_minus.png" alt="icon_minus">
-                                    1x Enchilados
-                                </a>
-                                <span>£11</span>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icon_minus.png" alt="icon_minus">
-                                    2x Burito
-                                </a>
-                                <span>£14</span>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icon_minus.png" alt="icon_minus">
-                                    1x Chicken
-                                </a>
-                                <span>£18</span>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icon_minus.png" alt="icon_minus">
-                                    2x Corona Beer
-                                </a>
-                                <span>£9</span>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icon_minus.png" alt="icon_minus">
-                                    2x Cheese Cake
-                                </a>
-                                <span>£11</span>
-                            </li>
-                        </ul>
-                        <ul class="subtotal-items">
-                            <li>Subtotal
-                                <span>£56</span>
-                            </li>
-                            <li>Delivery fee
-                                <span>£5</span>
-                            </li>
-                            <li class="special-style">Total
-                                <span>£61</span>
-                            </li>
-                        </ul>
-                        <button>Order Now</button>
-                        <small>Or Call Us at <strong>0125 365 8425</strong></small>
-                    </div>
+                <h2 class="heading-aside">Order Summary</h2>
+                <div class="order-items">
+                    <ul class="order-list">
+                        <li class="order-list-item">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                     class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                <strong class="mx-1 item-cost">1</strong>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                     class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                <span class="ms-1">Soft-Boiled Eggs</span>
+                            </span>
+                            <strong>£8.5</strong>
+                        </li>
+                        <li class="order-list-item">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                     class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                <strong class="mx-1 item-cost">1</strong>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                     class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                <span class="ms-1">Creamy Salmon</span>
+                            </span>
+                            <strong>£13.5</strong>
+                        </li>
+                        <li class="order-list-item">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                     class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                <strong class="mx-1 item-cost">1</strong>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                     class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                <span class="ms-1">Chocolate Brownie</span>
+                            </span>
+                            <strong>£4.5</strong>
+                        </li>
+                        <li class="order-list-item">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                     class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                                <strong class="mx-1 item-cost">1</strong>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                     class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                <span class="ms-1">Lemon Tea</span>
+                            </span>
+                            <strong>£2.5</strong>
+                        </li>
+                    </ul>
+                    <ul class="mt-4 order-list">
+                        <li class="mb-1 order-list-item">Subtotal
+                            <strong>£29</strong>
+                        </li>
+                        <li class="mt-0 order-list-item">Delivery fee
+                            <strong>£5</strong>
+                        </li>
+                        <li class="order-list-item special-style">Total
+                            <strong>£34</strong>
+                        </li>
+                    </ul>
+                    <button>Order Now</button>
+                    <small>Or Call Us at <strong>0125 365 8425</strong></small>
                 </div>
             </div>
         </div>
     </div>
 </main>
-<footer class="frame">
-    <div class="customer-info">
-        <div class="help-contact">
-            <h4>Customer Service</h4>
-            <div class="icon-operator"></div>
-            <div class="online-support">
-                <p><a href="#">You need help?</a></p>
-                <p>You have a question on a previous order</p>
-            </div>
-        </div>
-        <div class="info-contact">
-            <h4>Address</h4>
+<footer class="container-fluid frame">
+    <div class="row customer-info">
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Address</h4>
             <div class="main-info">
-                <p>11 Kingland Cres</p>
-                <p>BH15 1KZ, Poole</p>
+                <p class="text-decoration">11 Kingland Cres</p>
+                <p class="text-decoration">BH15 1KZ, Poole</p>
             </div>
         </div>
-        <div class="info-contact">
-            <h4>Reservations</h4>
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Reservations</h4>
             <div class="main-info">
-                <p>01202 148912</p>
-                <p>reservations@YummyRestaurant.com</p>
+                <p class="text-decoration">01202 148912</p>
+                <p class="text-decoration">reservations@YummyRestaurant.com</p>
             </div>
         </div>
-        <div class="info-contact">
-            <h4>Opening Hours</h4>
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Opening Hours</h4>
             <div class="main-info">
-                <p>Mon - Sat: 10am - 11pm</p>
-                <p>Sunday: Closed</p>
+                <p class="text-decoration">Mon - Sat: 10am - 11pm</p>
+                <p class="text-decoration">Sunday: Closed</p>
             </div>
         </div>
-        <div class="info-contact">
-            <h4>Follow us</h4>
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Follow us</h4>
             <form action="#">
                 <div class="input-container">
                     <input type="email" name="email" placeholder="Your email" required>
-                    <button class="button_submit" type="submit">
-                        <i class="fa fa-chevron-right"></i>
+                    <button class="button-submit" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
+                             class="bi bi-chevron-right button-svg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
                     </button>
                 </div>
             </form>
@@ -269,7 +273,7 @@
     </div>
     <hr class="hr-footer">
     <div class="social-media">
-        <p>© 2022 Yummy Restaurant - All rights reserved</p>
+        <p class="text-decoration text-position">© 2022 Yummy Restaurant - All rights reserved</p>
         <div class="icon-media">
             <a href="https://en-gb.facebook.com/">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
