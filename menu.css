@@ -415,9 +415,6 @@ input:-webkit-autofill:focus {
         z-index: 1000;
         opacity: 0.9;
     }
-    .scroll-sticky {
-        background-color: var(--shade-gray);
-    }
     .text-black svg {
         fill: var(--black-magic);
     }
