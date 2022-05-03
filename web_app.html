@@ -216,15 +216,15 @@
         </div>
     </div>
     <div class="container-fluid reserve-table">
-        <div class="container pt-3 pb-4">
+        <div class="container padding-container">
             <div class="row position-elements">
-                <div class="col-xl-5 pt-5 mobile-display">
+                <div class="col-xl-5 pt-5 hide-img">
                     <img src="img/chef.png" alt="Chef">
                 </div>
                 <div class="col-xl-6 col-lg-8 col-md-10 block">
                     <h3 class="title-heading">Reserve a table</h3>
                     <p class="heading-info">or Calls us at 0125 365 8425</p>
-                    <div class="form-block calendar show">
+                    <div class="form-block wizard-container show">
                         <div class="calendar-info">
                             <strong>1/3</strong>
                             Please Select a date
@@ -315,77 +315,82 @@
                                 </tbody>
                             </table>
                         </div>
-                       <hr>
-                        <div class="button-right">
-                            <button class="nav-buttons next reserve-table-step-next" type="button">Next</button>
+                        <hr>
+                        <div class="button-next">
+                            <button class="nav-buttons next" type="button">Next</button>
                         </div>
                     </div>
-                    <div class="form-block time">
-                        <div class="time-info">
+                    <div class="form-block wizard-container">
+                        <div class="calendar-info">
                             <strong>2/3</strong>
                             Select time and guests
                         </div>
-                        <div class="time-child gap-time">
-                            <div class="title-time">
-                                <span>Time</span>
-                            </div>
-                            <div class="select-condition">
-                                <div>12.00</div>
-                                <div>12.30</div>
-                                <div>1.00</div>
-                                <div>1.30</div>
-                                <div>8.00</div>
-                                <div>8.30</div>
-                                <div>9.00</div>
-                                <div>9.30</div>
-                            </div>
+                        <div class="wrap-time_container boxes-gap">
+                            <h4 class="title-time">Time</h4>
+                            <table class="select-condition">
+                                <tbody>
+                                <tr class="time">
+                                    <td>12.00</td>
+                                    <td>12.30</td>
+                                    <td>1.00</td>
+                                    <td>1.30</td>
+
+                                </tr>
+                                <tr class="time">
+                                    <td>8.00</td>
+                                    <td>8.30</td>
+                                    <td>9.00</td>
+                                    <td>9.30</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="time-child">
-                            <div class="title-time">
-                                <span>How many people?</span>
-                            </div>
-                            <div class="select-condition">
-                                <div>1</div>
-                                <div>2</div>
-                                <div>3</div>
-                                <div>+4</div>
-                            </div>
+                        <div class="wrap-time_container">
+                            <h4 class="title-time">How many people?</h4>
+                            <table class="select-condition">
+                                <tr class="time">
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>+4</td>
+                                </tr>
+                            </table>
                         </div>
-                        <hr class="hr-line">
-                        <div class="nav-buttons">
-                            <button class="prev" type="button">Prev</button>
-                            <button class="next" type="button">Next</button>
+                        <hr>
+                        <div class="button-next">
+                            <button class="nav-buttons prev" type="button">Prev</button>
+                            <button class="nav-buttons next" type="button">Next</button>
                         </div>
                     </div>
-                    <div class="form-block submit-form submit">
-                        <div class="time-info">
+                    <div class="form-block wizard-container">
+                        <div class="calendar-info">
                             <strong>3/3</strong>
                             Please fill with your details
                         </div>
-                        <form action="#">
-                            <div>
-                                <input type="text" name="First and Last Name" placeholder="First and Last Name">
+                        <form action="/" method="get" required>
+                            <div class="mb-2">
+                                <input class="form-control input-focus" type="text" name="First and Last Name" placeholder="First and Last Name">
                             </div>
-                            <div class="contact">
-                                <div class="contact-email">
-                                    <input type="email" name="Your Email" placeholder="Your Email">
+                            <div class="row mb-2">
+                                <div class="col-lg-6 form-control_mb">
+                                    <input class="form-control input-focus" type="email" name="Your Email" placeholder="Your Email">
                                 </div>
-                                <div class="contact-phone">
-                                    <input type="tel" name="Your Telephone" placeholder="Your Telephone">
+                                <div class="col-lg-6">
+                                    <input class="form-control input-focus" type="tel" name="Your Telephone" placeholder="Your Telephone">
                                 </div>
                             </div>
-                            <div class="subject">
-                                    <textarea name="subject"
+                            <div class="mb-2">
+                                    <textarea class="form-control input-focus" rows="3" name="subject"
                                               placeholder="Please provide any additional info"></textarea>
                             </div>
-                            <div class="confirm-policy">
-                                <input type="checkbox" name="terms" value="Yes">
-                                <p>Please accept our Terms and Conditions</p>
+                            <div>
+                                <input class="confirm-policy" type="checkbox" name="terms" value="Yes">
+                                <p class="policy-info">Please accept our Terms and Conditions</p>
                             </div>
-                            <hr class="hr-line">
-                            <div class="nav-buttons">
-                                <button class="prev" type="button">Prev</button>
-                                <button class="submit" type="submit">Submit</button>
+                            <hr>
+                            <div class="button-next">
+                                <button class="nav-buttons prev" type="button">Prev</button>
+                                <button class="nav-buttons submit" type="submit">Submit</button>
                             </div>
                         </form>
                     </div>
