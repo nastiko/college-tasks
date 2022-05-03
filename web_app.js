@@ -49,7 +49,7 @@ class Menu {
 
 class Calendar {
     initNext() {
-        $('.button-right .next').click(function () {
+        $('.button-next .next').click(function () {
             let elNow = $('.form-block.show');
             let elNext = elNow.next();
             if (elNext && elNext.length) {
@@ -60,7 +60,7 @@ class Calendar {
     }
 
     initPrev() {
-        $('.nav-buttons .prev').click(function () {
+        $('.button-next .prev').click(function () {
             let elNow = $('.form-block.show');
             let elPrev = elNow.prev();
             if (elPrev && elPrev.length) {

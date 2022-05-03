@@ -104,7 +104,20 @@ form input:focus {
 .col-sm-6 .sub-position {
     vertical-align: text-bottom;
 }
-
+.col-50_expire .field-form input {
+    display: inline-block;
+    width: 40%;
+    margin-right: 12px;
+}
+.fill-form img {
+    vertical-align: middle;
+}
+.fill-form span {
+    font-size: 0.7rem;
+}
+.boxes-gap {
+    margin-bottom: 1em;
+}
 
 /*aside*/
 .aside-block {
