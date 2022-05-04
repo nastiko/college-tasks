@@ -27,7 +27,7 @@
     <nav class="justify-content-center">
         <ul class="navbar-nav position-navbar">
             <li class="nav-hided">
-                <a class="nav-item_link" href="web_app.html">Home</a>
+                <a class="nav-item_link" href="menu.html">Menu</a>
             </li>
             <li class="nav-hided dropdown">
                 <a class="nav-item_link" href="#" role="button" data-bs-toggle="dropdown">Basket</a>
@@ -536,44 +536,40 @@
         </div>
     </div>
 </main>
-<footer class="frame">
-    <div class="customer-info">
-        <div class="help-contact">
-            <h4>Customer Service</h4>
-            <div class="icon-operator"></div>
-            <div class="online-support">
-                <p><a href="#">You need help?</a></p>
-                <p>You have a question on a previous order</p>
-            </div>
-        </div>
-        <div class="info-contact">
-            <h4>Address</h4>
+<footer class="container-fluid frame">
+    <div class="row customer-info">
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Address</h4>
             <div class="main-info">
-                <p>11 Kingland Cres</p>
-                <p>BH15 1KZ, Poole</p>
+                <p class="text-decoration">11 Kingland Cres</p>
+                <p class="text-decoration">BH15 1KZ, Poole</p>
             </div>
         </div>
-        <div class="info-contact">
-            <h4>Reservations</h4>
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Reservations</h4>
             <div class="main-info">
-                <p>01202 148912</p>
-                <p>reservations@YummyRestaurant.com</p>
+                <p class="text-decoration">01202 148912</p>
+                <p class="text-decoration">reservations@YummyRestaurant.com</p>
             </div>
         </div>
-        <div class="info-contact">
-            <h4>Opening Hours</h4>
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Opening Hours</h4>
             <div class="main-info">
-                <p>Mon - Sat: 10am - 11pm</p>
-                <p>Sunday: Closed</p>
+                <p class="text-decoration">Mon - Sat: 10am - 11pm</p>
+                <p class="text-decoration">Sunday: Closed</p>
             </div>
         </div>
-        <div class="info-contact">
-            <h4>Follow us</h4>
+        <div class="col-lg-3 col-md-6 info-contact">
+            <h4 class="font-style">Follow us</h4>
             <form action="#">
                 <div class="input-container">
                     <input type="email" name="email" placeholder="Your email" required>
-                    <button class="button_submit" type="submit">
-                        <i class="fa fa-chevron-right"></i>
+                    <button class="button-submit" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
+                             class="bi bi-chevron-right button-svg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
                     </button>
                 </div>
             </form>
@@ -581,7 +577,7 @@
     </div>
     <hr class="hr-footer">
     <div class="social-media">
-        <p>© 2022 Yummy Restaurant - All rights reserved</p>
+        <p class="text-decoration text-position">© 2022 Yummy Restaurant - All rights reserved</p>
         <div class="icon-media">
             <a href="https://en-gb.facebook.com/">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
