@@ -1,59 +1,163 @@
 body {
-    font-family: var(--font-family-sans-serif);
     font-weight: 400;
     background-color: var(--white);
 }
-*, *:before, *:after {
-    box-sizing: inherit;
+.navbar-nav.position-navbar {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 18px;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-/*navbar for Web*/
-.nav-hided {
-    position: fixed;
-    inset: 0.4rem 0 auto auto;
-    padding: 1vw;
-}
-.nav-hided ul li {
-    float: left;
-}
-.nav-hided ul {
-    list-style-type: none;
-}
-.nav-hided ul a {
+.nav-item_link {
     text-decoration: none;
-    color: var(--light-gray);
-    font-size: clamp(0.975rem, 1.5vw, 1.063rem);
+    color: var(--white);
+    font-size: 1.125rem;
     letter-spacing: 1px;
-    padding: 5px 8px;
+    margin-right: 25px;
 }
-.nav-sticky a {
+.nav-item_link:active, .nav-item_link:hover  {
+    color: var(--white);
+}
+.nav-sticky .nav-item_link {
     color: var(--black-magic);
     font-weight: 400;
 }
 
-
 /*logo for Web*/
 .logo {
     position: fixed;
-    inset: 0 auto auto 0;
+    /*inset: 0 auto auto 0;*/
 }
-
 .logo img {
     width: 200px;
-    margin: 0.5em;
+    margin: 8px;
     display: none;
 }
-
 .logo .visible {
     display: block;
 }
 
+
+/*scroll down NavBar*/
+.nav-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 67px;
+    width: 100%;
+    z-index: 1000;
+}
+.scroll-sticky {
+    background-color: var(--shade-gray);
+}
+
+
+/*dropdown basket*/
+.bg-menu {
+    background-color: var(--white);
+}
+.dropdown-item.position-item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.collect-flex {
+    display: flex;
+}
+.dropdown-item .item-img {
+    width: auto;
+    height: 70px;
+}
+.dropdown-item .item-info {
+    margin: 0 20px;
+}
+.item-title {
+    display: block;
+    text-decoration: none;
+    color: var(--black-magic);
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 3px;
+}
+.item-cost {
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: normal;
+}
+.dropdown-item .svg-item {
+    display: flex;
+    gap: 10px;
+}
+.svg-item:hover {
+    cursor: pointer;
+}
+.hr-line_style {
+    width: 90%;
+    margin: 5px auto;
+    background-color: var(--light-brown);
+}
+.total-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    margin: 0 17px;
+    font-weight: 500;
+}
+.checkout-link {
+    text-decoration: none;
+}
+.button-checkout {
+    display: block;
+    width: 90%;
+    font-family: "Poppins",Helvetica,sans-serif;
+    font-size: 0.975rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--light-brown);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    margin: 5px auto;
+}
+
+/*home page on phone and table*/
+.bg-app {
+    display: block;
+    width: 100%;
+    height: 530px;
+    opacity: 0.9;
+    z-index: -1;
+}
+.basket-icon .item-type {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    /* padding: 1vw 0.5vw 0 0;*/
+    margin: 0;
+}
+.basket-icon a {
+    text-decoration: none;
+}
+.basket-icon .item-amount {
+    position: relative;
+    right: 14px;
+    top: 12px;
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    background-color: var(--black-magic);
+    border-radius: 10px;
+    padding: 1px 5px;
+}
+.basket-icon {
+    display: none;
+}
 
 /*video*/
 .header-video {
@@ -561,6 +665,50 @@ input:-webkit-autofill:focus {
         padding-bottom: 3rem;
     }
 }
+/*navBar and NavScroll page*/
+@media all and (max-width: 992px) {
+    .nav-hided {
+        display: none;
+    }
+    .nav-app {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        height: 67px;
+        z-index: 1000;
+        opacity: 0.9;
+    }
+    .text-black svg {
+        fill: var(--black-magic);
+    }
+    .logo img {
+        width: 175px;
+    }
+    .basket-icon {
+        display: block;
+    }
+    .basket-icon .nav-item_link {
+        margin-right: 0;
+    }
+    .bg-img {
+        background-attachment: inherit;
+        background-position-y: 0;
+    }
+    .heading-size {
+        font-size: 3rem;
+    }
+    .icon-media {
+        margin-top: 15px;
+    }
+    .form-control_mb {
+        margin-bottom: 0.5rem;
+    }
+
+}
 
 /*calendar !important*/
 @media all and (max-width: 475px) {
@@ -586,7 +734,7 @@ input:-webkit-autofill:focus {
 
 /*none display of video and replaced it on img*/
 @media all and (max-width: 974px) {
-    video, .nav-scroll, .info-panel p, .icon-operator {
+    video, .info-panel p, .icon-operator {
         display: none;
     }
     .bg-app {
@@ -638,55 +786,6 @@ input:-webkit-autofill:focus {
     }
     .new-foods h2 {
         text-align: center;
-    }
-}
-
-
-/*navbar for app*/
-@media all and (max-width: 992px) {
-    .nav-web {
-        display: none;
-    }
-    .nav-app {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: transparent;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        padding: 1vw;
-        height: 58px;
-        z-index: 999999;
-    }
-    .scroll-sticky {
-        position: sticky;
-        background-color: white;
-    }
-    .nav-app .menu {
-        padding: 2vw;
-    }
-    .swap-color svg g g {
-        fill: black;
-    }
-    .icon-search {
-        transform: scaleX(-1);
-        -moz-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        -ms-transform: scaleX(-1);
-    }
-    .logo img {
-        width: 160px;
-        position: fixed;
-        inset: 0.5em 0 auto 0;
-        margin: auto;
-    }
-    .help-contact {
-        min-width: 15em;
-    }
-    .form-control_mb {
-        margin-bottom: 0.5rem;
     }
 }
 
