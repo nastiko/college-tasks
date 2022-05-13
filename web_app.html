@@ -143,7 +143,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="basket-icon dropdown">
+            <!--<li class="basket-icon dropdown">
                 <a class="nav-item_link" href="#" role="button" data-bs-toggle="dropdown">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff"
                          class="bi bi-bag-check" viewBox="0 0 16 16">
@@ -264,8 +264,135 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
+        <a href="#" class="basket-icon nav-item_link" onclick="openNav()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff"
+                 class="bi bi-bag-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+            </svg>
+            <strong class="item-amount">0</strong>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul class="sidenav-menu">
+                    <li class="position-item">
+                        <span class="collect-flex">
+                          <img class="item-img" src="img/starters_1.jpg" alt="Soft-Boiled Eggs">
+                            <span class="item-info">
+                            <em class="item-title">Soft-Boiled Eggs</em>
+                            <em class="item-cost">£8.5</em>
+                            </span>
+                        </span>
+                        <span class="svg-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                            <strong class="m-2 item-cost">1</strong>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                 class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <hr class="sidenav-hr">
+                    </li>
+                    <li class="position-item">
+                        <span class="collect-flex">
+                            <img class="item-img" src="img/dishes_2.jpg" alt="Creamy Salmon">
+                            <span class="item-info">
+                            <em class="item-title">Creamy Salmon</em>
+                            <em class="item-cost">£13.5</em>
+                            </span>
+                        </span>
+                        <span class="svg-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                            <strong class="m-2 item-cost">1</strong>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                 class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <hr class="sidenav-hr">
+                    </li>
+                    <li class="position-item">
+                        <span class="collect-flex">
+                          <img class="item-img" src="img/try_brownie.jpg" alt="Salted Caramel">
+                            <span class="item-info">
+                            <em class="item-title">Chocolate Brownie</em>
+                            <em class="item-cost">£4.5</em>
+                            </span>
+                        </span>
+                        <span class="svg-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                            <strong class="m-2 item-cost">1</strong>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                 class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <hr class="sidenav-hr">
+                    </li>
+                    <li class="position-item">
+                        <span class="collect-flex">
+                            <img class="item-img" src="img/drink_2.jpg" alt="Lemon Tea">
+                            <span class="item-info">
+                            <em class="item-title">Lemon Tea</em>
+                            <em class="item-cost">£2.5</em>
+                            </span>
+                        </span>
+                        <span class="svg-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                            <strong class="m-2 item-cost">1</strong>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                 class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <hr class="sidenav-hr">
+                    </li>
+                </ul>
+                <ul class="sidenav-menu_bottom">
+                    <li class="total-item_bottom">
+                        <strong>Total</strong>
+                        <strong>£61</strong>
+                    </li>
+                    <li>
+                        <a class="checkout-link" href="checkout.html">
+                            <button class="button-checkout_bottom">Checkout</button>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </a>
+
     </nav>
 </div>
 <header>
@@ -298,24 +425,6 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left icon-angle" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                 </svg>
-                <!--<div class="icon-angle">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                         width="2rem" height="2rem"
-                         viewBox="0 0 172 172"
-                         style=" fill:var(&#45;&#45;gray);">
-                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                           stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                           font-family="none" font-weight="100" font-size="none"
-                           style="mix-blend-mode: normal">
-                            <path d="M0,172v-172h172v172z" fill="transparent"></path>
-                            <g fill="#2b2b2b">
-                                <path d="M43.99294,88.47624l78.83333,82.41667c1.01481,1.0568 2.56852,1.39974 3.92627,0.84684c1.35775,-0.5424 2.24658,-1.86165 2.24658,-3.32438v-14.33333c0,-0.91683 -0.34993,-1.79867 -0.97982,-2.46354l-62.16943,-65.61979l62.16943,-65.61979c0.62988,-0.66488 0.97982,-1.54671 0.97982,-2.46354v-14.33333c0,-1.46273 -0.88883,-2.78198 -2.24658,-3.32438c-0.43392,-0.17497 -0.88893,-0.25895 -1.33675,-0.25895c-0.95882,0 -1.89665,0.38493 -2.58952,1.10579l-78.83333,82.41667c-1.32275,1.38574 -1.32275,3.56934 0,4.95508z"></path>
-                            </g>
-                            <path d="" fill="none"></path>
-                            <path d="" fill="none"></path>
-                        </g>
-                    </svg>
-                </div>-->
                 <div class="block-align">
                     <img src="img/try_pizza.jpg" alt="Pizza">
                     <h4>Rustica Chicken & Fiery Roquito</h4>
@@ -334,24 +443,6 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right icon-angle" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                 </svg>
-                <!--<div class="icon-angle">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                         width="2rem" height="2rem"
-                         viewBox="0 0 172 172"
-                         style=" fill:var(&#45;&#45;gray);">
-                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                           stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                           font-family="none" font-weight="100" font-size="none"
-                           style="mix-blend-mode: normal">
-                            <path d="M0,172v-172h172v172z" fill="transparent"></path>
-                            <g fill="#2b2b2b">
-                                <path d="M128.00706,83.52376l-78.83333,-82.41667c-1.01481,-1.0568 -2.56852,-1.39974 -3.92627,-0.84684c-1.35775,0.5424 -2.24658,1.86165 -2.24658,3.32438v14.33333c0,0.91683 0.34993,1.79867 0.97982,2.46354l62.16943,65.61979l-62.16943,65.61979c-0.62988,0.66488 -0.97982,1.54671 -0.97982,2.46354v14.33333c0,1.46273 0.88883,2.78198 2.24658,3.32438c0.43392,0.17497 0.88876,0.25895 1.33675,0.25895c0.95882,0 1.89665,-0.38493 2.58952,-1.10579l78.83333,-82.41667c1.32275,-1.38574 1.32275,-3.56933 0,-4.95508z"></path>
-                            </g>
-                            <path d="" fill="none"></path>
-                            <path d="" fill="none"></path>
-                        </g>
-                    </svg>
-                </div>-->
                 <div class="block-align img-hided">
                     <img src="img/try_brownie.jpg" alt="Brownie">
                     <h4>Salted Caramel Chocolate Brownie</h4>
@@ -571,7 +662,7 @@
             <h4 class="font-style">Follow us</h4>
             <form action="#">
                 <div class="input-container">
-                    <input type="email" name="email" placeholder="Your email" required>
+                    <input class="input-email" type="email" name="email" placeholder="Your email" required>
                     <button class="button-submit" type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
                              class="bi bi-chevron-right button-svg" viewBox="0 0 16 16">
