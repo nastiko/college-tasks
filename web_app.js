@@ -72,17 +72,27 @@ class Calendar {
 }
 
 class AddItem {
-    clickButton () {
+    clickButton() {
         $('.show-button').click(function () {
 
         })
     }
 }
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
+class MobileMenu {
+    openNav() {
+        $('.basket-icon').click (function () {
+            $("#mySidenav").animate({
+                width: '100%'
+            }, "fast");
+        });
+    }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    closeNav () {
+        $('.closebtn').click (function () {
+            $("#mySidenav").animate({
+                width: '0%'
+            }, "fast");
+        });
+    }
 }
