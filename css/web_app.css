@@ -1,0 +1,367 @@
+body {
+    font-weight: 400;
+    background-color: var(--white);
+}
+
+
+/*video*/
+.overflow-video {
+    height: 500px;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+.fit-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+}
+
+
+/*block about how customer can trust the restaurant*/
+.info-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--gray);
+    color: var(--light-brown);
+    --mask: linear-gradient(#2b2b2b, #2b2b2b, #2b2b2b) top/100% calc(100% - 0.3em) no-repeat,
+    radial-gradient(circle farthest-side, #2b2b2b 98%, #0000) bottom/0.56em 0.6em repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+.icon-knives i, .icon-card i, .icon-stars i {
+    margin: auto;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-size: auto 100%;
+    align-items: center;
+}
+.icon-knives i {
+    background-image: url("../img/knives.png");
+}
+.icon-card i {
+    background-image: url("../img/card.png");
+}
+.icon-stars i {
+    background-image: url("../img/stars.png");
+}
+.info-panel p {
+    font-family: HelveticaNeueW01-45Ligh, Helvetica Neue, Helvetica, sans-serif;
+    font-size: clamp(0.935rem, 1.5vw, 1.0125rem);
+    letter-spacing: 1px;
+}
+
+
+/*block about new food*/
+.new-foods {
+    background-color: var(--light-gray);
+}
+.heading-new_food {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    line-height: 1.75;
+    color: var(--gray);
+    padding: 0.5em 0;
+}
+.product-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;;
+    align-items: center;
+    margin-inline: auto;
+}
+.block-align {
+    text-align: center;
+}
+.block-align img {
+    width: 15em;
+}
+.block-align h4 {
+    font-size: clamp(1.105rem, 3vw, 1.125rem);
+    line-height: 2.5;
+    font-family: 'Lora', serif;
+}
+.icon-angle {
+    position: relative;
+    inset: -4rem auto auto 0;
+}
+
+.img-hided {
+    display: none;
+}
+
+
+/*button "add in basket"*/
+.price {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: var(--dark-orange);
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.price:before {
+    content: attr(data-front);
+    opacity: 1;
+    transition: 0.5s;
+    padding: 0 20px;
+    transform: translateY(0) rotate(0);
+}
+.price:after {
+    content: attr(data-back);
+    background-color: var(--blue-magenta);
+    color: var(--light-brown);
+    border-radius: 3px;
+    position: absolute;
+    /*inset: 0 auto auto 0;*/
+    top: -1px;
+    left: 12px;
+    font-size: 20px;
+    opacity: 0;
+    width: 80px;
+    height: 35px;
+    transition: 0.5s;
+    transform: translateY(0) rotate(0);
+}
+.price:hover::before {
+    opacity: 0;
+    transform: translateY(0) rotate(0);
+}
+.price:hover::after {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+}
+.price:hover::before, .price:hover::after {
+    cursor: pointer;
+}
+
+
+/*reserve table*/
+.reserve-table {
+    background-image: url("../img/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.padding-container {
+    padding-top: 3rem;
+}
+.row.position-elements {
+    justify-content: center;
+    align-items: center;
+}
+.title-heading {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    line-height: 1;
+}
+.heading-info {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.wizard-container {
+    background-color: rgb(244 244 244);
+    padding: 15px 20px;
+}
+/*calendar with choosing day*/
+.calendar-info {
+     color: var(--dark-gray);
+     font-size: 1.125rem;
+     font-weight: 500;
+     margin-bottom: 15px;
+}
+.calendar-info strong {
+    color: var(--medium-gray);
+    font-weight: 500;
+}
+.calendar-month {
+      background-color: var(--white);
+      border: 1px solid var(--chinese-silver);
+      border-radius: 4px;
+}
+.month-heading {
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       font-size: 18px;
+       font-weight: 500;
+       padding-top: 15px;
+}
+tbody, td, tfoot, th, thead, tr {
+    width: 13.5%;
+}
+td {
+    border: 1px solid var(--bs-gray-100);
+}
+.month {
+    width: 95%;
+    margin: 0 auto 20px auto;
+}
+.weekdays {
+    height: 50px;
+    text-align: center;
+    color: var(--blue-magenta);
+}
+/*main height for rows of cells in table */
+.days, .time {
+     height: 50px;
+     text-align: center;
+}
+.days td:hover, .time td:hover {
+    background-color: var(--light-brown);
+}
+.prev-date, .next-date {
+     opacity: .35;
+}
+/*choose time and how many people will come in*/
+.wrap-time_container {
+    background-color: var(--white);
+    border: 1px solid var(--chinese-silver);
+    border-radius: 4px;
+    padding: 15px 5px;
+}
+.boxes-gap {
+    margin-bottom: 1rem;
+}
+.title-time {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+.select-condition {
+    width: 90%;
+    margin: 0 auto;
+}
+/*filling in form*/
+.confirm-policy {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+}
+.policy-info {
+    display: inline-block;
+    font-weight: 400;
+    margin: 5px 0 0 0;
+}
+.input-focus:focus {
+    border: 2px solid var(--light-brown);
+    box-shadow: none;
+}
+/*button for reserve a table next/prev*/
+.nav-buttons {
+    background-color: var(--light-brown);
+    color: var(--white);
+    border: 1px solid var(--light-brown);
+    border-radius: 4px;
+    padding: 8px 20px;
+}
+.button-next .prev {
+    background-color: var(--mercury);
+    color: var(--black-magic);
+    border: 1px solid var(--mercury);
+}
+.nav-buttons:hover, .prev:hover {
+    background: var(--dark-gray);
+    color: var(--white);
+}
+.button-next {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+/*JS*/
+/*.reserve-table */
+.block .form-block.show, .reserve-table .submit-form {
+    display: block;
+}
+/*.reserve-table */
+.block .form-block, .reserve-table .submit-form {
+    display: none;
+}
+
+
+/*none display of the img/shef.png and angle's icons in calendar*/
+@media all and (max-width: 1200px) {
+    .hide-img, .icon-angle {
+        display: none;
+    }
+    .padding-container {
+        padding-bottom: 3rem;
+    }
+    .product-slider {
+        justify-content: space-evenly;
+    }
+}
+/*navBar and NavScroll page*/
+@media all and (max-width: 992px) {
+    .fit-video, .guarantee-text {
+        display: none;
+    }
+    .overflow-video {
+        height: 350px;
+    }
+    .bg-app {
+        display: block;
+        width: 100%;
+        height: 350px;
+        opacity: 0.9;
+        background-image: url("../img/slide_home.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+    }
+    .form-control_mb {
+        margin-bottom: 0.5rem;
+    }
+    .heading-new_food {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+}
+
+/*calendar !important*/
+@media all and (max-width: 475px) {
+    .logo img {
+        width: 175px;
+    }
+    .title-heading {
+        font-size: 32px;
+    }
+    .nav-buttons {
+        padding: 5px 20px;
+    }
+    .wrap-time_container {
+        padding: 10px 5px;
+    }
+    .boxes-gap {
+        margin-bottom: 0.5rem;
+    }
+    .policy-info {
+        display: inline-block;
+        font-weight: 400;
+        margin: 5px 0 0 0;
+        font-size: 12px;
+    }
+}
+
+/*none display of video and replaced it on img*/
+@media all and (max-width: 974px) {
+    .price {
+        line-height: 2em;
+    }
+}
