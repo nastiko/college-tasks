@@ -80,7 +80,7 @@ class AddItem {
 }
 
 class MobileMenu {
-    openNav() {
+    slideLeft() {
         $('.basket-icon').click (function () {
             $("#mySidenav").animate({
                 width: '100%'
@@ -88,7 +88,7 @@ class MobileMenu {
         });
     }
 
-    closeNav () {
+    slideRight() {
         $('.closebtn').click (function () {
             $("#mySidenav").animate({
                 width: '0%'
