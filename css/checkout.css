@@ -1,16 +1,26 @@
-/*logo for Web*/
-.logo {
-    width: 235px;
-    margin: 4px;
-}
-
-
 /*scroll down NavBar*/
 .nav-scroll {
     background-color: var(--gray94);
-    text-align: center;
+    height: 67px;
+    width: 100%;
 }
 
+/*navigation bar: menu, home, basket*/
+.navbar-nav.position-navbar {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 18px;
+}
+.nav-item_link {
+    text-decoration: none;
+    color: var(--black-magic);
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    margin-right: 25px;
+}
+.nav-item_link:active, .nav-item_link:hover  {
+    color: var(--black-magic);
+}
 
 /*forms*/
 main.pattern {

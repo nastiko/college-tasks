@@ -5,31 +5,32 @@ body {
 
 
 /*logo for Web*/
-.logo {
-    position: fixed;
-    inset: 0 auto auto 0;
-}
 .logo img {
-    width: 200px;
-    margin: 8px;
     display: none;
 }
 .logo .visible {
     display: block;
 }
 
-
-/*scroll down NavBar*/
-.nav-scroll {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 67px;
-    width: 100%;
-    z-index: 1000;
+/*navigation bar: menu, home, basket*/
+.navbar-nav.position-navbar {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 18px;
 }
-.scroll-sticky {
-    background-color: var(--gray94);
+.nav-item_link {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    margin-right: 25px;
+}
+.nav-item_link:active, .nav-item_link:hover  {
+    color: var(--white);
+}
+.nav-sticky .nav-item_link {
+    color: var(--black-magic);
+    font-weight: 400;
 }
 
 
