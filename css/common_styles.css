@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 /*logo for Web*/
-.logo {
+/*.logo {
     position: fixed;
     inset: 0 auto auto 0;
 }
@@ -64,10 +64,10 @@ h1, h2, h3, h4, h5, p {
 }
 .logo .visible {
     display: block;
-}
+}*/
 
 /*scroll down NavBar*/
-.nav-scroll {
+/*.nav-scroll {
     position: fixed;
     top: 0;
     left: 0;
@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, p {
 }
 .scroll-sticky {
     background-color: var(--gray94);
-}
+}*/
 
 /*dropdown basket*/
 .bg-menu {
