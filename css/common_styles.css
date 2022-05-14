@@ -130,6 +130,7 @@ h1, h2, h3, h4, h5, p {
 }
 .grid-icon {
     margin-top: 0.1rem;
+    /*margin-right: 1rem;*/
 }
 .basket-icon .item-type {
     display: flex;

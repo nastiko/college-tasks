@@ -60,7 +60,7 @@ class AddItem {
 
 class MobileMenu {
     slideLeft() {
-        $('.basket-icon').click (function () {
+        $('.basket-link').on ('click', function () {
             $("#mySidenav").animate({
                 width: '100%'
             }, "fast");
@@ -68,7 +68,7 @@ class MobileMenu {
     }
 
     slideRight() {
-        $('.icon-x').click (function () {
+        $('.icon-x').on ('click', function () {
             $("#mySidenav").animate({
                 width: '0%'
             }, "fast");
