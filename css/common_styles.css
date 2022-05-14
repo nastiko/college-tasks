@@ -129,8 +129,7 @@ h1, h2, h3, h4, h5, p {
     color: transparent;
 }
 .grid-icon {
-    margin-top: 0.1rem;
-    /*margin-right: 1rem;*/
+    margin: 0.1rem 1rem 0 0;
 }
 .basket-icon .item-type {
     display: flex;
@@ -348,10 +347,9 @@ a.icon-x:hover {
         fill: var(--black-magic);
     }
     .basket-icon {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 20px;
+        display: block;
+        position: absolute;
+        inset: 16px 0 auto auto;
     }
     .nav-item_link {
         margin-right: 0;
