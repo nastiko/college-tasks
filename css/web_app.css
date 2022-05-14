@@ -4,6 +4,34 @@ body {
 }
 
 
+/*logo for Web*/
+.logo {
+    position: fixed;
+    inset: 0 auto auto 0;
+}
+.logo img {
+    width: 200px;
+    margin: 8px;
+    display: none;
+}
+.logo .visible {
+    display: block;
+}
+
+/*scroll down NavBar*/
+.nav-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 67px;
+    width: 100%;
+    z-index: 1000;
+}
+.scroll-sticky {
+    background-color: var(--gray94);
+}
+
+
 /*video*/
 .overflow-video {
     height: 500px;

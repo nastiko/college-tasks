@@ -52,33 +52,6 @@ h1, h2, h3, h4, h5, p {
     font-weight: 400;
 }
 
-/*logo for Web*/
-/*.logo {
-    position: fixed;
-    inset: 0 auto auto 0;
-}
-.logo img {
-    width: 200px;
-    margin: 8px;
-    display: none;
-}
-.logo .visible {
-    display: block;
-}*/
-
-/*scroll down NavBar*/
-/*.nav-scroll {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 67px;
-    width: 100%;
-    z-index: 1000;
-}
-.scroll-sticky {
-    background-color: var(--gray94);
-}*/
-
 /*dropdown basket*/
 .bg-menu {
     background-color: var(--white);
@@ -187,6 +160,9 @@ h1, h2, h3, h4, h5, p {
     padding-top: 60px;
     transition: 0.4s;
     transition-timing-function: ease-out;
+}
+a.closebtn:hover {
+    color: var(--light-brown);
 }
 .closebtn {
     position: absolute;
