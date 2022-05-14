@@ -18,6 +18,7 @@ body {
     display: block;
 }
 
+
 /*scroll down NavBar*/
 .nav-scroll {
     position: fixed;
@@ -261,7 +262,7 @@ td {
 }
 .title-time {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     text-align: center;
 }
@@ -361,8 +362,7 @@ td {
     }
 
 }
-
-/*calendar !important*/
+/*calendar*/
 @media all and (max-width: 475px) {
     .logo img {
         width: 175px;
@@ -384,12 +384,5 @@ td {
         font-weight: 400;
         margin: 5px 0 0 0;
         font-size: 12px;
-    }
-}
-
-/*none display of video and replaced it on img*/
-@media all and (max-width: 974px) {
-    .price {
-        line-height: 2em;
     }
 }
