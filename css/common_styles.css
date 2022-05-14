@@ -124,6 +124,13 @@ h1, h2, h3, h4, h5, p {
     padding: 8px 0;
     margin: 5px auto;
 }
+.link-active {
+    text-decoration: none;
+    color: transparent;
+}
+.grid-icon {
+    margin-top: 0.1rem;
+}
 .basket-icon .item-type {
     display: flex;
     gap: 20px;
@@ -131,17 +138,17 @@ h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 .item-amount {
-    height: 19px;
-    width: 19px;
     position: relative;
-    right: 9px;
-    top: 19px;
+    right: 15px;
+    top: 15px;
     color: var(--white);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
+    letter-spacing: 0;
     text-align: center;
     background-color: var(--black-magic);
     border-radius: 13px;
+    padding: 1px 5px;
 }
 .basket-icon {
     display: none;
@@ -342,6 +349,8 @@ a.icon-x:hover {
     .basket-icon {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
     }
     .nav-item_link {
         margin-right: 0;
