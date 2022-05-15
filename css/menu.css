@@ -6,10 +6,32 @@
 
 /*logo for Web*/
 .logo img {
+    width: 200px;
+    margin: 8px;
+}
+.logo {
+    position: fixed;
+    inset: 0 auto auto 0;
+}
+.logo img {
     display: none;
 }
 .logo .visible {
     display: block;
+}
+
+
+/*scroll down NavBar*/
+.nav-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 67px;
+    width: 100%;
+    z-index: 1000;
+}
+.scroll-sticky {
+    background-color: var(--gray94);
 }
 
 
@@ -178,11 +200,6 @@ picture img {
 }
 
 
-@media all and (max-width: 992px) {
-    .logo img {
-        width: 175px;
-    }
-}
 @media screen and (max-width:475px) {
     .col-lg-6.container-mt {
         margin: 0;

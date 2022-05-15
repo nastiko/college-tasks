@@ -1,11 +1,27 @@
+/*logo for Web*/
+.logo {
+    position: sticky;
+    inset: 0 auto auto 0;
+}
+.logo img {
+    width: 200px;
+    margin: 8px;
+}
+
+
 /*scroll down NavBar*/
 .nav-scroll {
+    position: absolute;
     background-color: var(--gray94);
     height: 67px;
     width: 100%;
 }
 
 /*navigation bar: menu, home, basket*/
+.navbar-nav {
+    position: relative;
+    bottom: 70px;
+}
 .navbar-nav.position-navbar {
     flex-direction: row;
     justify-content: flex-end;
@@ -45,6 +61,7 @@ main.pattern {
 }
 .main-container .details:first-child {
     margin-bottom: 3rem;
+    margin-top: 4rem;
 }
 .details .heading-style {
     background-color: var(--light-brown);
@@ -205,6 +222,22 @@ form input:focus {
         left: 2px;
         font-size: 0.575rem;
         padding: 4px 2px;
+    }
+    .logo {
+        position: fixed;
+        inset: 0 auto auto 0;
+    }
+    /*scroll down NavBar*/
+    .nav-scroll {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 67px;
+        width: 100%;
+        z-index: 1000;
+    }
+    .scroll-sticky {
+        background-color: var(--gray94);
     }
 }
 
