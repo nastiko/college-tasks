@@ -154,7 +154,6 @@ class Slider {
     }
 }
 
-
 //configuration
 let slides         = $('#slider-content .slide');
 let slideWidth     = slides.outerWidth(true);
@@ -163,3 +162,30 @@ let sliderViewport = $('.slider-viewport');
 let sliderBlock    = $('.slick-slider');
 let sliderContent  = $('#slider-content');
 let currPosition   = 0;
+
+let item = $('.item-cost').index();
+
+class AmountItems {
+    stopPropagation() {
+        $('ul.dropdown-menu.bg-menu').click(function(e) {
+            e.stopPropagation();
+        });
+    }
+    addItem() {
+        $('svg.bi.bi-plus-circle.add-item').click(function () {
+            $('.amount-items').html(`${++item}`);
+        });
+    }
+    removeItem() {
+        $('svg.bi.bi-dash-circle.remove-item').click(function () {
+            if (item >= 1) {
+                $('.amount-items').html(`${--item}`);
+            } else if (item <= 1) {
+                $('.remove-basket').remove();
+            } else {
+                return false;
+            }
+        });
+    }
+
+}
