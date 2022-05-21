@@ -147,7 +147,7 @@ class Slider {
         let slidesCount = Math.floor(($(window).width() - (slideWidth * 2)) / slideWidth);
         let sliderWidth = (slidesCount <= 0 ? 1 : slidesCount) * slideWidth;
 
-        let sliderContentWidth = slides.length * slideWidth + 20;
+        let sliderContentWidth = slides.length * slideWidth + 200;
 
         sliderBlock.css("width", sliderWidth);
         sliderContent.css("width", sliderContentWidth);
