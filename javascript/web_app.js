@@ -56,14 +56,6 @@ class Calendar {
     }
 }
 
-class AddItem {
-    clickButton() {
-        $('.show-button').click(function () {
-
-        })
-    }
-}
-
 class MobileMenu {
     slideLeft() {
         $('.basket-link').on('click', function () {
@@ -83,12 +75,19 @@ class MobileMenu {
 }
 
 class Slider {
+    slides            = $('#slider-content .slide');
+    slideWidth        = this.slides.outerWidth(true);
+    slideMaxWidth     = this.slideWidth * this.slides.length;
+    sliderViewport    = $('.slider-viewport');
+    sliderBlock       = $('.slick-slider');
+    sliderContent     = $('#slider-content');
+    currPosition      = 0;
     animationDuration = 1000;
 
     getVisibleCount() {
         let cntVisible = 0;
-        for (let i = 0; i < slides.length; i++) {
-            let isVisible = this.isInViewport($(slides[i]));
+        for (let i = 0; i < this.slides.length; i++) {
+            let isVisible = this.isInViewport($(this.slides[i]));
             if (isVisible) {
                 cntVisible++;
             }
@@ -97,7 +96,7 @@ class Slider {
     }
 
     isInViewport(element) {
-        let positionViewportRight = sliderViewport.outerWidth(true);
+        let positionViewportRight = this.sliderViewport.outerWidth(true);
 
         if (element.position().left < 0) {
             return false;
@@ -113,10 +112,10 @@ class Slider {
     slideRight() {
         let sliderSelf = this;
         $('.slider-icon-next').click(function () {
-            let totalElements = Math.abs(currPosition) + sliderSelf.getVisibleCount() * slideWidth;
-            if (totalElements < slideMaxWidth) {
-                currPosition -= slideWidth;
-                $('#slider-content').animate({x: currPosition}, {
+            let totalElements = Math.abs(sliderSelf.currPosition) + sliderSelf.getVisibleCount() * sliderSelf.slideWidth;
+            if (totalElements < sliderSelf.slideMaxWidth) {
+                sliderSelf.currPosition -= sliderSelf.slideWidth;
+                $('#slider-content').animate({x: sliderSelf.currPosition}, {
                     duration: sliderSelf.animationDuration,
                     step: function (val) {
                         $('#slider-content').css("transform", `translateX(${val}px)`);
@@ -129,9 +128,9 @@ class Slider {
     slideLeft() {
         let sliderSelf = this;
         $('.slider-icon-prev').click(function () {
-            if (currPosition !== 0) {
-                currPosition += slideWidth;
-                $('#slider-content').animate({x: currPosition}, {
+            if (sliderSelf.currPosition !== 0) {
+                sliderSelf.currPosition += sliderSelf.slideWidth;
+                $('#slider-content').animate({x: sliderSelf.currPosition}, {
                     duration: sliderSelf.animationDuration,
                     step: function (val) {
                         $('#slider-content').css("transform", `translateX(${val}px)`);
@@ -144,26 +143,17 @@ class Slider {
     initSlider(slidesVisible, animationDuration) {
         this.animationDuration = animationDuration;
 
-        let slidesCount = Math.floor(($(window).width() - (slideWidth * 2)) / slideWidth);
-        let sliderWidth = (slidesCount <= 0 ? 1 : slidesCount) * slideWidth;
+        let slidesCount = Math.floor(($(window).width() - (this.slideWidth * 2)) / this.slideWidth);
+        let sliderWidth = (slidesCount <= 0 ? 1 : slidesCount) * this.slideWidth;
 
-        let sliderContentWidth = slides.length * slideWidth + 200;
+        let sliderContentWidth = this.slides.length * this.slideWidth + 200;
 
-        sliderBlock.css("width", sliderWidth);
-        sliderContent.css("width", sliderContentWidth);
+        this.sliderBlock.css("width", sliderWidth);
+        this.sliderContent.css("width", sliderContentWidth);
     }
 }
 
-//configuration
-let slides         = $('#slider-content .slide');
-let slideWidth     = slides.outerWidth(true);
-let slideMaxWidth  = slideWidth * slides.length;
-let sliderViewport = $('.slider-viewport');
-let sliderBlock    = $('.slick-slider');
-let sliderContent  = $('#slider-content');
-let currPosition   = 0;
-
-class AmountItems {
+class MiniCart {
     stopPropagation() {
         $('ul.dropdown-menu.bg-menu').click(function (e) {
             e.stopPropagation();
@@ -197,5 +187,4 @@ class AmountItems {
             }
         });
     }
-
 }

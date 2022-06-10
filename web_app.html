@@ -640,10 +640,11 @@
 </footer>
 <script src="javascript/web_app.js"></script>
 <script>
-    let menu       = new Menu();
-    let calendar   = new Calendar();
-    let mobileMenu = new MobileMenu();
-    let slider     = new Slider();
+    let menu        = new Menu();
+    let calendar    = new Calendar();
+    let mobileMenu  = new MobileMenu();
+    let slider      = new Slider();
+    let itemsBasket = new MiniCart();
 
     $(document).ready(function () {
         menu.makeSticky();
@@ -654,6 +655,9 @@
         slider.initSlider(3, 500);
         slider.slideLeft();
         slider.slideRight();
+        itemsBasket.stopPropagation();
+        itemsBasket.addItem();
+        itemsBasket.removeItem();
     });
     $(window).resize(function () {
         slider.initSlider(3, 500);
