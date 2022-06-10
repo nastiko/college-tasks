@@ -16,7 +16,7 @@ class MiniCart {
         let miniCartSelf = this;
         $('.menu-item .add-to-cart').on('click', function () {
             let product  = miniCartSelf.getCartItemObject(this);
-            let cartItem = miniCartSelf.getCartItem(product.id);
+            let cartItem = miniCartSelf.getCartItem(product);
 
             let amountEl   = $(this).siblings('.amount-items');
             let productQty = cartItem.qty;
@@ -24,7 +24,7 @@ class MiniCart {
             productQty = productQty + 1;
             amountEl.html(`${productQty}`);
 
-            this.cart.addCartItem(cartItem);
+            miniCartSelf.cart.addCartItem(cartItem);
         });
     }
 
@@ -32,15 +32,15 @@ class MiniCart {
         let miniCartSelf = this;
         $('.cart-plus').on('click', function () {
             let product  = miniCartSelf.getCartItemObject(this);
-            let cartItem = miniCartSelf.getCartItem(product.id);
+            let cartItem = miniCartSelf.getCartItem(product);
 
             let amountEl   = $(this).siblings('.amount-items');
-            let productQty = cartItem.qty;
+            let productQty = cartItem !== false ? cartItem.qty : 0;
 
             productQty = productQty + 1;
             amountEl.html(`${productQty}`);
 
-            this.cart.addCartItem(cartItem);
+            miniCartSelf.cart.addCartItem(cartItem);
         });
     }
 
@@ -48,10 +48,10 @@ class MiniCart {
         let miniCartSelf = this;
         $('.cart-minus').on('click', function () {
             let product  = miniCartSelf.getCartItemObject(this);
-            let cartItem = miniCartSelf.getCartItem(product.id);
+            let cartItem = miniCartSelf.getCartItem(product);
 
             let amountEl   = $(this).siblings('.amount-items');
-            let productQty = cartItem.qty;
+            let productQty = cartItem !== false ? cartItem.qty : 0;
 
             productQty = productQty - 1;
             if (productQty <= 0) {
@@ -64,13 +64,13 @@ class MiniCart {
                 amountEl.html(`${productQty}`);
             }
 
-            this.cart.removeCartItem(cartItem);
+            miniCartSelf.cart.removeCartItem(cartItem);
         });
     }
 
     getCartItemObject(element) {
         let productEl = $(element).parents('li.position-item').first();
-        if(productEl.length === 0){
+        if (productEl.length === 0) {
             productEl = $(element).parents('div.menu-item').first();
         }
 
@@ -79,12 +79,17 @@ class MiniCart {
             title: productEl.data('title'),
             price: productEl.data('price'),
             image: productEl.data('image'),
-            qty: 1
+            qty: 0
         };
     }
 
-    getCartItem(id) {
-        return this.cart.getCartItem(id);
+    getCartItem(product) {
+        let cartItem = this.cart.getCartItem(product.id);
+        if (cartItem === false) {
+            cartItem = product;
+        }
+
+        return cartItem;
     }
 }
 

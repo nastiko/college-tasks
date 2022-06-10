@@ -150,5 +150,8 @@ class Slider {
 
         this.sliderBlock.css("width", sliderWidth);
         this.sliderContent.css("width", sliderContentWidth);
+
+        this.slideLeft();
+        this.slideRight();
     }
 }
