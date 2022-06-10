@@ -12,34 +12,46 @@ class MiniCart {
         });
     }
 
-    addItemClick() {
+    addNewItemClick() {
         let miniCartSelf = this;
-        $('.cart-plus').on('click', function () {
+        $('.menu-item .add-to-cart').on('click', function () {
+            let product  = miniCartSelf.getCartItemObject(this);
+            let cartItem = miniCartSelf.getCartItem(product.id);
+
             let amountEl   = $(this).siblings('.amount-items');
-            let productQty = parseInt(amountEl.html());
+            let productQty = cartItem.qty;
 
             productQty = productQty + 1;
             amountEl.html(`${productQty}`);
 
-            let cartItem = miniCartSelf.getCartItemObject(this);
             this.cart.addCartItem(cartItem);
         });
     }
 
-    getCartItemObject(element) {
-        let productEl = $(element).parents('li.position-item');
-        return {
-            id: productEl.data('id'),
-            title: productEl.data('title'),
-            price: productEl.data('price'),
-            image: productEl.data('image'),
-        };
+    addItemClick() {
+        let miniCartSelf = this;
+        $('.cart-plus').on('click', function () {
+            let product  = miniCartSelf.getCartItemObject(this);
+            let cartItem = miniCartSelf.getCartItem(product.id);
+
+            let amountEl   = $(this).siblings('.amount-items');
+            let productQty = cartItem.qty;
+
+            productQty = productQty + 1;
+            amountEl.html(`${productQty}`);
+
+            this.cart.addCartItem(cartItem);
+        });
     }
 
     removeItemClick() {
+        let miniCartSelf = this;
         $('.cart-minus').on('click', function () {
+            let product  = miniCartSelf.getCartItemObject(this);
+            let cartItem = miniCartSelf.getCartItem(product.id);
+
             let amountEl   = $(this).siblings('.amount-items');
-            let productQty = parseInt(amountEl.html());
+            let productQty = cartItem.qty;
 
             productQty = productQty - 1;
             if (productQty <= 0) {
@@ -51,7 +63,28 @@ class MiniCart {
             } else {
                 amountEl.html(`${productQty}`);
             }
+
+            this.cart.removeCartItem(cartItem);
         });
+    }
+
+    getCartItemObject(element) {
+        let productEl = $(element).parents('li.position-item').first();
+        if(productEl.length === 0){
+            productEl = $(element).parents('div.menu-item').first();
+        }
+
+        return {
+            id: productEl.data('id'),
+            title: productEl.data('title'),
+            price: productEl.data('price'),
+            image: productEl.data('image'),
+            qty: 1
+        };
+    }
+
+    getCartItem(id) {
+        return this.cart.getCartItem(id);
     }
 }
 
@@ -105,6 +138,16 @@ class Cart {
         }
 
         return cartData;
+    }
+
+    getCartItem(id) {
+        let items = this.getCartItems();
+
+        if (items.hasOwnProperty(id)) {
+            return items[id];
+        } else {
+            return false;
+        }
     }
 
     setCartItems(cartData) {
