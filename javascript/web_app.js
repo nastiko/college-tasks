@@ -154,13 +154,19 @@ class Slider {
 }
 
 class MiniCart {
+    initialize() {
+        this.stopPropagation();
+        this.addItemClick();
+        this.removeItemClick();
+    }
+
     stopPropagation() {
         $('ul.dropdown-menu.bg-menu').click(function (e) {
             e.stopPropagation();
         });
     }
 
-    addItem() {
+    addItemClick() {
         $('.cart-plus').on('click', function () {
             let amountEl   = $(this).siblings('.amount-items');
             let productQty = parseInt(amountEl.html());
@@ -170,7 +176,7 @@ class MiniCart {
         });
     }
 
-    removeItem() {
+    removeItemClick() {
         $('.cart-minus').on('click', function () {
             let amountEl   = $(this).siblings('.amount-items');
             let productQty = parseInt(amountEl.html());

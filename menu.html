@@ -709,19 +709,17 @@
     </div>
 </footer>
 <script src="javascript/web_app.js"></script>
+<script src="javascript/cart.js"></script>
 <script>
-    let menu        = new Menu();
-    let add         = new AddItem();
-    let mobileMenu  = new MobileMenu();
-    let itemsBasket = new MiniCart();
+    let menu       = new Menu();
+    let mobileMenu = new MobileMenu();
+    let miniCart   = new MiniCart();
+
     $(document).ready(function () {
         menu.makeSticky();
-        add.clickButton();
         mobileMenu.slideLeft();
         mobileMenu.slideRight();
-        itemsBasket.stopPropagation();
-        itemsBasket.addItem();
-        itemsBasket.removeItem();
+        miniCart.initialize();
     });
 </script>
 </body>
