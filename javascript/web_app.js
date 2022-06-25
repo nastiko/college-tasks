@@ -57,28 +57,28 @@ class Calendar {
 }
 
 class Menu {
-    open() {
+    initOpen() {
         $('.desktop-basket_link, .basket-link').on('click', function () {
-            let width = $(window).width() >= 475 ? '325px' : '100%';
+            let width = $(window).width() >= 475 ? '400px' : '100%';
             $("#miniCart").animate({
                 width: `${width}`
-            }, "fast");
+            }, 10);
             $('#miniCart').css('box-shadow', '-5px 0px 5px 2px rgb(0 0 0 / 42%)');
         });
     }
 
-    close() {
+    initClose() {
         $('.icon-x').on('click', function () {
             $("#miniCart").animate({
                 width: '0%'
-            }, "fast");
+            }, 10);
             $('#miniCart').css('box-shadow', '');
         });
     }
 
     initialize() {
-        this.open();
-        this.close();
+        this.initOpen();
+        this.initClose();
     }
 }
 

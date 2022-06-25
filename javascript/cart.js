@@ -1,37 +1,23 @@
 class MiniCart {
     initialize() {
-        this.addItemClick();
-        this.addNewItemClick();
-        this.removeItemClick();
         this.cart = new Cart();
+        this.addItemClick();
+        this.removeItemClick();
         this.renderCartItems();
     }
 
-    addNewItemClick() {
+    addItemClick() {
         let miniCartSelf = this;
-        $('div.container-fluid.pattern').on('click', '.add-to-cart', function () {
+        $('#miniCart ul.sidenav-menu, div.container-fluid.pattern').on('click', '.cart-plus, .add-to-cart', function () {
             let product  = miniCartSelf.getCartItemObject(this);
             let cartItem = miniCartSelf.getCartItemData(product);
 
             cartItem.qty += 1;
             miniCartSelf.cart.addCartItem(cartItem);
             miniCartSelf.renderCartItem(cartItem);
-        });
-    }
 
-    addItemClick() {
-        let miniCartSelf = this;
-        $('#miniCart ul.sidenav-menu').on('click', '.cart-plus', function () {
-            let product  = miniCartSelf.getCartItemObject(this);
-            let cartItem = miniCartSelf.getCartItemData(product);
-
-            let amountEl   = $(this).siblings('.amount-items');
-            let productQty = cartItem !== false ? cartItem.qty : 0;
-
-            productQty = productQty + 1;
-            amountEl.html(`${productQty}`);
-
-            miniCartSelf.cart.addCartItem(cartItem);
+            // open cart
+            $('.desktop-basket_link, .basket-link').click();
         });
     }
 
@@ -41,23 +27,10 @@ class MiniCart {
             let product  = miniCartSelf.getCartItemObject(this);
             let cartItem = miniCartSelf.getCartItemData(product);
 
-            let amountEl   = $(this).siblings('.amount-items');
-            let productQty = cartItem !== false ? cartItem.qty : 0;
-
-            productQty = productQty - 1;
-            if (productQty <= 0) {
-                $(this).parents('.position-item').next('.cart-item-divider').fadeOut(500);
-                $(this).parents('.position-item').slideUp(500, function () {
-                    $(this).next('li').remove();
-                    $(this).remove();
-                });
-            } else {
-                amountEl.html(`${productQty}`);
-            }
-
+            cartItem.qty -= 1;
+            miniCartSelf.renderCartItem(cartItem);
             miniCartSelf.cart.decreaseQty(cartItem);
-
-            // getAllCartItems -> if cart items > 0 -> then hide empty basket -> else show empty basket
+            miniCartSelf.checkEmptyCart();
         });
     }
 
@@ -87,30 +60,51 @@ class MiniCart {
         return cartItem;
     }
 
+    /*
+     *  Render cart element: update qty if exists, generate HTML for new cart items, remove DOM elements if qty zero.
+     */
     renderCartItem(product) {
-        // if cart items > 0 -> then hide empty basket -> else show empty basket
         if (this.getCartItemData(product, false)) {
+            // find current DOM element by product ID
             let cartItem = $("#miniCart ul.sidenav-menu").find(`[data-id='${product.id}']`);
+            // if product is in cart
             if (cartItem.length > 0) {
-                $(cartItem).find('.amount-items').html(product.qty);
+                // remove product from cart if product qty zero or below
+                if (product.qty <= 0) {
+                    $(cartItem).next('li').fadeOut(500);
+                    $(cartItem).slideUp(500, function () {
+                        $(this).next('li').remove();
+                        $(this).remove();
+                    });
+                } else {
+                    // update product qty
+                    $(cartItem).find('.amount-items').html(product.qty);
+                }
             } else {
+                // generate new HTML and insert into minicart block
                 let html = this.getMiniCartItemHtml(product.id, product.price, product.title, product.image, product.qty);
                 $('#miniCart ul.sidenav-menu').append(html);
             }
         } else {
+            // generate new HTML and insert into minicart block
             let html = this.getMiniCartItemHtml(product.id, product.price, product.title, product.image, product.qty);
             $('#miniCart ul.sidenav-menu').append(html);
         }
+
+        // check if cart empty and remove "empty cart" badge
+        this.checkEmptyCart();
     }
 
-
+    /*
+     * Rendering all cart elements that we have in our data storage
+     */
     renderCartItems() {
         let items = this.cart.getCartItems();
         Object.keys(items).forEach(index => {
+            // render each cart item
             this.renderCartItem(items[index]);
         });
         this.checkEmptyCart();
-        // if cart items > 0 -> then hide empty basket -> else show empty basket
     }
 
     getMiniCartItemHtml(id, price, title, image, qty) {
@@ -131,6 +125,15 @@ class MiniCart {
                '<li>\n' +
                '    <hr class="sidenav-hr">\n' +
                '</li>';
+    }
+
+    checkEmptyCart() {
+        let cartItems = this.cart.getCartItems();
+        if (Object.keys(cartItems).length > 0) {
+            $('.empty-cart').hide();
+        } else {
+            $('.empty-cart').show();
+        }
     }
 }
 

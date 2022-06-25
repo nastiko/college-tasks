@@ -181,7 +181,15 @@ h1, h2, h3, h4, h5, p {
     display: none;
 }
 
-/*sidenav for mobile devices*/
+/*sidenav for mobile/desktop devices*/
+.empty-cart {
+    color: var(--light-brown);
+    font-size: 18px;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -209,6 +217,7 @@ a.icon-x:hover {
     font-size: 36px;
     margin-left: 50px;
     z-index: 1000;
+    cursor: pointer;
 }
 
 .sidenav-menu {
@@ -233,6 +242,7 @@ a.icon-x:hover {
 }
 
 .total-item_bottom {
+    width: 362px;
     display: flex;
     justify-content: space-between;
     font-size: 1.125rem;
@@ -240,7 +250,7 @@ a.icon-x:hover {
 }
 
 .button-checkout_bottom {
-    width: 23.5%;
+    width: 362px;
     font-family: "Poppins", Helvetica, sans-serif;
     font-size: 0.975rem;
     font-weight: 400;
@@ -376,6 +386,9 @@ a.icon-x:hover {
     color: var(--blue-magenta);
 }
 
+.nav-item_link {
+    cursor: pointer;
+}
 
 @media all and (max-width: 992px) {
     .nav-hided {
@@ -424,6 +437,10 @@ a.icon-x:hover {
 }
 
 @media screen and (max-width: 475px) {
+    .button-checkout_bottom {
+        width: 100%;
+    }
+
     .row.customer-info {
         width: 100%;
     }
