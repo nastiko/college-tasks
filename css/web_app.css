@@ -46,6 +46,7 @@ body {
     font-size: 1.125rem;
     letter-spacing: 1px;
     margin-right: 25px;
+    cursor: pointer;
 }
 .nav-item_link:active, .nav-item_link:hover  {
     color: var(--white);

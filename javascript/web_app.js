@@ -56,11 +56,11 @@ class Calendar {
     }
 }
 
-class MobileMenu {
+class DesktopMenu {
     slideLeft() {
-        $('.basket-link').on('click', function () {
+        $('.desktop-basket_link').on('click', function () {
             $("#mySidenav").animate({
-                width: '100%'
+                width: '25%'
             }, "fast");
         });
     }
