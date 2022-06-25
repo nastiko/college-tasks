@@ -16,7 +16,7 @@
 <body>
 <div class="container-fluid nav-scroll">
     <div class="logo">
-        <a href="web_app.html">
+        <a href="index.html">
             <img class="visible" src="img/logo_bg-dark.png" alt="logo">
             <img src="img/logo-dark_text.png" alt="logo">
         </a>
@@ -639,14 +639,13 @@
 <script src="javascript/web_app.js"></script>
 <script src="javascript/cart.js"></script>
 <script>
-    let menu       = new Menu();
-    let desktopMenu = new DesktopMenu();
-    let miniCart   = new MiniCart();
+    let menu     = new Menu();
+    let header   = new Header();
+    let miniCart = new MiniCart();
 
     $(document).ready(function () {
-        menu.makeSticky();
-        desktopMenu.slideLeft();
-        desktopMenu.slideRight();
+        menu.initialize();
+        header.initSticky();
         miniCart.initialize();
     });
 </script>

@@ -1,13 +1,13 @@
-class Menu {
-    makeSticky() {
+class Header {
+    initSticky() {
         let menuSelf = this;
-        this.initSticky();
+        this.makeSticky();
         $(window).scroll(function () {
-            menuSelf.initSticky();
+            menuSelf.makeSticky();
         });
     }
 
-    initSticky() {
+    makeSticky() {
         if ($(document).scrollTop() > 50) {
             // make sticky nav bar
             $(".nav-scroll").addClass("scroll-sticky");
@@ -56,21 +56,26 @@ class Calendar {
     }
 }
 
-class DesktopMenu {
-    slideLeft() {
-        $('.desktop-basket_link').on('click', function () {
+class Menu {
+    open() {
+        $('.desktop-basket_link, .basket-link').on('click', function () {
             $("#mySidenav").animate({
                 width: '25%'
             }, "fast");
         });
     }
 
-    slideRight() {
+    close() {
         $('.icon-x').on('click', function () {
             $("#mySidenav").animate({
                 width: '0%'
             }, "fast");
         });
+    }
+
+    initialize() {
+        this.open();
+        this.close();
     }
 }
 
