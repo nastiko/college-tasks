@@ -60,19 +60,19 @@ class Menu {
     open() {
         $('.desktop-basket_link, .basket-link').on('click', function () {
             let width = $(window).width() >= 475 ? '325px' : '100%';
-            $("#mySidenav").animate({
+            $("#miniCart").animate({
                 width: `${width}`
             }, "fast");
-            $('#mySidenav').css('box-shadow', '-5px 0px 5px 2px rgb(0 0 0 / 42%)');
+            $('#miniCart').css('box-shadow', '-5px 0px 5px 2px rgb(0 0 0 / 42%)');
         });
     }
 
     close() {
         $('.icon-x').on('click', function () {
-            $("#mySidenav").animate({
+            $("#miniCart").animate({
                 width: '0%'
             }, "fast");
-            $('#mySidenav').css('box-shadow', '');
+            $('#miniCart').css('box-shadow', '');
         });
     }
 

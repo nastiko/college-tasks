@@ -27,80 +27,12 @@
                 <a class="nav-item_link" href="menu.html">Menu</a>
             </li>
             <li class="nav-hided">
-                <a class="nav-item_link desktop-basket_link" href="#">Basket</a>
+                <a class="nav-item_link desktop-basket_link">Basket</a>
             </li>
-            <div id="mySidenav" class="sidenav">
+            <div id="miniCart" class="sidenav">
                 <a href="#" class="icon-x">&times;</a>
-                <ul class="sidenav-menu">
-                    <li class="position-item">
-                    <span class="collect-flex">
-                        <img class="item-img" src="img/starters_1.jpg" alt="Soft-Boiled Eggs">
-                        <span class="item-info">
-                            <em class="item-title">Soft-Boiled Eggs</em>
-                            <em class="item-cost">£8.5</em>
-                        </span>
-                    </span>
-                        <span class="svg-item">
-                            <span class="cart-minus"></span>
-                            <strong class="m-0 item-cost amount-items">1</strong>
-                            <span class="cart-plus"></span>
-                        </span>
-                    </li>
-                    <li>
-                        <hr class="sidenav-hr">
-                    </li>
-                    <li class="position-item">
-                    <span class="collect-flex">
-                        <img class="item-img" src="img/dishes_2.jpg" alt="Creamy Salmon">
-                        <span class="item-info">
-                            <em class="item-title">Creamy Salmon</em>
-                            <em class="item-cost">£13.5</em>
-                        </span>
-                    </span>
-                        <span class="svg-item">
-                            <span class="cart-minus"></span>
-                            <strong class="m-0 item-cost amount-items">1</strong>
-                            <span class="cart-plus"></span>
-                        </span>
-                    </li>
-                    <li>
-                        <hr class="sidenav-hr">
-                    </li>
-                    <li class="position-item">
-                    <span class="collect-flex">
-                        <img class="item-img" src="img/try_brownie.jpg" alt="Salted Caramel">
-                        <span class="item-info">
-                            <em class="item-title">Chocolate Brownie</em>
-                            <em class="item-cost">£4.5</em>
-                        </span>
-                    </span>
-                        <span class="svg-item">
-                            <span class="cart-minus"></span>
-                            <strong class="m-0 item-cost amount-items">1</strong>
-                            <span class="cart-plus"></span>
-                        </span>
-                    </li>
-                    <li>
-                        <hr class="sidenav-hr">
-                    </li>
-                    <li class="position-item">
-                    <span class="collect-flex">
-                        <img class="item-img" src="img/drink_2.jpg" alt="Lemon Tea">
-                        <span class="item-info">
-                            <em class="item-title">Lemon Tea</em>
-                            <em class="item-cost">£2.5</em>
-                        </span>
-                    </span>
-                        <span class="svg-item">
-                            <span class="cart-minus"></span>
-                            <strong class="m-0 item-cost amount-items">1</strong>
-                            <span class="cart-plus"></span>
-                        </span>
-                    </li>
-                    <li>
-                        <hr class="sidenav-hr">
-                    </li>
-                </ul>
+                <p class="empty-cart">Your basket is empty</p>
+                <ul class="sidenav-menu"></ul>
                 <ul class="sidenav-menu_bottom">
                     <li class="total-item_bottom">
                         <strong>Total</strong>
@@ -121,7 +53,7 @@
                     <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
                 </svg>
             </a>
-            <a href="#" class="link-active">
+            <a class="link-active">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff"
                      class="bi bi-bag-check basket-link" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -161,10 +93,10 @@
             </span>
             <h2 class="heading-h2">Starters</h2>
             <div class="row mobile-mt">
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="1" data-price="8.5" data-title="Soft-Boiled Eggs" data-image="img/starters_1.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/starters_1.jpg" alt="Toast with eggs">
+                            <img src="img/starters_1.jpg" alt="Soft-Boiled Eggs">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -175,13 +107,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="2" data-price="5.5" data-title="Grill corn" data-image="img/starters_3.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/starters_3.jpg" alt="Grill corn">
                         </picture>
@@ -194,15 +126,15 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="3" data-price="12" data-title="Marinated Shrimp Salad" data-image="img/starters_2.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/starters_2.jpg" alt="Marinated Grilled Shrimp Salad">
+                            <img src="img/starters_2.jpg" alt="Marinated Shrimp Salad">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -213,13 +145,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="4" data-price="6.5" data-title="Avocado Salad" data-image="img/starters_4.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/starters_4.jpg" alt="Avocado Salad">
                         </picture>
@@ -232,13 +164,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="5" data-price="9.5" data-title="Cesar Salad" data-image="img/starters_6.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/starters_6.jpg" alt="Cesar Salad">
                         </picture>
@@ -251,15 +183,15 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="6" data-price="10" data-title="Pita Pockets & Grilled Pork" data-image="img/starters_5.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/starters_5.jpg" alt="Greek Salad Pita ">
+                            <img src="img/starters_5.jpg" alt="Pita Pockets & Grilled Pork">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -270,7 +202,7 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
@@ -283,10 +215,10 @@
                 </span>
             <h2 class="heading-h2">Main Dishes</h2>
             <div class="row">
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="7" data-price="9.5" data-title="Rustica Chicken & Fiery Roquito" data-image="img/try_pizza.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/try_pizza.jpg" alt="Rustica Chicken">
+                            <img src="img/try_pizza.jpg" alt="Rustica Chicken & Fiery Roquito">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -297,13 +229,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="8" data-price="12.5" data-title="King Prawn Linguine" data-image="img/try_pasta.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/try_pasta.jpg" alt="King Prawn Linguine">
                         </picture>
@@ -316,15 +248,15 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="9" data-price="14.5" data-title="Grill Pork & Sweet Potatoes" data-image="img/dishes_1.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/dishes_1.jpg" alt="Grill Pork Sweet Potatoes">
+                            <img src="img/dishes_1.jpg" alt="Grill Pork & Sweet Potatoes">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -335,15 +267,15 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="10" data-price="13.5" data-title="Creamy Salmon" data-image="img/dishes_2.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/dishes_2.jpg" alt="Salmon">
+                            <img src="img/dishes_2.jpg" alt="Creamy Salmon">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -354,15 +286,15 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="11" data-price="18.5" data-title="Grill Steak" data-image="img/dishes_3.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/dishes_3.jpg" alt="Steak">
+                            <img src="img/dishes_3.jpg" alt="Grill Steak">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -373,26 +305,26 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="12" data-price="11.5" data-title="Small Ramen Soup" data-image="img/dishes_4.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/dishes_4.jpg" alt="Small Ramen Soup ">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
-                                <h3 class="bg-title">Small Ramen Soup </h3>
+                                <h3 class="bg-title">Small Ramen Soup</h3>
                                 <em class="bg-em_title">£11.5</em>
                             </div>
                             <p class="paragraph-font">Ramen noodles, Pork, Egg, Spring onion</p>
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
@@ -405,8 +337,8 @@
             </span>
             <h2 class="heading-h2">Dessert and Drinks</h2>
             <div class="row">
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="13" data-price="7.5" data-title="Giant S'mores Fondue" data-image="img/try_sweet.png">
+                    <a class="small-block">
                         <picture>
                             <img src="img/try_sweet.png" alt="Giant S'mores Fondue">
                         </picture>
@@ -419,15 +351,15 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="14" data-price="4.5" data-title="Salted Caramel Brownie" data-image="img/try_brownie.jpg">
+                    <a class="small-block">
                         <picture>
-                            <img src="img/try_brownie.jpg" alt="Brownie">
+                            <img src="img/try_brownie.jpg" alt="Salted Caramel Brownie">
                         </picture>
                         <div class="name-items">
                             <div class="cost-items">
@@ -438,13 +370,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="15" data-price="7.5" data-title="Apple strudel" data-image="img/dessert_1.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/dessert_1.jpg" alt="Apple strudel">
                         </picture>
@@ -457,13 +389,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="16" data-price="4.5" data-title="Coffee" data-image="img/drink_1.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/drink_1.jpg" alt="Coffee">
                         </picture>
@@ -476,13 +408,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="17" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/drink_2.jpg" alt="tea">
                         </picture>
@@ -495,13 +427,13 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 container-mt menu-item" data-price="2.5" data-title="Lemon Tea" data-image="img/drink_2.jpg">
-                    <a class="small-block" href="#">
+                <div class="col-lg-6 container-mt menu-item" data-id="18" data-price="4.5" data-title="Hot Chocolate" data-image="img/drink_3.jpg">
+                    <a class="small-block">
                         <picture>
                             <img src="img/drink_3.jpg" alt="Hot Chocolate">
                         </picture>
@@ -514,14 +446,14 @@
                         </div>
                     </a>
                     <div class="show-button">
-                        <a href="#">
+                        <a>
                             <button class="add-to-cart">Add To Cart</button>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="download-file">
-                <a href="#">Download Menu</a>
+                <a>Download Menu</a>
             </div>
         </div>
     </div>

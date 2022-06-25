@@ -208,6 +208,7 @@ a.icon-x:hover {
     color: var(--light-brown);
     font-size: 36px;
     margin-left: 50px;
+    z-index: 1000;
 }
 
 .sidenav-menu {

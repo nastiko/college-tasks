@@ -1,38 +1,29 @@
 class MiniCart {
     initialize() {
-        this.stopPropagation();
         this.addItemClick();
+        this.addNewItemClick();
         this.removeItemClick();
         this.cart = new Cart();
-    }
-
-    stopPropagation() {
-        $('ul.dropdown-menu.bg-menu').click(function (e) {
-            e.stopPropagation();
-        });
+        this.renderCartItems();
     }
 
     addNewItemClick() {
         let miniCartSelf = this;
-        $('.menu-item .add-to-cart').on('click', function () {
+        $('div.container-fluid.pattern').on('click', '.add-to-cart', function () {
             let product  = miniCartSelf.getCartItemObject(this);
-            let cartItem = miniCartSelf.getCartItem(product);
+            let cartItem = miniCartSelf.getCartItemData(product);
 
-            let amountEl   = $(this).siblings('.amount-items');
-            let productQty = cartItem.qty;
-
-            productQty = productQty + 1;
-            amountEl.html(`${productQty}`);
-
+            cartItem.qty += 1;
             miniCartSelf.cart.addCartItem(cartItem);
+            miniCartSelf.renderCartItem(cartItem);
         });
     }
 
     addItemClick() {
         let miniCartSelf = this;
-        $('.cart-plus').on('click', function () {
+        $('#miniCart ul.sidenav-menu').on('click', '.cart-plus', function () {
             let product  = miniCartSelf.getCartItemObject(this);
-            let cartItem = miniCartSelf.getCartItem(product);
+            let cartItem = miniCartSelf.getCartItemData(product);
 
             let amountEl   = $(this).siblings('.amount-items');
             let productQty = cartItem !== false ? cartItem.qty : 0;
@@ -46,9 +37,9 @@ class MiniCart {
 
     removeItemClick() {
         let miniCartSelf = this;
-        $('.cart-minus').on('click', function () {
+        $('#miniCart ul.sidenav-menu').on('click', '.cart-minus', function () {
             let product  = miniCartSelf.getCartItemObject(this);
-            let cartItem = miniCartSelf.getCartItem(product);
+            let cartItem = miniCartSelf.getCartItemData(product);
 
             let amountEl   = $(this).siblings('.amount-items');
             let productQty = cartItem !== false ? cartItem.qty : 0;
@@ -57,14 +48,16 @@ class MiniCart {
             if (productQty <= 0) {
                 $(this).parents('.position-item').next('.cart-item-divider').fadeOut(500);
                 $(this).parents('.position-item').slideUp(500, function () {
-                    $(this).next('.cart-item-divider').remove();
+                    $(this).next('li').remove();
                     $(this).remove();
                 });
             } else {
                 amountEl.html(`${productQty}`);
             }
 
-            miniCartSelf.cart.removeCartItem(cartItem);
+            miniCartSelf.cart.decreaseQty(cartItem);
+
+            // getAllCartItems -> if cart items > 0 -> then hide empty basket -> else show empty basket
         });
     }
 
@@ -83,38 +76,80 @@ class MiniCart {
         };
     }
 
-    getCartItem(product) {
+    getCartItemData(product, fillEmpty = true) {
         let cartItem = this.cart.getCartItem(product.id);
-        if (cartItem === false) {
+        if (cartItem === false && fillEmpty) {
             cartItem = product;
+        } else if (cartItem === false && !fillEmpty) {
+            return false;
         }
 
         return cartItem;
     }
+
+    renderCartItem(product) {
+        // if cart items > 0 -> then hide empty basket -> else show empty basket
+        if (this.getCartItemData(product, false)) {
+            let cartItem = $("#miniCart ul.sidenav-menu").find(`[data-id='${product.id}']`);
+            if (cartItem.length > 0) {
+                $(cartItem).find('.amount-items').html(product.qty);
+            } else {
+                let html = this.getMiniCartItemHtml(product.id, product.price, product.title, product.image, product.qty);
+                $('#miniCart ul.sidenav-menu').append(html);
+            }
+        } else {
+            let html = this.getMiniCartItemHtml(product.id, product.price, product.title, product.image, product.qty);
+            $('#miniCart ul.sidenav-menu').append(html);
+        }
+    }
+
+
+    renderCartItems() {
+        let items = this.cart.getCartItems();
+        Object.keys(items).forEach(index => {
+            this.renderCartItem(items[index]);
+        });
+        this.checkEmptyCart();
+        // if cart items > 0 -> then hide empty basket -> else show empty basket
+    }
+
+    getMiniCartItemHtml(id, price, title, image, qty) {
+        return `<li class="position-item" data-id="${id}" data-price="${price}" data-title="${title}" data-image="${image}">\n` +
+               '    <span class="collect-flex">\n' +
+               `        <img class="item-img" src="${image}" alt="${title}">\n` +
+               '        <span class="item-info">\n' +
+               `            <em class="item-title">${title}</em>\n` +
+               `            <em class="item-cost">£${price}</em>\n` +
+               '        </span>\n' +
+               '    </span>\n' +
+               '    <span class="svg-item">\n' +
+               '        <span class="cart-minus"></span>\n' +
+               `        <strong class="m-0 item-cost amount-items">${qty}</strong>\n` +
+               '        <span class="cart-plus"></span>\n' +
+               '    </span>\n' +
+               '</li>' +
+               '<li>\n' +
+               '    <hr class="sidenav-hr">\n' +
+               '</li>';
+    }
 }
 
 class Cart {
-    updateItem(data) {
-        let items = this.getCartItems();
-        //...
-        this.setCartItems(items);
-    }
-
-    decreaseQty(itemId) {
-        let items = this.getCartItems();
-
-        items[itemId].qty--;
-        if (items[itemId].qty === 0) {
-            this.removeCartItem(itemId);
-        }
-
-        this.setCartItems(items);
-    }
-
     removeCartItem(itemId) {
         let items = this.getCartItems();
         delete items[itemId];
         this.setCartItems(items);
+    }
+
+    decreaseQty(cartItem) {
+        let items = this.getCartItems();
+
+        items[cartItem.id].qty--;
+        if (items[cartItem.id].qty === 0) {
+            this.removeCartItem(cartItem.id);
+        } else {
+            this.setCartItems(items);
+        }
     }
 
     addCartItem(cartItem) {
@@ -178,34 +213,4 @@ class Orders {
         // ..... ....
     }
 }
-
-
-let cartData = {
-    1: {name: 'Pizza', id: 1, price: 7.99, qty: 5},
-    2: {name: 'Soup', id: 2, price: 17.99, qty: 1},
-    3: {name: 'Soup3', id: 3, price: 17.99, qty: 2},
-    9: {name: 'Soup9', id: 9, price: 17.99, qty: 1},
-    10: {name: 'Soup10', id: 10, price: 17.99, qty: 4},
-};
-
-
-class Car {
-    brand = 'Mazda';
-    color = 'red';
-
-    constructor(brand, color) {
-        this.brand = brand;
-        this.color = color;
-    }
-
-    getCarModel() {
-        console.log(this.brand + ' ' + this.color);
-    }
-}
-
-let car1 = new Car('Ferrari', 'white');
-let car2 = new Car('Audi', 'black');
-
-car1.getCarModel();
-car2.getCarModel();
 
