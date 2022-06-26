@@ -18,6 +18,9 @@ class MiniCart {
 
             // open cart
             $('.desktop-basket_link, .basket-link').click();
+
+            // refresh totals
+            miniCartSelf.calculateTotal(true);
         });
     }
 
@@ -31,6 +34,7 @@ class MiniCart {
             miniCartSelf.renderCartItem(cartItem);
             miniCartSelf.cart.decreaseQty(cartItem);
             miniCartSelf.checkEmptyCart();
+            miniCartSelf.calculateTotal(true);
         });
     }
 
@@ -79,15 +83,17 @@ class MiniCart {
                 } else {
                     // update product qty
                     $(cartItem).find('.amount-items').html(product.qty);
+                    // update product total price
+                    $(cartItem).find('.item-cost').html('£' + (product.price * product.qty));
                 }
             } else {
                 // generate new HTML and insert into minicart block
-                let html = this.getMiniCartItemHtml(product.id, product.price, product.title, product.image, product.qty);
+                let html = this.getMiniCartItemHtml(product.id, product.price * product.qty, product.title, product.image, product.qty);
                 $('#miniCart ul.sidenav-menu').append(html);
             }
         } else {
             // generate new HTML and insert into minicart block
-            let html = this.getMiniCartItemHtml(product.id, product.price, product.title, product.image, product.qty);
+            let html = this.getMiniCartItemHtml(product.id, product.price * product.qty, product.title, product.image, product.qty);
             $('#miniCart ul.sidenav-menu').append(html);
         }
 
@@ -104,6 +110,7 @@ class MiniCart {
             // render each cart item
             this.renderCartItem(items[index]);
         });
+        this.calculateTotal(true);
         this.checkEmptyCart();
     }
 
@@ -118,7 +125,7 @@ class MiniCart {
                '    </span>\n' +
                '    <span class="svg-item">\n' +
                '        <span class="cart-minus"></span>\n' +
-               `        <strong class="m-0 item-cost amount-items">${qty}</strong>\n` +
+               `        <strong class="m-0 amount-items">${qty}</strong>\n` +
                '        <span class="cart-plus"></span>\n' +
                '    </span>\n' +
                '</li>' +
@@ -134,6 +141,25 @@ class MiniCart {
         } else {
             $('.empty-cart').show();
         }
+    }
+
+    calculateTotal(refreshHtml = false) {
+        let cartTotal = 0;
+        let cartItems = 0;
+        let items     = this.cart.getCartItems();
+        Object.keys(items).forEach(index => {
+            cartTotal += items[index].price * items[index].qty;
+            cartItems += items[index].qty;
+        });
+
+        if (refreshHtml) {
+            // update html for cart price total
+            $('#total-items').html('£' + cartTotal);
+            // update html for cart items total amount
+            $('.basket-icon .item-amount').html(cartItems);
+        }
+
+        return cartTotal;
     }
 }
 
