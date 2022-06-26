@@ -434,6 +434,12 @@ td {
 }
 /*calendar*/
 @media all and (max-width: 475px) {
+    .slider-icon-prev {
+        left: -40px
+    }
+    .slider-icon-next {
+        right: -40px;
+    }
     .title-heading {
         font-size: 32px;
     }
