@@ -34,6 +34,7 @@ body {
     background-color: var(--gray94);
 }
 
+
 /*navigation bar: menu, home, basket*/
 .navbar-nav.position-navbar {
     flex-direction: row;
@@ -270,56 +271,105 @@ body {
     background-color: rgb(244 244 244);
     padding: 15px 20px;
 }
+
+
 /*calendar with choosing day*/
 .calendar-info {
-     color: var(--dark-gray);
-     font-size: 1.125rem;
-     font-weight: 500;
-     margin-bottom: 15px;
+    color: var(--dark-gray);
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 .calendar-info strong {
     color: var(--medium-gray);
     font-weight: 500;
 }
 .calendar-month {
-      background-color: var(--white);
-      border: 1px solid var(--chinese-silver);
-      border-radius: 4px;
+    width: 37rem;
+    background-color: var(--white);
+    border: 1px solid var(--chinese-silver);
+    border-radius: 4px;
 }
 .month-heading {
-       display: flex;
-       justify-content: space-around;
-       align-items: center;
-       font-size: 18px;
-       font-weight: 500;
-       padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 15px;
 }
-tbody, td, tfoot, th, thead, tr {
-    width: 13.5%;
+.left-arrow {
+    background-image: url("../img/left-arrow.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 20px;
+    cursor: pointer;
 }
-td {
-    border: 1px solid var(--bs-gray-100);
+.right-arrow {
+    background-image: url("../img/right-arrow.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 20px;
+    cursor: pointer;
 }
 .month {
     width: 95%;
     margin: 0 auto 20px auto;
 }
 .weekdays {
+    display: flex;
+    align-items: center;
+    width: 100%;
     height: 50px;
     text-align: center;
     color: var(--blue-magenta);
+    padding: 0 0.4rem;
 }
-/*main height for rows of cells in table */
-.days, .time {
-     height: 50px;
-     text-align: center;
+.weekdays div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(44.2rem / 7);
 }
-.days td:hover, .time td:hover {
-    background-color: var(--light-brown);
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.4rem;
+}
+.days div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(34.2rem / 7);
+    height: 50px;
+    transition: background-color 0.2s;
+    border: 1px solid var(--bs-gray-100);
+}
+.today {
+    background-color: var(--chinese-silver) !important;
+    color: var(--black-magic) !important;
+}
+.days div:hover:not(.today, .prev-date,.next-date) {
+    background-color: var(--light-brown) !important;
+    color: var(--white) !important;
+    cursor: pointer;
 }
 .prev-date, .next-date {
-     opacity: .35;
+    opacity: .5;
 }
+#days div {
+    background-color: transparent;
+    color: var(--black-magic);
+}
+#days div.clicked {
+    background-color: var(--light-brown);
+    color: var(--white);
+}
+
+
 /*choose time and how many people will come in*/
 .wrap-time_container {
     background-color: var(--white);
@@ -340,6 +390,19 @@ td {
     width: 90%;
     margin: 0 auto;
 }
+.time td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid var(--bs-gray-100);
+}
+.time td:hover {
+    background-color: var(--light-brown) !important;
+    color: var(--white) !important;
+    cursor: pointer;
+}
+
+
 /*filling in form*/
 .confirm-policy {
     width: 15px;
@@ -352,10 +415,30 @@ td {
     font-weight: 400;
     margin: 5px 0 0 0;
 }
+.label-style {
+    color: var(--green-cyan);
+}
 .input-focus:focus {
     border: 2px solid var(--light-brown);
     box-shadow: none;
 }
+.input-control.success input {
+    border-color: #09c372;
+}
+.input-control.error input {
+    border-color: #ff3860;
+}
+.input-control .error {
+    color: #ff3860;
+    margin-top: 2px;
+}
+.input-control.error textarea {
+    border-color: #ff3860;
+}
+.submit-style {
+    margin-top: 1rem !important;
+}
+
 /*button for reserve a table next/prev*/
 .nav-buttons {
     background-color: var(--light-brown);
@@ -403,6 +486,8 @@ td {
         justify-content: space-evenly;
     }
 }
+
+
 /*navBar and NavScroll page*/
 @media all and (max-width: 992px) {
     .fit-video, .guarantee-text {
@@ -432,6 +517,8 @@ td {
     }
 
 }
+
+
 /*calendar*/
 @media all and (max-width: 475px) {
     .slider-icon-prev {

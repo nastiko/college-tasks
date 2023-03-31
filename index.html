@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
           rel="stylesheet">
     <title>Web Application</title>
-    <script src="javascript/jquery-3.6.0.min.js"></script>
-    <script src="javascript/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="javascript/jquery-3.6.4.min.js" type="text/javascript"></script>
+<!--    <script src="javascript/bootstrap/bootstrap.bundle.min.js"></script>-->
 </head>
 <body>
 <div class="container-fluid nav-scroll">
@@ -149,89 +149,26 @@
                         </div>
                         <div class="calendar-month">
                             <div class="month-heading">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                     fill="currentColor"
-                                     class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                </svg>
-                                <span>March 2022</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                     fill="currentColor"
-                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                                </svg>
+                                <div id="left-arrow" class="left-arrow"></div>
+                                <div>
+                                    <span id="day-month"></span>
+                                    <span id="year"></span>
+                                </div>
+                                <div id="right-arrow" class="right-arrow"></div>
                             </div>
-                            <table class="month">
-                                <thead>
-                                <tr class="weekdays">
-                                    <th>Sun</th>
-                                    <th>Mon</th>
-                                    <th>Tue</th>
-                                    <th>Wed</th>
-                                    <th>Thu</th>
-                                    <th>Fri</th>
-                                    <th>Sat</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="days">
-                                    <td class="prev-date">26</td>
-                                    <td class="prev-date">27</td>
-                                    <td class="prev-date">28</td>
-                                    <td class="prev-date">29</td>
-                                    <td class="prev-date">30</td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr class="days">
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                </tr>
-                                <tr class="days">
-                                    <td>10</td>
-                                    <td>11</td>
-                                    <td>12</td>
-                                    <td>13</td>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                </tr>
-                                <tr class="days">
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                </tr>
-                                <tr class="days">
-                                    <td>24</td>
-                                    <td>25</td>
-                                    <td>26</td>
-                                    <td>27</td>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr class="days">
-                                    <td>31</td>
-                                    <td class="next-date">1</td>
-                                    <td class="next-date">2</td>
-                                    <td class="next-date">3</td>
-                                    <td class="next-date">4</td>
-                                    <td class="next-date">5</td>
-                                    <td class="next-date">6</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="month">
+                                <div class="weekdays">
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                    <div>Sun</div>
+                                </div>
+                                <div id="days" class="days">
+                                </div>
+                            </div>
                         </div>
                         <hr>
                         <div class="button-next">
@@ -246,13 +183,12 @@
                         <div class="wrap-time_container boxes-gap">
                             <h4 class="title-time">Time</h4>
                             <table class="select-condition">
-                                <tbody>
+                                <tbody id="select-time">
                                 <tr class="time">
                                     <td>12.00</td>
                                     <td>12.30</td>
                                     <td>1.00</td>
                                     <td>1.30</td>
-
                                 </tr>
                                 <tr class="time">
                                     <td>8.00</td>
@@ -266,7 +202,7 @@
                         <div class="wrap-time_container">
                             <h4 class="title-time">How many people?</h4>
                             <table class="select-condition">
-                                <tr class="time">
+                                <tr id="select-guests" class="time">
                                     <td>1</td>
                                     <td>2</td>
                                     <td>3</td>
@@ -285,30 +221,41 @@
                             <strong>3/3</strong>
                             Please fill with your details
                         </div>
-                        <form action="/" method="get" required>
-                            <div class="mb-2">
-                                <input class="form-control input-focus" type="text" name="First and Last Name" placeholder="First and Last Name">
+                        <form id="form-submit" action="../college/send_mail.php" method="post">
+                            <div class="mb-2 input-control">
+                                <label class="label-style" for="fullName">Full Name</label>
+                                <input class="form-control input-focus" id="fullName" type="text" name="Full Name"
+                                       placeholder="Full Name*">
+                                <div class="error"></div>
                             </div>
                             <div class="row mb-2">
-                                <div class="col-lg-6 form-control_mb">
-                                    <input class="form-control input-focus" type="email" name="Your Email" placeholder="Your Email">
+                                <div class="col-lg-6 form-control_mb input-control">
+                                    <label class="label-style" for="email">Email</label>
+                                    <input class="form-control input-focus" id="email" type="email" name="Your Email"
+                                           placeholder="Your Email*">
+                                    <div class="error"></div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <input class="form-control input-focus" type="tel" name="Your Telephone" placeholder="Your Telephone">
+                                <div class="col-lg-6 input-control">
+                                    <label class="label-style" for="phone">Phone</label>
+                                    <input class="form-control input-focus" id="phone" type="tel" name="Your Telephone"
+                                           placeholder="Your Telephone*" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                    <div class="error"></div>
                                 </div>
                             </div>
-                            <div class="mb-2">
-                                    <textarea class="form-control input-focus" rows="3" name="subject"
-                                              placeholder="Please provide any additional info"></textarea>
+                            <div class="mb-2 input-control">
+                                <label class="label-style" for="message">Message</label>
+                                <textarea class="form-control input-focus" id="message" rows="5" name="message" placeholder="Your message*"></textarea>
+                                <div class="error"></div>
                             </div>
-                            <div>
-                                <input class="confirm-policy" type="checkbox" name="terms" value="Yes">
+                            <div class="input-control">
+                                <input class="confirm-policy" id="checkbox" type="checkbox" name="terms" value="Yes">
                                 <p class="policy-info">Please accept our Terms and Conditions</p>
+                                <div class="error"></div>
                             </div>
                             <hr>
                             <div class="button-next">
                                 <button class="nav-buttons prev" type="button">Prev</button>
-                                <button class="nav-buttons submit" type="submit">Submit</button>
+                                <button class="nav-buttons submit" type="button">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -378,23 +325,25 @@
 <script src="javascript/web_app.js"></script>
 <script src="javascript/cart.js"></script>
 <script>
-    let menu     = new Menu();
-    let header   = new Header();
-    let slider   = new Slider();
-    let calendar = new Calendar();
+    let menu = new Menu();
+    let header = new Header();
+    let slider = new Slider();
+    let nextPrevBtn = new NextPrevBtn();
     let miniCart = new MiniCart();
 
     $(document).ready(function () {
         menu.initialize();
         header.initSticky();
-        calendar.initNext();
-        calendar.initPrev();
+        nextPrevBtn.initNext();
+        nextPrevBtn.initPrev();
         slider.initSlider(3, 500);
         miniCart.initialize();
     });
     $(window).resize(function () {
         slider.initSlider(3, 1000);
     });
+
+
 </script>
 </body>
 </html>
