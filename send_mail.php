@@ -1,5 +1,5 @@
 <?php
-if ($_POST['fullName'] && $_POST['email'] && $_POST['phone'] && $_POST['message']) {
+if ($_POST['name'] && $_POST['email'] && $_POST['phone'] && $_POST['message']) {
     mail(
         'jogarat367@marikuza.com',
         'Website form submission from `' . htmlspecialchars($_POST['fullName']) . ' (' . htmlspecialchars($_POST['email']) . ')',

@@ -304,7 +304,6 @@ class Form {
             return;
         }
 
-        //let blockSubmit =  this.#form.querySelector('button.submit');
         let status = document.createElement('div');
         status.id = 'form-status';
         status.classList.add('submit-style');
