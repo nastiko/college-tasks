@@ -199,6 +199,7 @@ class Form {
     #message;
     #checkbox;
 
+    #form;
     #validationResult = true;
 
     constructor(fullName, email, phone, message, checkbox) {
@@ -225,9 +226,9 @@ class Form {
         return this.#message.value.trim();
     }
 
-    getCheckboxValue() {
-        return this.#checkbox.value.trim();
-    }
+    /*getCheckboxValue() {
+        return this.#checkbox = true;
+    }*/
 
     setError(elem, message) {
         let inputControl = elem.parentElement;
@@ -250,16 +251,12 @@ class Form {
     }
 
     isValidEmail(email) {
-        return String(email)
-            .toLowerCase()
-            .match(
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        return this.#email.value.toLowerCase().match(
+                /^[^]+\@[a-zA-z]+\.[a-zA-Z]{2,4}$/);
     }
 
     isValidPhone(phone) {
-        return String(phone)
-            .match(
-                /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/);
+        return this.#phone.value.match(/^[\d,\s,\+,\-]{5,20}/);
     }
 
     validationInput() {
@@ -292,35 +289,35 @@ class Form {
             this.setSuccess(this.#message);
         }
 
-        /*if (!this.#checkbox.checkbox.checked) {
-            this.setError(this.getCheckboxValue(), 'You must agree to the terms first');
-        }*/
+        if (!this.#checkbox.checked) {
+            this.setError(this.#checkbox, 'By clicking here, you agree to our policy');
+        } else {
+            this.setSuccess(this.#checkbox);
+        }
 
         return this.#validationResult;
     }
 
     handleSubmit() {
-        //event.preventDefault();
-
         //validate? true / false
         if(!validateForm.validationInput()){
             return;
         }
 
-        let blockSubmit = document.getElementById('btn-submit');
+        //let blockSubmit =  this.#form.querySelector('button.submit');
         let status = document.createElement('div');
         status.id = 'form-status';
         status.classList.add('submit-style');
-        blockSubmit.appendChild(status);
+        this.#form.appendChild(status);
 
-        let data = new FormData(event.target);
-        fetch(event.target.action, {
-            method: this.submitForm.method,
+        let data = new FormData(this.#form);
+        fetch(this.#form.action, {
+            method: this.#form.method,
             body: data
         }).then(response => {
             if (response.ok) {
                 status.innerHTML = 'Thanks for your submission!';
-                this.submitForm.reset();
+                this.#form.reset();
             } else {
                 status.innerHTML = 'Oops! There was a problem submitting your form';
             }
@@ -335,13 +332,15 @@ class Form {
         this.#phone = document.getElementById(phoneId);
         this.#message = document.getElementById(messageId);
         this.#checkbox = document.getElementById(checkboxId);
-        document.querySelector(formId).addEventListener('click', () => this.handleSubmit());
+        this.#form = document.querySelector(formId);
+
+        this.#form.querySelector('button.submit').addEventListener('click', () => this.handleSubmit());
     }
 }
 
 let validateForm = new Form();
 
-validateForm.init('fullName', 'email', 'phone', 'message', 'checkbox', '#form-submit .submit');
+validateForm.init('fullName', 'email', 'phone', 'message', 'checkbox', '#form-submit');
 
 
 class NextPrevBtn {

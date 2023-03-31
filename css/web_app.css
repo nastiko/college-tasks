@@ -285,7 +285,6 @@ body {
     font-weight: 500;
 }
 .calendar-month {
-    width: 37rem;
     background-color: var(--white);
     border: 1px solid var(--chinese-silver);
     border-radius: 4px;
@@ -343,7 +342,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(34.2rem / 7);
+    width: calc(100% / 7);
     height: 50px;
     transition: background-color 0.2s;
     border: 1px solid var(--bs-gray-100);
@@ -425,6 +424,9 @@ body {
 .input-control.success input {
     border-color: #09c372;
 }
+.input-control.success textarea {
+    border-color: #09c372;
+}
 .input-control.error input {
     border-color: #ff3860;
 }
@@ -436,6 +438,8 @@ body {
     border-color: #ff3860;
 }
 .submit-style {
+    display: flex;
+    justify-content: flex-end;
     margin-top: 1rem !important;
 }
 
