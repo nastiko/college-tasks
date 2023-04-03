@@ -277,24 +277,20 @@ a.icon-x:hover {
     -webkit-mask: var(--mask);
     mask: var(--mask);
 }
-
 .row.customer-info {
     width: 80%;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
-
 .col-lg-3.info-contact {
     margin-top: 2rem;
     padding-left: 0;
 }
-
 .font-style {
     font-size: 1.215rem;
     margin-bottom: 1rem;
 }
-
 .text-decoration {
     font-size: 0.875rem;
     font-weight: lighter;
@@ -302,15 +298,12 @@ a.icon-x:hover {
     word-spacing: 2px;
     margin-bottom: 0;
 }
-
 .online-support p {
     color: var(--light-brown);
 }
-
 .main-info, .social-media p {
     color: rgba(255, 255, 255, 0.6);
 }
-
 .input-container {
     display: flex;
     flex-direction: row;
@@ -318,7 +311,6 @@ a.icon-x:hover {
     align-items: center;
     border: none;
 }
-
 .input-container input[type="email"] {
     width: 100%;
     border: none;
@@ -327,11 +319,9 @@ a.icon-x:hover {
     color: var(--chinese-silver);
     padding: 10px 10px 10px 15px;
 }
-
 .input-container input[type="email"]:focus {
     outline: 1px solid var(--light-brown);
 }
-
 .button-submit {
     background-color: var(--light-brown);
     color: var(--white);
@@ -339,21 +329,25 @@ a.icon-x:hover {
     border-radius: 0 4px 4px 0;
     padding: 10px;
 }
-
 .button-submit:hover {
     cursor: pointer;
 }
-
 .button-svg {
     vertical-align: sub;
 }
-
-.input-container::placeholder {
-    font-size: 0.800rem;
-    letter-spacing: 0.1vw;
-    color: var(--light-brown);
+.info-contact .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    outline: 1px solid var(--light-brown);
+    color: var(--chinese-silver);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 10px 10px 15px;
+    box-shadow: none;
 }
-
+.info-contact .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: lighter;
+}
 
 /*change Autocomplete styles in Chrome*/
 .input-container .input-email:-webkit-autofill,

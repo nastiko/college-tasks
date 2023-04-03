@@ -161,9 +161,6 @@ class Calendar {
     }
 }
 
-let calendar = new Calendar('days', 'day-month', 'year', 'left-arrow', 'right-arrow');
-calendar.init();
-
 class SelectTimeGuest {
 
     #time;
@@ -201,15 +198,9 @@ class SelectTimeGuest {
         document.querySelectorAll('#select-guests tr td.clicked').forEach((el) => {
             el.classList.remove('clicked');
         });
-
         event.target.classList.add('clicked');
     }
 }
-
-let timeGuest = new SelectTimeGuest('#select-time tr td', '#select-guests tr td');
-timeGuest.clickActionTime();
-timeGuest.clickActionGuests();
-
 
 class Form {
 
@@ -352,11 +343,6 @@ class Form {
         this.#form.querySelector('button.submit').addEventListener('click', () => this.handleSubmit());
     }
 }
-
-let validateForm = new Form();
-
-validateForm.init('fullName', 'email', 'phone', 'message', 'checkbox', '#form-submit');
-
 
 class NextPrevBtn {
     initNext() {

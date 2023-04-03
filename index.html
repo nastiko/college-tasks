@@ -291,7 +291,7 @@
             <h4 class="font-style">Follow us</h4>
             <form action="#">
                 <div class="input-container">
-                    <input class="input-email" type="email" name="email" placeholder="Your email" required>
+                    <input class="form-control input-email " type="email" name="email" placeholder="Your email" required>
                     <button class="button-submit" type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
                              class="bi bi-chevron-right button-svg" viewBox="0 0 16 16">
@@ -330,6 +330,14 @@
     let slider = new Slider();
     let nextPrevBtn = new NextPrevBtn();
     let miniCart = new MiniCart();
+    let calendar = new Calendar('days', 'day-month', 'year', 'left-arrow', 'right-arrow');
+    let timeGuest = new SelectTimeGuest('#select-time tr td', '#select-guests tr td');
+    let validateForm = new Form();
+
+    calendar.init();
+    timeGuest.clickActionTime();
+    timeGuest.clickActionGuests();
+    validateForm.init('fullName', 'email', 'phone', 'message', 'checkbox', '#form-submit');
 
     $(document).ready(function () {
         menu.initialize();
