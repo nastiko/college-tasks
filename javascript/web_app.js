@@ -164,31 +164,51 @@ class Calendar {
 let calendar = new Calendar('days', 'day-month', 'year', 'left-arrow', 'right-arrow');
 calendar.init();
 
-// class SelectTimeGuest {
-//
-//     /*#time;
-//
-//     constructor(time) {
-//         this.#time = time;
-//     }*/
-//
-//     selectTime(event) {
-//         document.querySelectorAll('#select-time tr .clicked').forEach((el) => {
-//             el.classList.remove('clicked');
-//         });
-//         event.target.classList.add('clicked');
-//     }
-//
-//     clickAction() {
-//         let cells = document.querySelectorAll('#select-time tr');
-//         for (let i = 0; i < cells.length; i++) {
-//             cells[i].addEventListener('click', (event) => this.selectTime(event));
-//         }
-//     }
-// }
-//
-// let timeGuest = new SelectTimeGuest();
-// timeGuest.clickAction();
+class SelectTimeGuest {
+
+    #time;
+    #guests;
+
+    constructor(time, guests) {
+        this.#time = document.querySelectorAll(time);
+        this.#guests = document.querySelectorAll(guests);
+    }
+
+    clickActionTime() {
+        for (let i = 0; i < this.#time.length; i++) {
+            this.#time[i].addEventListener('click', (event) => {
+                this.selectTime(event);
+            });
+        }
+    }
+
+    clickActionGuests() {
+        for(let j = 0; j < this.#guests.length; j++) {
+            this.#guests[j].addEventListener('click', (event) => {
+                this.selectGuest(event);
+            });
+        }
+    }
+
+    selectTime(event) {
+        document.querySelectorAll('#select-time tr td.clicked').forEach((el) => {
+            el.classList.remove('clicked');
+        });
+        event.target.classList.add('clicked');
+    }
+
+    selectGuest(event) {
+        document.querySelectorAll('#select-guests tr td.clicked').forEach((el) => {
+            el.classList.remove('clicked');
+        });
+
+        event.target.classList.add('clicked');
+    }
+}
+
+let timeGuest = new SelectTimeGuest('#select-time tr td', '#select-guests tr td');
+timeGuest.clickActionTime();
+timeGuest.clickActionGuests();
 
 
 class Form {
@@ -225,10 +245,6 @@ class Form {
     getMessageValue() {
         return this.#message.value.trim();
     }
-
-    /*getCheckboxValue() {
-        return this.#checkbox = true;
-    }*/
 
     setError(elem, message) {
         let inputControl = elem.parentElement;
@@ -312,7 +328,7 @@ class Form {
         let data = new FormData(this.#form);
         fetch(this.#form.action, {
             method: this.#form.method,
-            body: data
+            body: data,
         }).then(response => {
             if (response.ok) {
                 status.innerHTML = 'Thanks for your submission!';

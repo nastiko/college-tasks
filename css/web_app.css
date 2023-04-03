@@ -401,6 +401,15 @@ body {
     cursor: pointer;
 }
 
+.time td {
+    background-color: transparent;
+    color: var(--black-magic);
+}
+.time td.clicked {
+    background-color: var(--light-brown);
+    color: var(--white);
+}
+
 
 /*filling in form*/
 .confirm-policy {
@@ -472,7 +481,7 @@ body {
 .block .form-block.show, .reserve-table .submit-form {
     display: block;
 }
-/*.reserve-table */
+/*.reserve-table*/
 .block .form-block, .reserve-table .submit-form {
     display: none;
 }
