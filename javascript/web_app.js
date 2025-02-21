@@ -462,8 +462,9 @@ class Slider {
 
     initSlider(slidesVisible, animationDuration) {
         this.animationDuration = animationDuration;
+        this.slidesVisible = slidesVisible;
 
-        let slidesCount = Math.floor(($(window).width() - (this.slideWidth * 2)) / this.slideWidth);
+        let slidesCount = Math.floor(($(window).width() - (this.slideWidth * this.slidesVisible)) / this.slideWidth);
         let sliderWidth = (slidesCount <= 0 ? 1 : slidesCount) * this.slideWidth;
 
         let sliderContentWidth = this.slides.length * this.slideWidth + 200;
