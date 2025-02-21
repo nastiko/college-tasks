@@ -402,7 +402,6 @@ class Slider {
     sliderBlock = $('.slick-slider');
     sliderContent = $('#slider-content');
     currPosition = 0;
-    animationDuration = 1000;
 
     getVisibleCount() {
         let cntVisible = 0;
